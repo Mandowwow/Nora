@@ -9,6 +9,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] protected private int health;
     [SerializeField] protected private SpriteRenderer sprite;
     [SerializeField] protected private Rigidbody2D rb;
+    [SerializeField] private GameObject heart;  
     private static int playerPoints;
     protected private Transform player;
 
@@ -44,12 +45,21 @@ public class Enemy : MonoBehaviour
         if (health <= 0) {
             Destroy(this.gameObject);
             playerPoints += 1;
-            Debug.Log(playerPoints);
+            RandomDrop();
             FindEnemies.Enemies.Remove(this.gameObject);
             if (FindEnemies.Enemies.Count <= 0) {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
 
+        }
+    }
+
+    private void RandomDrop() {
+        int rand = Random.Range(1, 26);
+        Debug.Log(rand);
+        if(rand > 24) {
+            //1 in 25 chance 
+            Instantiate(heart, transform.position, Quaternion.identity);
         }
     }
 

@@ -23,6 +23,8 @@ public class Shoot : MonoBehaviour
         if (collision.CompareTag("Enemy")) {
             collision.GetComponent<Enemy>().TakeDamage(1);
             Destroy(this.gameObject);
+        } else if (collision.CompareTag("Wall")) {
+            Destroy(this.gameObject);
         }
     }
 
