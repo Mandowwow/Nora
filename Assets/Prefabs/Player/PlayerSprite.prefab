@@ -44,10 +44,9 @@ GameObject:
   - component: {fileID: 3766334910001464856}
   - component: {fileID: 3766334910001464857}
   - component: {fileID: 3766334910001464859}
-  - component: {fileID: 667974267786696}
   m_Layer: 0
   m_Name: PlayerSprite
-  m_TagString: Untagged
+  m_TagString: Controller
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -142,6 +141,10 @@ MonoBehaviour:
   shootD: {fileID: 5289703107215555213}
   shootL: {fileID: 4923398518992996541}
   shootR: {fileID: 5067057581517551984}
+  KBCounter: 0
+  KBTotalTime: 0.2
+  KBForce: 6
+  knockFromRight: 1
 --- !u!50 &3766334910001464856
 Rigidbody2D:
   serializedVersion: 4
@@ -198,32 +201,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!61 &667974267786696
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3766334910001464861}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.000000014901161, y: 0.49315676}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.15}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.5024688, y: 0.6046148}
-  m_EdgeRadius: 0
 --- !u!1 &3766334910322849291
 GameObject:
   m_ObjectHideFlags: 0

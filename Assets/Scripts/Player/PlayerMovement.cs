@@ -18,6 +18,13 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform shootL;
     [SerializeField] private Transform shootR;
 
+    //Knockback Variables
+    public float KBCounter;
+    public float KBTotalTime;
+    public float KBForce;
+
+    public bool knockFromRight;
+
     // Update is called once per frame
     void Update()
     {
@@ -39,7 +46,18 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private void FixedUpdate() {
-        rb.MovePosition(rb.position + movement.normalized * runSpeed * Time.fixedDeltaTime);
+        if(KBCounter <= 0) {
+            rb.MovePosition(rb.position + movement.normalized * runSpeed * Time.fixedDeltaTime);
+        } else {
+            if (knockFromRight == true) {
+                rb.velocity = new Vector2(-KBForce, KBForce);
+            }
+            if (knockFromRight == false) {
+                rb.velocity = new Vector2(KBForce, KBForce);
+            }
+
+            KBCounter -= Time.deltaTime;
+        }
     }
 
     private void Shoot(Transform pos) {

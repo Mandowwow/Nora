@@ -9,13 +9,15 @@ public class Enemy : MonoBehaviour
     [SerializeField] protected private int health;
     [SerializeField] protected private SpriteRenderer sprite;
     [SerializeField] protected private Rigidbody2D rb;
-    [SerializeField] private GameObject heart;  
+    [SerializeField] private GameObject heart;
+    public PlayerMovement playerMovement;
     private static int playerPoints;
     protected private Transform player;
 
     private void Start() {
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        playerMovement = GameObject.FindGameObjectWithTag("Controller").GetComponent<PlayerMovement>();
         sprite = GetComponent<SpriteRenderer>();
         sprite.color = Color.black;
     }
@@ -56,7 +58,6 @@ public class Enemy : MonoBehaviour
 
     private void RandomDrop() {
         int rand = Random.Range(1, 26);
-        Debug.Log(rand);
         if(rand > 24) {
             //1 in 25 chance 
             Instantiate(heart, transform.position, Quaternion.identity);
@@ -67,4 +68,5 @@ public class Enemy : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
         sprite.color = Color.black;
     }
+
 }
