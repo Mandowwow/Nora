@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3179359326345802712}
   - component: {fileID: 456863535304488747}
   - component: {fileID: 7641530715198292469}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BleedingMoon
   m_TagString: Untagged
   m_Icon: {fileID: 0}

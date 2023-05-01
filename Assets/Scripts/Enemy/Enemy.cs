@@ -14,7 +14,7 @@ public class Enemy : MonoBehaviour
     private static int playerPoints;
     protected private Transform player;
 
-    private void Start() {
+    protected virtual void Start() {
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         playerMovement = GameObject.FindGameObjectWithTag("Controller").GetComponent<PlayerMovement>();

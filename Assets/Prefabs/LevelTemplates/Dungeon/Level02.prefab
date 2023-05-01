@@ -156,7 +156,7 @@ GameObject:
   m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &512496045814526419
 Transform:
@@ -2114,7 +2114,7 @@ GameObject:
   - component: {fileID: 1322247496356662689}
   - component: {fileID: 8721880897980314590}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: MouthGenerator
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
