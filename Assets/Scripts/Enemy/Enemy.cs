@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Enemy : MonoBehaviour
 {
@@ -10,14 +9,16 @@ public class Enemy : MonoBehaviour
     [SerializeField] protected private SpriteRenderer sprite;
     [SerializeField] protected private Rigidbody2D rb;
     [SerializeField] private GameObject heart;
-    public PlayerMovement playerMovement;
-    private static int playerPoints;
+    protected private PlayerMovement playerMovement;
     protected private Transform player;
+    private static int playerPoints;
+    private FindEnemies findEnemies; 
 
     protected virtual void Start() {
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         playerMovement = GameObject.FindGameObjectWithTag("Controller").GetComponent<PlayerMovement>();
+        findEnemies = GameObject.FindGameObjectWithTag("Manager").GetComponent<FindEnemies>();
         sprite = GetComponent<SpriteRenderer>();
         sprite.color = Color.black;
     }
@@ -50,7 +51,7 @@ public class Enemy : MonoBehaviour
             RandomDrop();
             FindEnemies.Enemies.Remove(this.gameObject);
             if (FindEnemies.Enemies.Count <= 0) {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                Instantiate(findEnemies.Portal, new Vector3(0,0,0), Quaternion.identity);
             }
 
         }

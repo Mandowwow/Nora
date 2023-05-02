@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class FindEnemies : MonoBehaviour
 {
+    [SerializeField] private GameObject portal;
     private static List<GameObject> enemies = new List<GameObject>();
 
-    public static List<GameObject> Enemies
-    {
-        get
-        {
-            return enemies;
-        }
-    }
+    public static List<GameObject> Enemies => enemies;
+
+    public GameObject Portal => portal;
     // Start is called before the first frame update
     void Start()
     {
