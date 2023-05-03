@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3179359326345802712}
   - component: {fileID: 456863535304488747}
   - component: {fileID: 7641530715198292469}
+  - component: {fileID: -3457554687563294972}
   m_Layer: 10
   m_Name: BleedingMoon
   m_TagString: Untagged
@@ -128,3 +129,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.7049086, y: 0.4135232}
   m_EdgeRadius: 0
+--- !u!114 &-3457554687563294972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6832706887906859284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ad2801d0bcb86945a46673b0e82796a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6777477220313820894}
   - component: {fileID: 6777477220313820895}
   - component: {fileID: 1400305034807431765}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: Mouth
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -169,7 +169,7 @@ MonoBehaviour:
   sprite: {fileID: 0}
   rb: {fileID: 0}
   heart: {fileID: 7268758921841377277, guid: d51346bfc6da7784ba9e835950155f64, type: 3}
-  playerMovement: {fileID: 0}
+  test: 44
   movingRight: 0
 --- !u!1 &8861652923302176145
 GameObject:

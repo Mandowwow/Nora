@@ -12,7 +12,13 @@ public class Enemy : MonoBehaviour
     protected private PlayerMovement playerMovement;
     protected private Transform player;
     private static int playerPoints;
-    private FindEnemies findEnemies; 
+    private FindEnemies findEnemies;
+
+    public int Health
+    {
+        get => health;
+        set => health = value + health;
+    }
 
     protected virtual void Start() {
         rb = GetComponent<Rigidbody2D>();
