@@ -42,20 +42,20 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (Input.GetKey("up") && Time.time > nextFire) {
             Shoot(shootU);
-        }
+        } 
     }
 
     private void FixedUpdate() {
-        if(KBCounter <= 0) {
+        if (KBCounter <= 0) {
             rb.MovePosition(rb.position + movement.normalized * runSpeed * Time.fixedDeltaTime);
-        } else {
+        }
+        else {
             if (knockFromRight == true) {
                 rb.velocity = new Vector2(-KBForce, KBForce);
             }
             if (knockFromRight == false) {
                 rb.velocity = new Vector2(KBForce, KBForce);
             }
-
             KBCounter -= Time.deltaTime;
         }
     }

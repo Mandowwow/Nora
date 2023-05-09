@@ -22,4 +22,5 @@ public class Ghost : Enemy
             sp.flipX = true;
         }
     }
+
 }

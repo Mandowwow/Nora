@@ -19,8 +19,6 @@ public class FindEnemies : MonoBehaviour
     void FindObjects() {
         foreach (GameObject enemy in GameObject.FindGameObjectsWithTag("Enemy")) {
             enemies.Add(enemy);
-            //Debug.Log(enemy.GetComponent<Enemy>().test);
-            //enemy.GetComponent<Enemy>().health += 1;
         }
     }
 }

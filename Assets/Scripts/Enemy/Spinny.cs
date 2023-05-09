@@ -20,5 +20,6 @@ public class Spinny : Enemy
 
             rb.velocity = direction * Mathf.Max(speed, 0f);
         }
+
     }
 }

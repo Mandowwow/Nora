@@ -9,6 +9,10 @@ public class Enemy : MonoBehaviour
     [SerializeField] protected private SpriteRenderer sprite;
     [SerializeField] protected private Rigidbody2D rb;
     [SerializeField] private GameObject heart;
+    [SerializeField] private LayerMask playerLayer;
+    [SerializeField] private float attackRange;
+    [SerializeField] protected private float fireRate = 0.6f;
+    protected private float nextFire = 0f;
     protected private PlayerMovement playerMovement;
     protected private Transform player;
     private static int playerPoints;
@@ -31,6 +35,7 @@ public class Enemy : MonoBehaviour
 
     private void Update() {
         ChasePlayer();
+        Attack();
     }
 
     public void TakeDamage(int damage) {
@@ -40,8 +45,14 @@ public class Enemy : MonoBehaviour
     }
 
     protected virtual void ChasePlayer() {
-        if (Vector2.Distance(transform.position, player.position) < 10 && Vector2.Distance(transform.position, player.position) > 0.625f) {
+        if (Vector2.Distance(transform.position, player.position) < 12 && Vector2.Distance(transform.position, player.position) > attackRange) {
             transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+        }
+    }
+
+    protected virtual void Attack() {
+        if(Vector2.Distance(transform.position, player.position) < attackRange && Time.time > nextFire) {
+            DealDmg();
         }
     }
 
@@ -69,6 +80,19 @@ public class Enemy : MonoBehaviour
             //1 in 25 chance 
             Instantiate(heart, transform.position, Quaternion.identity);
         }
+    }
+
+    protected virtual void DealDmg() {
+        Collider2D[] playerToDamage = Physics2D.OverlapCircleAll(transform.position, 1, playerLayer);
+        for (int i = 0; i < playerToDamage.Length; i++) {
+            playerToDamage[i].GetComponent<Health>().TakeDamage(1);
+        }
+        nextFire = Time.time + fireRate;
+    }
+
+    private void OnDrawGizmosSelected() {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, 1);
     }
 
     IEnumerator Change() {

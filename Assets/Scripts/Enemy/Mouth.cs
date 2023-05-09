@@ -20,7 +20,7 @@ public class Mouth : Enemy
                 movingRight = false;
             }
         }
-        if (collision.gameObject.tag == "Controller") {
+        if (collision.collider.gameObject.tag == "Player") {
             Debug.Log("Detected");
             playerMovement.KBCounter = playerMovement.KBTotalTime;
             if (collision.transform.position.x <= transform.position.x) {
@@ -29,6 +29,7 @@ public class Mouth : Enemy
             if (collision.transform.position.x > transform.position.x) {
                 playerMovement.knockFromRight = false;
             }
+
         }
 
     }

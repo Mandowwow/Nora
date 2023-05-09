@@ -158,4 +158,8 @@ MonoBehaviour:
   sprite: {fileID: 0}
   rb: {fileID: 0}
   heart: {fileID: 7268758921841377277, guid: d51346bfc6da7784ba9e835950155f64, type: 3}
-  test: 55
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 8192
+  attackRange: 0.7
+  fireRate: 0.6
