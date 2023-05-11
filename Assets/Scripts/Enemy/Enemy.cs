@@ -16,12 +16,12 @@ public class Enemy : MonoBehaviour
     protected private PlayerMovement playerMovement;
     protected private Transform player;
     private static int playerPoints;
-    private FindEnemies findEnemies;
+    protected private FindEnemies findEnemies;
 
     public int Health
     {
         get => health;
-        set => health = value + health;
+        set => health = value;
     }
 
     protected virtual void Start() {
@@ -39,7 +39,7 @@ public class Enemy : MonoBehaviour
     }
 
     public void TakeDamage(int damage) {
-        health -= damage;
+        Health -= damage;
         ChangeColor();
         Dying();
     }
@@ -95,7 +95,7 @@ public class Enemy : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, 1);
     }
 
-    IEnumerator Change() {
+    protected virtual IEnumerator Change() {
         yield return new WaitForSeconds(0.1f);
         sprite.color = Color.black;
     }

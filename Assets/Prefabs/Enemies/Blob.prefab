@@ -171,5 +171,5 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 8192
-  attackRange: 0.5
+  attackRange: 0.6
   fireRate: 1

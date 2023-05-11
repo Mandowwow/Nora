@@ -4,22 +4,29 @@ using UnityEngine;
 
 public class TestEnemyScript : MonoBehaviour
 {
-    public PlayerMovement playerMovement;
+    [SerializeField] private Transform[] ghostPlayers;
+    private Transform player;
+    private float speed = 1f;
+    private int rand;
 
-    private void Awake() {
-        playerMovement = GameObject.FindGameObjectWithTag("Controller").GetComponent<PlayerMovement>();
+    private void Start() {
+        rand = Random.Range(0, 3);
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
 
-    private void OnCollisionEnter2D(Collision2D collision) {
-        if(collision.gameObject.tag == "Controller") {
-            Debug.Log("Detected");
-            playerMovement.KBCounter = playerMovement.KBTotalTime;
-            if(collision.transform.position.x <= transform.position.x) {
-                playerMovement.knockFromRight = true;
-            }
-            if(collision.transform.position.x > transform.position.x) {
-                playerMovement.knockFromRight = false;
-            }
+    private void Update() {
+        ChasePlayer();
+    }
+
+    private void ChasePlayer() {
+        
+        if(Vector2.Distance(transform.position, ghostPlayers[rand].position) < 1) {
+            transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+            Debug.Log("Chasing actual player now");
+        } else {
+            transform.position = Vector2.MoveTowards(transform.position, ghostPlayers[rand].position, speed * Time.deltaTime);
+            Debug.Log("Chasing ghosts");
         }
+
     }
 }

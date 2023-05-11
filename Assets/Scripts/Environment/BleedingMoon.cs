@@ -11,7 +11,7 @@ public class BleedingMoon : MonoBehaviour
 
     private void HealthBuff() {
         foreach (GameObject enemy in FindEnemies.Enemies) {
-            enemy.GetComponent<Enemy>().Health = 1;
+            enemy.GetComponent<Enemy>().Health += 1;
         }
     }
 }
