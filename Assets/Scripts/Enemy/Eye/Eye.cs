@@ -35,7 +35,6 @@ public class Eye : Enemy
         //DealDmg code
         randPos = new Vector2(Random.Range(-5.5f, 5.5f), Random.Range(-3f, 0.75f));
         Instantiate(portal, randPos, Quaternion.identity);
-        //nextInstantiate = instantiateRate + Time.time;
     }
 
     protected override IEnumerator Change() {
