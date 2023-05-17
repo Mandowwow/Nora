@@ -47,7 +47,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate() {
         if (KBCounter <= 0) {
-            rb.MovePosition(rb.position + movement.normalized * runSpeed * Time.fixedDeltaTime);
+            //rb.MovePosition(rb.position + movement.normalized * runSpeed * Time.fixedDeltaTime);
+            rb.AddForce(movement.normalized * runSpeed * Time.fixedDeltaTime);
         }
         else {
             if (knockFromRight == true) {

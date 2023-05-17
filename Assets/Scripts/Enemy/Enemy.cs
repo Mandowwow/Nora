@@ -85,7 +85,7 @@ public class Enemy : MonoBehaviour
     protected virtual void DealDmg() {
         Collider2D[] playerToDamage = Physics2D.OverlapCircleAll(transform.position, 1, playerLayer);
         for (int i = 0; i < playerToDamage.Length; i++) {
-            playerToDamage[i].GetComponent<Health>().TakeDamage(1);
+            playerToDamage[i].GetComponentInParent<Health>().TakeDamage(1);
         }
         nextFire = Time.time + fireRate;
     }

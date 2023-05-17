@@ -10,6 +10,7 @@ public class Spider : Enemy
 
     protected override void Start() {
         base.Start();
+        sprite.color = Color.white;
         InvokeRepeating("DealDmg", instantiateRate, nextInstantiate);
     }
     protected override void ChasePlayer() {
@@ -32,6 +33,11 @@ public class Spider : Enemy
             playerPos.x - transform.position.x,
             playerPos.y - transform.position.y);
         transform.up = direction.normalized;
+    }
+
+    protected override IEnumerator Change() {
+        yield return new WaitForSeconds(0.1f);
+        sprite.color = Color.white;
     }
 
     private void OnCollisionStay2D(Collision2D collision) {

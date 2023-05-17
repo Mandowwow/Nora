@@ -8,6 +8,7 @@ TagManager:
   - Wall
   - Manager
   - Controller
+  - BeamTarget
   layers:
   - Default
   - TransparentFX
@@ -25,8 +26,8 @@ TagManager:
   - Player
   - Body
   - Portal
-  - 
-  - 
+  - PlayerWall
+  - Wall
   - 
   - 
   - 
