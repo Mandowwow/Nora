@@ -13,6 +13,7 @@ public class Eye : Enemy
         base.Start();
         sprite.color = Color.white;
         InvokeRepeating("DealDmg", instantiateRate, nextInstantiate);
+        InvokeRepeating("Charge", instantiateRate, 5f);
     }
     protected override void ChasePlayer() {
         Vector3 playerPos = player.transform.position;
