@@ -15,7 +15,7 @@ public class Shoot : MonoBehaviour
     }
 
     IEnumerator Wait() {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
         Destroy(this.gameObject);
     }
 

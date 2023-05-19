@@ -49,6 +49,7 @@ public class PlayerMovement : MonoBehaviour
         if (KBCounter <= 0) {
             //rb.MovePosition(rb.position + movement.normalized * runSpeed * Time.fixedDeltaTime);
             rb.AddForce(movement.normalized * runSpeed * Time.fixedDeltaTime);
+            //rb.velocity = movement.normalized * runSpeed * Time.fixedDeltaTime;
         }
         else {
             if (knockFromRight == true) {

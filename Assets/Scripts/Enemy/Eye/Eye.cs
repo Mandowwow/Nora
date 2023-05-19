@@ -6,7 +6,7 @@ public class Eye : Enemy
 {
     [SerializeField] private GameObject portal;
     private Vector2 randPos;
-    private float instantiateRate = 5f;
+    private float instantiateRate = 3f;
     private float nextInstantiate = 3f;
     protected override void Start() {
         rb = GetComponent<Rigidbody2D>();
@@ -27,14 +27,12 @@ public class Eye : Enemy
 
     protected override void Attack() {
         //if enemy is close enough DealDmg()
-        //This will run in update()
-        
+        //This will run in update()    
     }
 
     protected override void DealDmg() {
-        //DealDmg code
         randPos = new Vector2(Random.Range(-5.5f, 5.5f), Random.Range(-3f, 0.75f));
-        Instantiate(portal, randPos, Quaternion.identity);
+        Instantiate(portal, randPos, Quaternion.identity);       
     }
 
     protected override IEnumerator Change() {

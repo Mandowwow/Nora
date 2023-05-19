@@ -12,7 +12,6 @@ public class Butterfly : Enemy
         InvokeRepeating("DealDmg", 1f, 0.25f);
     }
 
-
     protected override void DealDmg() {
         Instantiate(beam, gun.transform.position, Quaternion.identity);
     }

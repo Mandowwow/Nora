@@ -21,7 +21,7 @@ public class Beam : MonoBehaviour
             targetPos.x - transform.position.x,
             targetPos.y - transform.position.y);
         transform.up = direction;
-        rb.velocity = direction * 6;
+        rb.velocity = direction * speed;
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
