@@ -5,15 +5,13 @@ using UnityEngine;
 public class Eye : Enemy
 {
     [SerializeField] private GameObject portal;
+    private List<GameObject> waypoints = new List<GameObject>();
     private Vector2 randPos;
     private float instantiateRate = 3f;
     private float nextInstantiate = 3f;
     protected override void Start() {
-        rb = GetComponent<Rigidbody2D>();
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        playerMovement = GameObject.FindGameObjectWithTag("Controller").GetComponent<PlayerMovement>();
-        findEnemies = GameObject.FindGameObjectWithTag("Manager").GetComponent<FindEnemies>();
-        sprite = GetComponent<SpriteRenderer>();
+        base.Start();
+        sprite.color = Color.white;
         InvokeRepeating("DealDmg", instantiateRate, nextInstantiate);
     }
     protected override void ChasePlayer() {
@@ -27,12 +25,19 @@ public class Eye : Enemy
 
     protected override void Attack() {
         //if enemy is close enough DealDmg()
-        //This will run in update()    
+        //This will run in update()
     }
 
     protected override void DealDmg() {
         randPos = new Vector2(Random.Range(-5.5f, 5.5f), Random.Range(-3f, 0.75f));
-        Instantiate(portal, randPos, Quaternion.identity);       
+        Instantiate(portal, randPos, Quaternion.identity);
+    }
+
+    private void Charge() {
+        if(Health <= 20) {
+            Vector2 randPos2 = new Vector2(Random.Range(-6.4f, 6.4f), Random.Range(-3.35f, 3.35f));
+            transform.position = new Vector2(randPos2.x, randPos2.y);
+        }
     }
 
     protected override IEnumerator Change() {

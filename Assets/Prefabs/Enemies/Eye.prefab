@@ -207,7 +207,7 @@ GameObject:
   - component: {fileID: 1491394084604073197}
   - component: {fileID: 1491394084604073199}
   - component: {fileID: 1491394084604073198}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Eye
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -293,7 +293,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1.5
-  health: 30
+  health: 40
   sprite: {fileID: 0}
   rb: {fileID: 0}
   heart: {fileID: 7268758921841377277, guid: d51346bfc6da7784ba9e835950155f64, type: 3}

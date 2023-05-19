@@ -9,6 +9,7 @@ TagManager:
   - Manager
   - Controller
   - BeamTarget
+  - Waypoint
   layers:
   - Default
   - TransparentFX
