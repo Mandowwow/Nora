@@ -61,11 +61,12 @@ public class Enemy : MonoBehaviour
         StartCoroutine(Change());
     }
 
-    private void Dying() {
+    protected virtual void Dying() {
         if (health <= 0) {
             Destroy(this.gameObject);
             playerPoints += 1;
             RandomDrop();
+            Debug.Log(FindEnemies.Enemies.Count);
             FindEnemies.Enemies.Remove(this.gameObject);
             if (FindEnemies.Enemies.Count <= 0) {
                 Instantiate(findEnemies.Portal, new Vector3(0,0,0), Quaternion.identity);

@@ -5,6 +5,6 @@ using UnityEngine;
 public class WayPoint : MonoBehaviour
 {
     private void Start() {
-        Destroy(this.gameObject, 2.5f);
+        Destroy(this.gameObject, 0.5f);
     }
 }

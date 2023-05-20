@@ -5,7 +5,7 @@ using UnityEngine;
 public class Eye : Enemy
 {
     [SerializeField] private GameObject portal;
-    private List<GameObject> waypoints = new List<GameObject>();
+    [SerializeField] private GameObject wayPoint;
     private Vector2 randPos;
     private float instantiateRate = 3f;
     private float nextInstantiate = 3f;
@@ -13,7 +13,7 @@ public class Eye : Enemy
         base.Start();
         sprite.color = Color.white;
         InvokeRepeating("DealDmg", instantiateRate, nextInstantiate);
-        InvokeRepeating("Charge", instantiateRate, 5f);
+        InvokeRepeating("Charge", instantiateRate, 4.5f);
     }
     protected override void ChasePlayer() {
         Vector3 playerPos = player.transform.position;
@@ -35,8 +35,14 @@ public class Eye : Enemy
     }
 
     private void Charge() {
-        if(Health <= 20) {
+        StartCoroutine(Spawn());
+    }
+
+    private IEnumerator Spawn()  {
+        if (Health <= 30) {
             Vector2 randPos2 = new Vector2(Random.Range(-6.4f, 6.4f), Random.Range(-3.35f, 3.35f));
+            Instantiate(wayPoint, randPos2, Quaternion.identity);
+            yield return new WaitForSeconds(0.5f);
             transform.position = new Vector2(randPos2.x, randPos2.y);
         }
     }
