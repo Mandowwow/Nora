@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LevelGeneration : MonoBehaviour
+public class EnemyGeneration : MonoBehaviour
 {
     public GameObject[] objects;
 
