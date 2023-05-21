@@ -16,7 +16,7 @@ public class FindEnemies : MonoBehaviour
         //Invoke("FindObjects", 0.1f);
     }
 
-    public void FindObjects() {
+    private void FindObjects() {
         foreach (GameObject enemy in GameObject.FindGameObjectsWithTag("Enemy")) {
             enemies.Add(enemy);
             Debug.Log(enemy);
