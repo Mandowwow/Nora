@@ -13,7 +13,7 @@ public class FindEnemies : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Invoke("FindObjects", 0.1f);
+        //Invoke("FindObjects", 0.1f);
     }
 
     public void FindObjects() {

@@ -30,6 +30,7 @@ public class Enemy : MonoBehaviour
         playerMovement = GameObject.FindGameObjectWithTag("Controller").GetComponent<PlayerMovement>();
         findEnemies = GameObject.FindGameObjectWithTag("Manager").GetComponent<FindEnemies>();
         sprite = GetComponent<SpriteRenderer>();
+        FindEnemies.Enemies.Add(this.gameObject);
         sprite.color = Color.black;
     }
 
