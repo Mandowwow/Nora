@@ -9,12 +9,14 @@ public class Eye : Enemy
     private Vector2 randPos;
     private float instantiateRate = 3f;
     private float nextInstantiate = 3f;
+
     protected override void Start() {
         base.Start();
         sprite.color = Color.white;
         InvokeRepeating("DealDmg", instantiateRate, nextInstantiate);
         InvokeRepeating("Charge", instantiateRate, 4.5f);
     }
+
     protected override void ChasePlayer() {
         Vector3 playerPos = player.transform.position;
 
@@ -24,12 +26,7 @@ public class Eye : Enemy
         transform.up = direction;
     }
 
-    protected override void Attack() {
-        //if enemy is close enough DealDmg()
-        //This will run in update()
-    }
-
-    protected override void DealDmg() {
+    private void DealDmg() {
         randPos = new Vector2(Random.Range(-5.5f, 5.5f), Random.Range(-3f, 0.75f));
         Instantiate(portal, randPos, Quaternion.identity);
     }

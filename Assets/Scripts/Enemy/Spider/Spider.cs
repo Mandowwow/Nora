@@ -13,17 +13,23 @@ public class Spider : Enemy
         sprite.color = Color.white;
         InvokeRepeating("DealDmg", instantiateRate, nextInstantiate);
     }
-    protected override void ChasePlayer() {
-        base.ChasePlayer();
-    }
 
     protected override void Attack() {
-        LookAtPlayer();
-        
+        LookAtPlayer();   
     }
 
-    protected override void DealDmg() {
+    private void DealDmg() {
         Instantiate(slime, transform.position, Quaternion.identity);
+    }
+
+    protected override void Dying() {
+        base.Dying();
+        if(Health <= 0) {
+            GameObject[] slime = GameObject.FindGameObjectsWithTag("Slime");
+            foreach(GameObject obj in slime) {
+                GameObject.Destroy(obj);
+            }
+        }
     }
 
     private void LookAtPlayer() {

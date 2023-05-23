@@ -8,43 +8,44 @@ public class Butterfly : Enemy
     [SerializeField] private GameObject gun;
     [SerializeField] private GameObject ball;
     [SerializeField] private GameObject barrel;
+    [SerializeField] private GameObject[] randPos;
+    private int rand = 0;
+    private bool move = false;
     protected override void Start() {
         base.Start();
         sprite.color = Color.white;
+        randPos = GameObject.FindGameObjectsWithTag("RandPos");
+        rand = Random.Range(0, randPos.Length);
         InvokeRepeating("DealDmg", 1f, 0.20f);
-        //Invoke("DealDmg", 1f);
-        InvokeRepeating("Ball", 1f, 1f);
+        Debug.Log(randPos.Length);
     }
 
-
-    protected override void DealDmg() {
-        if(Health >= 30) {
+    private void DealDmg() {
+        if(Health >= 30 ) {
             Instantiate(beam, gun.transform.position, Quaternion.identity);
+        } else {
+            move = true;
+            CancelInvoke();
+            InvokeRepeating("Ball", 3f, 1f);
         }
     }
 
     private void Ball() {
-        if(Health <= 29) {
+        if (Health <= 29) {
             Instantiate(ball, barrel.transform.position, Quaternion.identity);
-            Debug.Log("ball");
         }
     }
 
     protected override void ChasePlayer() {
-        //if(Health <= 30) {
-        //    base.ChasePlayer();
-        //    CancelInvoke();
-        //}
-    }
-    protected override void Attack() {
-        //base.Attack();
+        if (Health <= 29 && move == true) {
+            transform.position = Vector3.MoveTowards(transform.position, randPos[rand].transform.position, speed * Time.deltaTime);
+        }
     }
 
     protected override IEnumerator Change() {
         yield return new WaitForSeconds(0.1f);
         sprite.color = Color.white;
     }
-
 
     private void OnDrawGizmosSelected() {
         Gizmos.color = Color.red;

@@ -12,7 +12,6 @@ public class Beam : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         target = GameObject.FindGameObjectWithTag("BeamTarget");
         Shoot();
-        //transform.position = Vector3.MoveTowards(transform.position, target.transform.position, speed * Time.deltaTime);
     }
 
     private void Shoot() {

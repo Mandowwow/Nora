@@ -5,8 +5,24 @@ using UnityEngine;
 public class Mouth : Enemy
 {
     [SerializeField] private bool movingRight = true;
+    [SerializeField] private float attackRange;
+    [SerializeField] private LayerMask playerLayer;
     protected override void ChasePlayer() {
         transform.Translate(Vector2.left * speed * Time.deltaTime);                   
+    }
+
+    protected override void Attack() {
+        if (Vector2.Distance(transform.position, player.position) < attackRange && Time.time > nextFire) {
+            DealDmg();
+        }
+    }
+
+    private void DealDmg() {
+        Collider2D[] playerToDamage = Physics2D.OverlapCircleAll(transform.position, 1, playerLayer);
+        for (int i = 0; i < playerToDamage.Length; i++) {
+            playerToDamage[i].GetComponentInParent<Health>().TakeDamage(1);
+        }
+        nextFire = Time.time + fireRate;
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {

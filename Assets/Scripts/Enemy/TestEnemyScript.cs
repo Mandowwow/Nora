@@ -29,4 +29,18 @@ public class TestEnemyScript : MonoBehaviour
         }
 
     }
+
+    //------------------KNOCKBACK----------------------//
+    //private void OnCollisionStay2D(Collision2D collision) {
+    //    if (collision.collider.gameObject.CompareTag("Player")) {
+    //        Vector2 a = player.position;
+    //        Vector2 b = transform.position;
+
+    //        Vector2 direction = (a - b).normalized;
+    //        Vector2 knockback = direction * 5f;
+    //        rb = collision.gameObject.GetComponent<Rigidbody2D>();
+    //        //rb.AddForce(knockback);
+    //        rb.velocity = new Vector2(knockback.x, knockback.y);
+    //    }
+    //}
 }

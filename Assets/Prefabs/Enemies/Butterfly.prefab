@@ -236,6 +236,7 @@ MonoBehaviour:
   gun: {fileID: 7375224026723814772}
   ball: {fileID: 1361851709276467276, guid: ce01411dad103f54faa2c679839c43ff, type: 3}
   barrel: {fileID: 5315753139862409984}
+  randPos: []
 --- !u!61 &7375224027167047604
 BoxCollider2D:
   m_ObjectHideFlags: 0
