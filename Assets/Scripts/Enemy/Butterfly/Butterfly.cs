@@ -5,9 +5,10 @@ using UnityEngine;
 public class Butterfly : Enemy
 {
     [SerializeField] private GameObject beam;
-    [SerializeField] private GameObject gun;
     [SerializeField] private GameObject ball;
     [SerializeField] private GameObject barrel;
+    [SerializeField] private GameObject gun;
+    [SerializeField] private GameObject charge;
     [SerializeField] private GameObject[] randPos;
     private int rand = 0;
     private bool move = false;
@@ -26,14 +27,12 @@ public class Butterfly : Enemy
         } else {
             move = true;
             CancelInvoke();
-            InvokeRepeating("Ball", 3f, 1f);
+            InvokeRepeating("Ball", 4f, 1f);
         }
     }
 
     private void Ball() {
-        if (Health <= 29) {
-            Instantiate(ball, barrel.transform.position, Quaternion.identity);
-        }
+        StartCoroutine(Spawn());     
     }
 
     protected override void ChasePlayer() {
@@ -45,6 +44,12 @@ public class Butterfly : Enemy
     protected override IEnumerator Change() {
         yield return new WaitForSeconds(0.1f);
         sprite.color = Color.white;
+    }
+
+    private IEnumerator Spawn() {
+        Instantiate(charge, barrel.transform.position, Quaternion.identity);
+        yield return new WaitForSeconds(0.5f);
+        Instantiate(ball, barrel.transform.position, Quaternion.identity);
     }
 
     private void OnDrawGizmosSelected() {

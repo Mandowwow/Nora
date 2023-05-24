@@ -9,7 +9,6 @@ public class Enemy : MonoBehaviour
     [SerializeField] protected private SpriteRenderer sprite;
     [SerializeField] protected private Rigidbody2D rb;
     [SerializeField] private GameObject heart;
-    //[SerializeField] protected private float attackRange;
     [SerializeField] protected private float fireRate = 0.6f;
     protected private float nextFire = 0f;
     protected private PlayerMovement playerMovement;

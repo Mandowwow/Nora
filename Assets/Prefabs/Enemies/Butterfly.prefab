@@ -24,11 +24,41 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5315753139862409984}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.4, z: -0.16210938}
+  m_LocalPosition: {x: 0, y: 0.4, z: 0}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 7375224027167047607}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5694335482950426905
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3115479279481581502}
+  m_Layer: 0
+  m_Name: Mouth
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3115479279481581502
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5694335482950426905}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.185, z: 0}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7375224027167047607}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7375224026649687138
 GameObject:
@@ -138,6 +168,7 @@ Transform:
   m_Children:
   - {fileID: 7375224026723814778}
   - {fileID: 804904539691295341}
+  - {fileID: 3115479279481581502}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -227,15 +258,12 @@ MonoBehaviour:
   sprite: {fileID: 0}
   rb: {fileID: 0}
   heart: {fileID: 7268758921841377277, guid: d51346bfc6da7784ba9e835950155f64, type: 3}
-  playerLayer:
-    serializedVersion: 2
-    m_Bits: 16384
-  attackRange: 0
   fireRate: 0.6
   beam: {fileID: 2836463681970971719, guid: 76a48a9c11a021d43983adac947d5cd6, type: 3}
-  gun: {fileID: 7375224026723814772}
   ball: {fileID: 1361851709276467276, guid: ce01411dad103f54faa2c679839c43ff, type: 3}
   barrel: {fileID: 5315753139862409984}
+  gun: {fileID: 5694335482950426905}
+  charge: {fileID: 2878499501968654866, guid: a1123377932ee0e4d9cc0afc30a75dbc, type: 3}
   randPos: []
 --- !u!61 &7375224027167047604
 BoxCollider2D:

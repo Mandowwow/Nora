@@ -297,10 +297,6 @@ MonoBehaviour:
   sprite: {fileID: 0}
   rb: {fileID: 0}
   heart: {fileID: 7268758921841377277, guid: d51346bfc6da7784ba9e835950155f64, type: 3}
-  playerLayer:
-    serializedVersion: 2
-    m_Bits: 0
-  attackRange: 0
   fireRate: 0.6
   portal: {fileID: 6676095875542809022, guid: 1fef088c10806014a8badd7725f9f63d, type: 3}
   wayPoint: {fileID: 3834336736234178038, guid: 8f323c5b32e96044091b31a31472d1f8,
