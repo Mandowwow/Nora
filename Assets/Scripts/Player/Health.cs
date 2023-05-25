@@ -10,10 +10,12 @@ public class Health : MonoBehaviour
     [SerializeField] private Image[] hearts;
     [SerializeField] private Sprite fullHeart;
     [SerializeField] private Sprite emptyHeart;
+    private Collider2D col;
     private SpriteRenderer player;
 
     private void Start() {
         stats = GameObject.FindGameObjectWithTag("Manager").GetComponent<CharacterStats>();
+        col = GameObject.FindGameObjectWithTag("Player").GetComponent<Collider2D>();
         player = GetComponent<SpriteRenderer>();
     }
 
@@ -49,8 +51,10 @@ public class Health : MonoBehaviour
     }
 
     IEnumerator Change() {
+        col.enabled = false;
         player.color = Color.red;
-        yield return new WaitForSeconds(0.1f);
-        player.color = Color.white;
+        yield return new WaitForSeconds(1f);
+        player.color = Color.white;        
+        col.enabled = true;
     }
 }
