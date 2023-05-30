@@ -44,9 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objects:
-  - {fileID: 1452214515460013607, guid: fb37175280ae88444beaf38f522de472, type: 3}
-  - {fileID: 1452214515460013607, guid: fb37175280ae88444beaf38f522de472, type: 3}
-  - {fileID: 3259817878132797292, guid: f137eb97dfc012749839ecaddbfa606a, type: 3}
+  - {fileID: 362184563650865092, guid: df800e36eab29d543820d4899fb3b8f0, type: 3}
 --- !u!1 &5512866714690374294
 GameObject:
   m_ObjectHideFlags: 0
@@ -90,9 +88,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1122a390cfbc9d64eaec5528609eebe5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objects:
-  - {fileID: 6777477220313820889, guid: 98dcd29bb683a8f47a9483afe16e7c78, type: 3}
-  - {fileID: 3259817878132797292, guid: f137eb97dfc012749839ecaddbfa606a, type: 3}
+  objects: []
 --- !u!1 &6915953509271608274
 GameObject:
   m_ObjectHideFlags: 0
@@ -137,9 +133,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objects:
-  - {fileID: 1452214515460013607, guid: fb37175280ae88444beaf38f522de472, type: 3}
-  - {fileID: 1452214515460013607, guid: fb37175280ae88444beaf38f522de472, type: 3}
-  - {fileID: 3259817878132797292, guid: f137eb97dfc012749839ecaddbfa606a, type: 3}
+  - {fileID: 362184563650865092, guid: df800e36eab29d543820d4899fb3b8f0, type: 3}
 --- !u!1 &7241065294943012979
 GameObject:
   m_ObjectHideFlags: 0
@@ -184,9 +178,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objects:
-  - {fileID: 1452214515460013607, guid: fb37175280ae88444beaf38f522de472, type: 3}
-  - {fileID: 1452214515460013607, guid: fb37175280ae88444beaf38f522de472, type: 3}
-  - {fileID: 3259817878132797292, guid: f137eb97dfc012749839ecaddbfa606a, type: 3}
+  - {fileID: 362184563650865092, guid: df800e36eab29d543820d4899fb3b8f0, type: 3}
 --- !u!1 &7688178452455913979
 GameObject:
   m_ObjectHideFlags: 0
@@ -2457,6 +2449,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objects:
-  - {fileID: 1452214515460013607, guid: fb37175280ae88444beaf38f522de472, type: 3}
-  - {fileID: 1452214515460013607, guid: fb37175280ae88444beaf38f522de472, type: 3}
-  - {fileID: 3259817878132797292, guid: f137eb97dfc012749839ecaddbfa606a, type: 3}
+  - {fileID: 362184563650865092, guid: df800e36eab29d543820d4899fb3b8f0, type: 3}

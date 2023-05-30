@@ -29,7 +29,7 @@ public class Enemy : MonoBehaviour
         findEnemies = GameObject.FindGameObjectWithTag("Manager").GetComponent<FindEnemies>();
         sprite = GetComponent<SpriteRenderer>();
         FindEnemies.Enemies.Add(this.gameObject);
-        sprite.color = Color.black;
+        //sprite.color = Color.black;
     }
 
     private void Update() {
@@ -44,7 +44,7 @@ public class Enemy : MonoBehaviour
     }
 
     protected virtual void ChasePlayer() {
-        if (Vector2.Distance(transform.position, player.position) < 12) {
+        if (Vector2.Distance(transform.position, player.position) < 12 && Vector2.Distance(transform.position, player.position) > 0.35f) {
             transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
         }
     }
@@ -86,7 +86,8 @@ public class Enemy : MonoBehaviour
 
     protected virtual IEnumerator Change() {
         yield return new WaitForSeconds(0.1f);
-        sprite.color = Color.black;
+        //sprite.color = Color.black;
+        sprite.color = Color.white;
     }
 
 }
