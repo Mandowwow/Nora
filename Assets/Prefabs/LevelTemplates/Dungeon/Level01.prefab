@@ -44,9 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objects:
-  - {fileID: 2518210558495255735, guid: a000f447e9d81264e9944313332e4dd6, type: 3}
-  - {fileID: 2518210558495255735, guid: a000f447e9d81264e9944313332e4dd6, type: 3}
-  - {fileID: 3259817878132797292, guid: f137eb97dfc012749839ecaddbfa606a, type: 3}
+  - {fileID: 8579157217144655059, guid: 2b3d0d20040d2984596a482b25b0595c, type: 3}
 --- !u!1 &2414846052016089409
 GameObject:
   m_ObjectHideFlags: 0
@@ -91,9 +89,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objects:
-  - {fileID: 2518210558495255735, guid: a000f447e9d81264e9944313332e4dd6, type: 3}
-  - {fileID: 2518210558495255735, guid: a000f447e9d81264e9944313332e4dd6, type: 3}
-  - {fileID: 3259817878132797292, guid: f137eb97dfc012749839ecaddbfa606a, type: 3}
+  - {fileID: 8579157217144655059, guid: 2b3d0d20040d2984596a482b25b0595c, type: 3}
 --- !u!1 &2779209642611052503
 GameObject:
   m_ObjectHideFlags: 0
@@ -186,9 +182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objects:
-  - {fileID: 2518210558495255735, guid: a000f447e9d81264e9944313332e4dd6, type: 3}
-  - {fileID: 2518210558495255735, guid: a000f447e9d81264e9944313332e4dd6, type: 3}
-  - {fileID: 3259817878132797292, guid: f137eb97dfc012749839ecaddbfa606a, type: 3}
+  - {fileID: 8579157217144655059, guid: 2b3d0d20040d2984596a482b25b0595c, type: 3}
 --- !u!1 &4940635940491532491
 GameObject:
   m_ObjectHideFlags: 0
@@ -2556,9 +2550,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objects:
-  - {fileID: 2518210558495255735, guid: a000f447e9d81264e9944313332e4dd6, type: 3}
-  - {fileID: 2518210558495255735, guid: a000f447e9d81264e9944313332e4dd6, type: 3}
-  - {fileID: 3259817878132797292, guid: f137eb97dfc012749839ecaddbfa606a, type: 3}
+  - {fileID: 8579157217144655059, guid: 2b3d0d20040d2984596a482b25b0595c, type: 3}
 --- !u!1 &7860370768662376228
 GameObject:
   m_ObjectHideFlags: 0
@@ -2603,6 +2595,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objects:
-  - {fileID: 2518210558495255735, guid: a000f447e9d81264e9944313332e4dd6, type: 3}
-  - {fileID: 2518210558495255735, guid: a000f447e9d81264e9944313332e4dd6, type: 3}
-  - {fileID: 3259817878132797292, guid: f137eb97dfc012749839ecaddbfa606a, type: 3}
+  - {fileID: 8579157217144655059, guid: 2b3d0d20040d2984596a482b25b0595c, type: 3}
