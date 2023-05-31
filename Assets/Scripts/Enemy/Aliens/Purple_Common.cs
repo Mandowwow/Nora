@@ -4,9 +4,22 @@ using UnityEngine;
 
 public class Purple_Common : Enemy
 {
+    private void FixedUpdate() {
+        RunAway();
+    }
+    private void RunAway() {
+        if (Vector2.Distance(transform.position, player.position) < 5) {
+            TurnDirection();
+            Vector3 targetPos = player.position;
+            Vector2 direction = new Vector2(
+                targetPos.x - transform.position.x,
+                targetPos.y - transform.position.y);
+            direction = Quaternion.AngleAxis(45, Vector2.up) * direction;
+            rb.MovePosition(rb.position + -direction.normalized * speed * Time.fixedDeltaTime);
+        }
+    }
     protected override void ChasePlayer() {
-        base.ChasePlayer();
-        TurnDirection();
+        //base.ChasePlayer();
     }
     private void TurnDirection() {
         if (transform.position.x > player.transform.position.x) {
