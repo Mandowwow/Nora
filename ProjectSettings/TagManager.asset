@@ -12,6 +12,7 @@ TagManager:
   - Waypoint
   - Slime
   - RandPos
+  - Shield
   layers:
   - Default
   - TransparentFX

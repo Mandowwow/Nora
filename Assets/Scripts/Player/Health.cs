@@ -46,8 +46,10 @@ public class Health : MonoBehaviour
     }
 
     public void TakeDamage(int dmg) {
-        CharacterStats.Health = CharacterStats.Health - dmg;
-        StartCoroutine(Change());
+        if(CharacterStats.Shield == false) {
+            CharacterStats.Health = CharacterStats.Health - dmg;
+            StartCoroutine(Change());
+        }
     }
 
     IEnumerator Change() {
