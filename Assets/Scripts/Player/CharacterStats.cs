@@ -5,7 +5,7 @@ using UnityEngine;
 public class CharacterStats : MonoBehaviour
 {
     [SerializeField] private static int health = 6;
-    [SerializeField] private int numOfHearts;
+    [SerializeField] private static int numOfHearts = 3;
     [SerializeField] private static bool shield = false;
     public static int Health
     {
@@ -18,6 +18,9 @@ public class CharacterStats : MonoBehaviour
         set => shield = value;
     }
 
-    public int NumOfHearts => numOfHearts;
-
+    public static int NumOfHearts
+    {
+        get => numOfHearts;
+        set => numOfHearts = value;
+    }
 }

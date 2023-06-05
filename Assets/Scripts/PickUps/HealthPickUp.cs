@@ -11,7 +11,7 @@ public class HealthPickUp : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.CompareTag("Player")) {
-            if(CharacterStats.Health == stats.NumOfHearts) {
+            if(CharacterStats.Health == CharacterStats.NumOfHearts) {
                 return;
             } else {
                 CharacterStats.Health += 1;

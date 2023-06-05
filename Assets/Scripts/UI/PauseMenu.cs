@@ -41,12 +41,12 @@ public class PauseMenu : MonoBehaviour
         Application.Quit();
     }
 
-    void ShowMouse() {
+    static public void ShowMouse() {
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
     }
 
-    void HideMouse() {
+    static public void HideMouse() {
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
     }

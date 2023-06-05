@@ -30,6 +30,7 @@ public class Purple_Fat : Enemy
             FindEnemies.Enemies.Remove(this.gameObject);
             if (FindEnemies.Enemies.Count <= 0) {
                 Instantiate(findEnemies.Portal, new Vector3(0, 0, 0), Quaternion.identity);
+                LevelUp();
             }
 
         }

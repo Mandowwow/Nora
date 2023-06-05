@@ -25,8 +25,8 @@ public class Health : MonoBehaviour
             Destroy(this.gameObject);
         }
 
-        if(CharacterStats.Health > stats.NumOfHearts) {
-            CharacterStats.Health = stats.NumOfHearts;
+        if(CharacterStats.Health > CharacterStats.NumOfHearts) {
+            CharacterStats.Health = CharacterStats.NumOfHearts;
         }
 
         for (int i = 0; i < hearts.Length; i++) {
@@ -37,7 +37,7 @@ public class Health : MonoBehaviour
                 hearts[i].sprite = emptyHeart;
             }
 
-            if(i < stats.NumOfHearts) {
+            if(i < CharacterStats.NumOfHearts) {
                 hearts[i].enabled = true;
             } else {
                 hearts[i].enabled = false;
