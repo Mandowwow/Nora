@@ -1930,6 +1930,7 @@ GameObject:
   - component: {fileID: 1140351023}
   - component: {fileID: 1140351025}
   - component: {fileID: 1140351026}
+  - component: {fileID: 1140351027}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Manager
@@ -1986,6 +1987,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 152100970625bed4ea24e8b82dc36fea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1140351027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1140351022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ebd89690a056e94f8fd3ea1f483a1ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1448697043
@@ -3020,6 +3033,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8383360076945742691, guid: 644b0bf6538aee340932cf8e894ed934,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 644b0bf6538aee340932cf8e894ed934, type: 3}

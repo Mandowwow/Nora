@@ -38,6 +38,9 @@ public class LevelUpMenu : MonoBehaviour
 
     public void Shield() {
         CharacterStats.Shield = true;
+        AbilityController.state = AbilityController.State.Active;
+        GameObject player = GameObject.FindGameObjectWithTag("Controller");
+        player.transform.GetChild(6).gameObject.SetActive(true);
         CloseMenu();
     }
 }

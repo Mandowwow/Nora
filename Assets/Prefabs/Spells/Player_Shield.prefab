@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 4714507967767572478}
   - component: {fileID: 4714507967767572473}
   - component: {fileID: 4714507967767572472}
-  - component: {fileID: 2775073462300798354}
   - component: {fileID: 5741485696549315819}
+  - component: {fileID: 5573235696065473984}
   m_Layer: 0
   m_Name: Player_Shield
   m_TagString: Shield
@@ -103,22 +103,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!58 &2775073462300798354
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4714507967767572479}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.0045114723, y: 0.008240069}
-  serializedVersion: 2
-  m_Radius: 0.4629361
 --- !u!114 &5741485696549315819
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -131,3 +115,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94b1bd62450b57744abaf48aa78632d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!61 &5573235696065473984
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4714507967767572479}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.01478976, y: -0.04051894}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 0.16, y: 0.16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.5478562, y: 0.61796427}
+  m_EdgeRadius: 0
