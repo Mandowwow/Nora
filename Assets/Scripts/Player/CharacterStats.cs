@@ -7,6 +7,7 @@ public class CharacterStats : MonoBehaviour
     [SerializeField] private static int health = 6;
     [SerializeField] private static int numOfHearts = 3;
     [SerializeField] private static bool shield = false;
+    [SerializeField] private static float bulletSpeed = 6;
     public static int Health
     {
         get => health;
@@ -22,5 +23,11 @@ public class CharacterStats : MonoBehaviour
     {
         get => numOfHearts;
         set => numOfHearts = value;
+    }
+
+    public static float BulletSpeed
+    {
+        get => bulletSpeed;
+        set => bulletSpeed = value;
     }
 }

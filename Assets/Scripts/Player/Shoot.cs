@@ -10,7 +10,7 @@ public class Shoot : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        rb.velocity = transform.right * speed;
+        rb.velocity = transform.right * CharacterStats.BulletSpeed;
         StartCoroutine(Wait());
     }
 

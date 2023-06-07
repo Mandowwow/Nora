@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2222176060421809577}
   - component: {fileID: 4273900507862005131}
   - component: {fileID: 3205095625871974511}
-  m_Layer: 0
+  m_Layer: 21
   m_Name: Gray_Ball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -133,4 +133,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05491b61d1ec2d340b482418056232ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
+  speed: 0

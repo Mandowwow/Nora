@@ -5,7 +5,7 @@ using UnityEngine;
 public class ShieldForce : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision) {
-        if (collision.CompareTag("Enemy")) {           
+        if (!collision.CompareTag("Wall")) {           
             Debug.Log("Not wall");
             StartCoroutine(Change()); 
         }

@@ -43,4 +43,9 @@ public class LevelUpMenu : MonoBehaviour
         player.transform.GetChild(6).gameObject.SetActive(true);
         CloseMenu();
     }
+
+    public void IncreaseBulletSpeed() {
+        CharacterStats.BulletSpeed += 3;
+        CloseMenu();
+    }
 }
