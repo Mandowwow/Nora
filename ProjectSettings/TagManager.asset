@@ -13,6 +13,7 @@ TagManager:
   - Slime
   - RandPos
   - Shield
+  - Canvas
   layers:
   - Default
   - TransparentFX
