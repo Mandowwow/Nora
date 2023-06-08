@@ -630,6 +630,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shield
       objectReference: {fileID: 0}
+    - target: {fileID: 5996007852209626612, guid: 1e1b1d0d573e3e649a77a8cf1a932e76,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5996007852209626613, guid: 1e1b1d0d573e3e649a77a8cf1a932e76,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1429,6 +1434,7 @@ GameObject:
   - component: {fileID: 1457356234}
   - component: {fileID: 1457356238}
   - component: {fileID: 1457356239}
+  - component: {fileID: 1457356240}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: GameController
@@ -1550,6 +1556,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelUpMenuUi: {fileID: 530946323}
   stats: {fileID: 1140351025}
+--- !u!114 &1457356240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1457356233}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 818e7294a53d950448f53072bbbe4e68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 6234174059979473498, guid: 0bd0ca1f7f2ec4943bb62e712ecc29d9, type: 3}
+  - {fileID: 5294060050146398515, guid: 8dd267807e01e284d963b0504201ccde, type: 3}
+  - {fileID: 5996007852209626612, guid: 1e1b1d0d573e3e649a77a8cf1a932e76, type: 3}
+  parentObject: {fileID: 530946323}
 --- !u!224 &1458458259 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6234174059979473499, guid: 0bd0ca1f7f2ec4943bb62e712ecc29d9,
@@ -1801,6 +1824,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HealthUp
       objectReference: {fileID: 0}
+    - target: {fileID: 5294060050146398515, guid: 8dd267807e01e284d963b0504201ccde,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8dd267807e01e284d963b0504201ccde, type: 3}
 --- !u!1 &1862780156
@@ -1954,6 +1982,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cog
+      objectReference: {fileID: 0}
+    - target: {fileID: 6234174059979473498, guid: 0bd0ca1f7f2ec4943bb62e712ecc29d9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6234174059979473499, guid: 0bd0ca1f7f2ec4943bb62e712ecc29d9,
         type: 3}
@@ -2229,7 +2262,7 @@ PrefabInstance:
     - target: {fileID: 8901023934580366065, guid: e2bc61387b962f24c9b848309890638b,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8901023934580366066, guid: e2bc61387b962f24c9b848309890638b,
         type: 3}

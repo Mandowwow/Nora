@@ -10,9 +10,9 @@ public class ButtonController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        menu = GameObject.FindGameObjectWithTag("Canvas").GetComponent<LevelUpMenu>();
+        menu = GameObject.FindGameObjectWithTag("GameController").GetComponent<LevelUpMenu>();
         button = button.GetComponent<Button>();
-        button.onClick.AddListener(test);
+        button.onClick.AddListener(menu.IncreaseBulletSpeed);
     }
 
     // Update is called once per frame
