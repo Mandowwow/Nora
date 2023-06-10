@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5477361673377489946}
   - component: {fileID: 494143971301119417}
   - component: {fileID: 1969084056849297706}
+  - component: {fileID: 8183345944479211179}
   m_Layer: 9
   m_Name: Purple_Long
   m_TagString: Enemy
@@ -117,7 +118,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.013247967, y: 0.6383522}
+  m_Offset: {x: 0.15423143, y: 0.50433946}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.483, y: 0.115}
@@ -128,7 +129,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.47456837, y: 1.3451368}
+  m_Size: {x: 0.80952716, y: 1.2334597}
   m_EdgeRadius: 0
 --- !u!114 &1969084056849297706
 MonoBehaviour:
@@ -150,6 +151,27 @@ MonoBehaviour:
   fireRate: 0.6
   spit: {fileID: 5861732203937392003, guid: 33e6922b52ac8f2418bbbdf18987e364, type: 3}
   barrel: {fileID: 9163906306497330015}
+--- !u!50 &8183345944479211179
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5477361673377489945}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &9163906306497330015
 GameObject:
   m_ObjectHideFlags: 0
@@ -174,7 +196,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9163906306497330015}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.025, y: 0.962, z: -0.08811696}
+  m_LocalPosition: {x: 0.502, y: 0.459, z: -0.08811696}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5477361673377489947}

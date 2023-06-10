@@ -28,6 +28,8 @@ public class Purple_Long : Enemy
     }
 
     public void Spit() {
-        Instantiate(spit, barrel.transform.position, Quaternion.identity);
+        if (Vector2.Distance(transform.position, player.position) < 5f) {
+            Instantiate(spit, barrel.transform.position, Quaternion.identity);
+        }
     }
 }

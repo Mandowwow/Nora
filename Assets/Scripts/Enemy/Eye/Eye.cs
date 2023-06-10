@@ -23,7 +23,7 @@ public class Eye : Enemy
         Vector2 direction = new Vector2(
             playerPos.x - transform.position.x,
             playerPos.y - transform.position.y);
-        transform.up = direction;
+        transform.up = direction.normalized;
     }
 
     private void DealDmg() {
