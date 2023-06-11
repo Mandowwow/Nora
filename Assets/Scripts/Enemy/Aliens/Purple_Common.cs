@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class Purple_Common : Enemy
 {
-    private void FixedUpdate() {
-        //RunAway();
-    }
     private void RunAway() {
         if (Vector2.Distance(transform.position, player.position) < 5) {
             TurnDirection();

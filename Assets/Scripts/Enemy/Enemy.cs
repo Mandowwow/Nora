@@ -14,7 +14,7 @@ public class Enemy : MonoBehaviour
     protected private float nextFire = 0f;
     protected private PlayerMovement playerMovement;
     protected private Transform player;
-    private static int playerPoints;
+    protected private static int playerPoints;
     protected private FindEnemies findEnemies;
 
     public int Health
@@ -35,11 +35,15 @@ public class Enemy : MonoBehaviour
     }
 
     private void Update() {
-        ChasePlayer();
+        //ChasePlayer();
         Attack();
     }
 
-    public void TakeDamage(int damage) {
+    private void FixedUpdate() {
+        ChasePlayer();
+    }
+
+    public virtual void TakeDamage(int damage) {
         Health -= damage;
         ChangeColor();
         Dying();
@@ -47,7 +51,8 @@ public class Enemy : MonoBehaviour
 
     protected virtual void ChasePlayer() {
         if (Vector2.Distance(transform.position, player.position) < 12 && Vector2.Distance(transform.position, player.position) > 0.35f) {
-            transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+            Vector2 direction = (player.position - transform.position).normalized;
+            rb.MovePosition(rb.position + direction * Time.deltaTime * speed);
         }
     }
 
@@ -79,7 +84,7 @@ public class Enemy : MonoBehaviour
         levelUpMenuUi.OpenMenu();
     }
 
-    private void RandomDrop() {
+    protected void RandomDrop() {
         int rand = Random.Range(1, 26);
         if(rand > 24) {
             //1 in 25 chance 
@@ -87,15 +92,11 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    private void OnDrawGizmosSelected() {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, 1);
-    }
-
     protected virtual IEnumerator Change() {
         yield return new WaitForSeconds(0.1f);
         //sprite.color = Color.black;
         sprite.color = Color.white;
     }
+    
 
 }

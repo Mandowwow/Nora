@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SmallEye : Enemy
+public class Bacteria : Enemy
 {
     protected override void ChasePlayer() {
         base.ChasePlayer();
