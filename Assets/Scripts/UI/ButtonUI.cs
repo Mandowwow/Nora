@@ -11,5 +11,11 @@ public class ButtonUI : MonoBehaviour
     
     private void StartGame() {
         SceneManager.LoadScene("Dungeon");
+        CharacterStats.NumOfHearts = 3;
+        CharacterStats.Health = 6;
+        CharacterStats.Shield = false;
+        AbilityController.state = AbilityController.State.Inactive;
+        CharacterStats.BulletSpeed = 6;
+        FindEnemies.Enemies.Clear();
     }
 }

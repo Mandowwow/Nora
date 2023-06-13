@@ -14,7 +14,6 @@ public class AbilityController : MonoBehaviour
     void Start()
     {
         if(state == State.Active) {
-            Debug.Log(CharacterStats.Shield); 
             GameObject player = GameObject.FindGameObjectWithTag("Controller");
             player.transform.GetChild(6).gameObject.SetActive(true);
         }
