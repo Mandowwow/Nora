@@ -11,8 +11,6 @@ public class BlobBall : MonoBehaviour
     private void Start() {
         rb = GetComponent<Rigidbody2D>();
         int rand = Random.Range(0, 4);
-        //Vector2 direction = new Vector2(-1, 0);
-        //rb.velocity = direction.normalized * speed;
         rb.velocity = angles[rand] * speed;
         StartCoroutine(Wait());
     }
