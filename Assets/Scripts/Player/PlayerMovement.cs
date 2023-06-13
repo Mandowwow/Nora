@@ -5,8 +5,8 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     //Movement Variables
-    [SerializeField] private Rigidbody2D rb;
-    [SerializeField] private float runSpeed;
+    [SerializeField] private Rigidbody2D rb = null;
+    [SerializeField] private float runSpeed = 0;
     private Vector2 movement;
 
     //Shooting Variables

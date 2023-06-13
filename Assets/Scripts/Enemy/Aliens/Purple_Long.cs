@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Purple_Long : Enemy
 {
-    [SerializeField] private GameObject spit;
-    [SerializeField] private GameObject barrel;
+    [SerializeField] private GameObject spit = null;
+    [SerializeField] private GameObject barrel = null;
     protected override void ChasePlayer() {
         if (Vector2.Distance(transform.position, player.position) < 12 && Vector2.Distance(transform.position, player.position) > 5f) {
             transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);

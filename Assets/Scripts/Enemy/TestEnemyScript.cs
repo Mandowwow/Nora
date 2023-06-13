@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TestEnemyScript : MonoBehaviour
 {
-    [SerializeField] private Transform[] ghostPlayers;
+    [SerializeField] private Transform[] ghostPlayers = null;
     private Transform player;
     private float speed = 1f;
     private int rand;

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Cell : Enemy
 {
+    [SerializeField] private GameObject spawn;
     [SerializeField] private GameObject smallCell;
     protected override void ChasePlayer() {
         base.ChasePlayer();
@@ -23,7 +24,7 @@ public class Cell : Enemy
             Debug.Log(FindEnemies.Enemies.Count);
             FindEnemies.Enemies.Remove(this.gameObject);
         }
-        Instantiate(smallCell, transform.position, Quaternion.identity);
+        Instantiate(smallCell, spawn.transform.position, Quaternion.identity);
     }
 
     private void OnCollisionStay2D(Collision2D collision) {

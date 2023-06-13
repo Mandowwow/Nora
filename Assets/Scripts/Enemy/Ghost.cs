@@ -6,7 +6,7 @@ public class Ghost : Enemy
 {
     private SpriteRenderer sp;
     [SerializeField] private LayerMask playerLayer;
-    [SerializeField] private float attackRange;
+    [SerializeField] private float attackRange = 0f;
 
     protected override void Start() {
         base.Start();

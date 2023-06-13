@@ -169,3 +169,4 @@ MonoBehaviour:
   rb: {fileID: 0}
   heart: {fileID: 7268758921841377277, guid: d51346bfc6da7784ba9e835950155f64, type: 3}
   fireRate: 0.6
+  bullet: {fileID: 9059355006293607620, guid: cafe56d0bbdad314893404db860654b9, type: 3}

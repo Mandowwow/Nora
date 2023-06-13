@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Purple_Fat : Enemy
 {
-    [SerializeField] GameObject barrel;
-    [SerializeField] GameObject barrel2;
-    [SerializeField] GameObject barrel3;
-    [SerializeField] GameObject barrel4;
-    [SerializeField] GameObject bullet;
+    [SerializeField] GameObject barrel = null;
+    [SerializeField] GameObject barrel2 = null;
+    [SerializeField] GameObject barrel3 = null;
+    [SerializeField] GameObject barrel4 = null;
+    [SerializeField] GameObject bullet = null;
     protected override void ChasePlayer() {
         base.ChasePlayer();
         TurnDirection();

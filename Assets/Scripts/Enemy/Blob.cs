@@ -7,13 +7,13 @@ public class Blob : Enemy
     private Vector2 randPos;
     private float randTime;
     private bool canMove = true;
+    [SerializeField] private GameObject bullet;
 
     protected override void Start() {
         base.Start();
         randTime = Random.Range(1f, 3f);
         randPos = new Vector2(Random.Range(-6.4f, 6.4f), Random.Range(-3.5f, 3f));
     }
-
     protected override void ChasePlayer() {
         if(Vector2.Distance(transform.position, randPos) > 0) {
             transform.position = Vector2.MoveTowards(transform.position, randPos, speed * Time.deltaTime);
@@ -26,6 +26,15 @@ public class Blob : Enemy
             collision.gameObject.GetComponent<Health>().TakeDamage(1);
             nextFire = Time.time + fireRate;
         }
+    }
+    protected override void Dying() {
+        base.Dying();
+        if(health <= 0) {
+            BlowUp();
+        }
+    }
+    private void BlowUp() {
+        Instantiate(bullet, transform.position, Quaternion.identity);
     }
 
     private IEnumerator Wait() {

@@ -5,10 +5,11 @@ using UnityEngine;
 public class Shoot : MonoBehaviour
 {
     private Rigidbody2D rb;
-    [SerializeField] float speed;
+    private Animator anim;
     // Start is called before the first frame update
     void Start()
     {
+        anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = transform.right * CharacterStats.BulletSpeed;
         StartCoroutine(Wait());
@@ -22,7 +23,11 @@ public class Shoot : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.CompareTag("Enemy")) {
             collision.GetComponent<Enemy>().TakeDamage(1);
-            Destroy(this.gameObject);
+            GetComponent<Collider2D>().enabled = false;
+            gameObject.transform.localScale += new Vector3(0.2f, 0.2f);
+            anim.Play("Impact");
+            rb.velocity = new Vector2(0, 0);
+            Destroy(this.gameObject, 0.3f);
         } else if (collision.CompareTag("Wall")) {
             Destroy(this.gameObject);
         }
