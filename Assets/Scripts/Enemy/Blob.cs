@@ -36,7 +36,6 @@ public class Blob : Enemy
     private void BlowUp() {
         Instantiate(bullet, transform.position, Quaternion.identity);
     }
-
     private IEnumerator Wait() {
         canMove = false;
         Debug.Log("Waiting " + randTime);

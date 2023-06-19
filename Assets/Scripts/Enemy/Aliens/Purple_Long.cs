@@ -6,29 +6,27 @@ public class Purple_Long : Enemy
 {
     [SerializeField] private GameObject spit = null;
     [SerializeField] private GameObject barrel = null;
-    protected override void ChasePlayer() {
-        if (Vector2.Distance(transform.position, player.position) < 12 && Vector2.Distance(transform.position, player.position) > 5f) {
-            transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
-        }
-        TurnDirection();
+    private Animator anim;
+
+    protected override void Start() {
+        base.Start();
+        anim = GetComponent<Animator>();
     }
+    protected override void ChasePlayer() {
+        if (Vector2.Distance(transform.position, player.position) >= 0f) {
+            anim.Play("Spit");
+        }
+    }
+    
     private void OnCollisionStay2D(Collision2D collision) {
         if (collision.gameObject.CompareTag("Controller") && Time.time > nextFire) {
             collision.gameObject.GetComponent<Health>().TakeDamage(1);
             nextFire = Time.time + fireRate;
         }
     }
-    private void TurnDirection() {
-        if (transform.position.x > player.transform.position.x) {
-            sprite.flipX = true;
-        }
-        else {
-            sprite.flipX = false;
-        }
-    }
-
     public void Spit() {
-        if (Vector2.Distance(transform.position, player.position) < 5f) {
+        if (Vector2.Distance(transform.position, player.position) < 13f) {
+            rb.velocity = new Vector2(0f,0f);
             Instantiate(spit, barrel.transform.position, Quaternion.identity);
         }
     }
