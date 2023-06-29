@@ -17,5 +17,6 @@ public class ButtonUI : MonoBehaviour
         AbilityController.state = AbilityController.State.Inactive;
         CharacterStats.BulletSpeed = 6;
         FindEnemies.Enemies.Clear();
+        LevelGeneration.PlayerPoints = 0;
     }
 }

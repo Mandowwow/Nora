@@ -19,7 +19,7 @@ public class Cell : Enemy
     protected override void Dying() {
         if (health <= 0) {
             Destroy(this.gameObject);
-            playerPoints += 1;
+            //playerPoints += 1;
             RandomDrop();
             Debug.Log(FindEnemies.Enemies.Count);
             FindEnemies.Enemies.Remove(this.gameObject);

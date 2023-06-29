@@ -18,7 +18,6 @@ public class Butterfly : Enemy
         randPos = GameObject.FindGameObjectsWithTag("RandPos");
         rand = Random.Range(0, randPos.Length);
         InvokeRepeating("DealDmg", 1f, 0.20f);
-        Debug.Log(randPos.Length);
     }
 
     private void DealDmg() {

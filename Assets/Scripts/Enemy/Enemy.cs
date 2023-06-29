@@ -14,7 +14,7 @@ public class Enemy : MonoBehaviour
     protected private float nextFire = 0f;
     protected private PlayerMovement playerMovement;
     protected private Transform player;
-    protected private static int playerPoints;
+    //protected private static int playerPoints;
     protected private FindEnemies findEnemies;
 
     public int Health
@@ -22,6 +22,11 @@ public class Enemy : MonoBehaviour
         get => health;
         set => health = value;
     }
+    //public static int PlayerPoints
+    //{
+    //    get => playerPoints;
+    //    set => playerPoints = value;
+    //}
 
     protected virtual void Start() {
         rb = GetComponent<Rigidbody2D>();
@@ -67,13 +72,11 @@ public class Enemy : MonoBehaviour
     protected virtual void Dying() {
         if (health <= 0) {
             Destroy(this.gameObject);
-            playerPoints += 1;
             RandomDrop();
-            Debug.Log(FindEnemies.Enemies.Count);
             FindEnemies.Enemies.Remove(this.gameObject);
             if (FindEnemies.Enemies.Count <= 0) {
                 Instantiate(findEnemies.Portal, new Vector3(0,0,0), Quaternion.identity);
-                LevelUp();
+                //LevelUp();
             }
 
         }

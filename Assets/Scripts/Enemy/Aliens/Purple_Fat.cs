@@ -26,11 +26,10 @@ public class Purple_Fat : Enemy
         if (health <= 0) {
             BlowUp();
             Destroy(this.gameObject);
-            Debug.Log(FindEnemies.Enemies.Count);
             FindEnemies.Enemies.Remove(this.gameObject);
             if (FindEnemies.Enemies.Count <= 0) {
                 Instantiate(findEnemies.Portal, new Vector3(0, 0, 0), Quaternion.identity);
-                LevelUp();
+                //LevelUp();
             }
 
         }
