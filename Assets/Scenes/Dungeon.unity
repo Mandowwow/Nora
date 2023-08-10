@@ -337,6 +337,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: center
       objectReference: {fileID: 0}
+    - target: {fileID: 1140469447977145453, guid: b6a1b01e76a63fa4b97467e7b36e622f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1140469447977145454, guid: b6a1b01e76a63fa4b97467e7b36e622f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1842,7 +1847,6 @@ MonoBehaviour:
   - {fileID: 5908353447084392717, guid: b2550118e4f558044921410a738b091a, type: 3}
   - {fileID: 7391284403099385510, guid: b574f3c42f045c14080a02f6474049a8, type: 3}
   - {fileID: 7766578136517144736, guid: ffdc3135e17fe5846a0bb2e6c1f19edf, type: 3}
-  - {fileID: 0}
 --- !u!1001 &1784820323
 PrefabInstance:
   m_ObjectHideFlags: 0
