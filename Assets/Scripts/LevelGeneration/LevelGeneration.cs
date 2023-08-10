@@ -24,7 +24,7 @@ public class LevelGeneration : MonoBehaviour
             int rand = Random.Range(4, 7);
             Instantiate(objects[rand], transform.position, Quaternion.identity);
         } else if (playerPoints >= 5) {
-            int rand = Random.Range(7, 10);
+            int rand = Random.Range(7, 11);
             Instantiate(objects[rand], transform.position, Quaternion.identity);
         }
 
