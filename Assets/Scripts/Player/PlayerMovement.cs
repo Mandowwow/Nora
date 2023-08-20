@@ -2,6 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+public enum Weapon {
+    Gun,
+    Lazer
+}
 public class PlayerMovement : MonoBehaviour
 {
     //Movement Variables
@@ -10,9 +15,11 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 movement;
 
     //Shooting Variables
+    private Weapon currentWeapon = Weapon.Lazer;
     private float nextFire = 0f;
     [SerializeField] private float fireRate = 0.5f;
     [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private GameObject lazerPrefab;
     [SerializeField] private Transform shootU;
     [SerializeField] private Transform shootD;
     [SerializeField] private Transform shootL;
@@ -31,17 +38,35 @@ public class PlayerMovement : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
-        if(Input.GetKey("right") && Time.time > nextFire) {
-            Shoot(shootR);
-        }
-        else if (Input.GetKey("left") && Time.time > nextFire) {
-            Shoot(shootL);
-        }
-        else if (Input.GetKey("down") && Time.time > nextFire) {
-            Shoot(shootD);
-        }
-        else if (Input.GetKey("up") && Time.time > nextFire) {
-            Shoot(shootU);
+        switch (currentWeapon) {
+            case Weapon.Gun:
+                if (Input.GetKey("right") && Time.time > nextFire) {
+                    Shoot(shootR);
+                }
+                else if (Input.GetKey("left") && Time.time > nextFire) {
+                    Shoot(shootL);
+                }
+                else if (Input.GetKey("down") && Time.time > nextFire) {
+                    Shoot(shootD);
+                }
+                else if (Input.GetKey("up") && Time.time > nextFire) {
+                    Shoot(shootU);
+                }
+                break;
+            case Weapon.Lazer:
+                if (Input.GetKey("right") && Time.time > nextFire) {
+                    LazerShoot(shootR);
+                }
+                else if (Input.GetKey("left") && Time.time > nextFire) {
+                    LazerShoot(shootL);
+                }
+                else if (Input.GetKey("down") && Time.time > nextFire) {
+                    LazerShoot(shootD);
+                }
+                else if (Input.GetKey("up") && Time.time > nextFire) {
+                    LazerShoot(shootU);
+                }
+                break;
         } 
     }
 
@@ -64,6 +89,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void Shoot(Transform pos) {
         Instantiate(bulletPrefab, pos.position, pos.rotation);
+        nextFire = Time.time + fireRate;
+    }
+
+    private void LazerShoot(Transform pos) {
+        Instantiate(lazerPrefab, pos.position, pos.rotation, pos);
         nextFire = Time.time + fireRate;
     }
 }
