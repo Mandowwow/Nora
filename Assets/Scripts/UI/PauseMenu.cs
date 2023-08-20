@@ -4,7 +4,13 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
-{
+{   
+    //Music
+    public AudioSource source;
+    public AudioSource source2;
+    public AudioClip clip;
+    public AudioClip clip2;
+    //
     public static bool gameIsPaused = false;
     public GameObject pauseMenuUi;
     private void Update() {
@@ -24,12 +30,16 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         gameIsPaused = false;
         HideMouse();
+        source.GetComponent<AudioSource>().UnPause();
+        source2.GetComponent<AudioSource>().Pause();
     }
 
     void Pause() {
         pauseMenuUi.SetActive(true);
+        source.GetComponent<AudioSource>().Pause();
         Time.timeScale = 0f;
         gameIsPaused = true;
+        source2.PlayOneShot(clip);
     }
 
     public void LoadMenu() {
