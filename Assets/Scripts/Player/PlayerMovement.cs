@@ -53,6 +53,7 @@ public class PlayerMovement : MonoBehaviour
                     Shoot(shootU);
                 }
                 break;
+
             case Weapon.Lazer:
                 if (Input.GetKey("right") && Time.time > nextFire) {
                     LazerShoot(shootR);
