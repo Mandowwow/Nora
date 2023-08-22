@@ -9,11 +9,10 @@ public class Lazer : MonoBehaviour
     public List<GameObject> enemies = new List<GameObject>();
     void Update()
     {
-        //if(Time.time > nextFire) {
-        //    foreach (GameObject enemy in enemies) {
-        //        enemy.
-        //    }
-        //}
+        //Destroy(this.gameObject, 0.5f);
+    }
+
+    private void Start() {
         Destroy(this.gameObject, 0.5f);
     }
     private void OnTriggerEnter2D(Collider2D collision) {

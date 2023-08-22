@@ -17,9 +17,11 @@ public class PlayerMovement : MonoBehaviour
     //Shooting Variables
     private Weapon currentWeapon = Weapon.Lazer;
     private float nextFire = 0f;
+    bool canShoot = true;
     [SerializeField] private float fireRate = 0.5f;
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private GameObject lazerPrefab;
+    [SerializeField] private GameObject charge;
     [SerializeField] private Transform shootU;
     [SerializeField] private Transform shootD;
     [SerializeField] private Transform shootL;
@@ -55,17 +57,17 @@ public class PlayerMovement : MonoBehaviour
                 break;
 
             case Weapon.Lazer:
-                if (Input.GetKey("right") && Time.time > nextFire) {
-                    LazerShoot(shootR);
+                if (Input.GetKey("right") && Time.time > nextFire && canShoot) {
+                    StartCoroutine(LazerShoot(shootR));
                 }
-                else if (Input.GetKey("left") && Time.time > nextFire) {
-                    LazerShoot(shootL);
+                else if (Input.GetKey("left") && Time.time > nextFire && canShoot) {
+                    StartCoroutine(LazerShoot(shootL));
                 }
-                else if (Input.GetKey("down") && Time.time > nextFire) {
-                    LazerShoot(shootD);
+                else if (Input.GetKey("down") && Time.time > nextFire && canShoot) {
+                    StartCoroutine(LazerShoot(shootD));
                 }
-                else if (Input.GetKey("up") && Time.time > nextFire) {
-                    LazerShoot(shootU);
+                else if (Input.GetKey("up") && Time.time > nextFire && canShoot) {
+                    StartCoroutine(LazerShoot(shootU));
                 }
                 break;
         } 
@@ -93,7 +95,11 @@ public class PlayerMovement : MonoBehaviour
         nextFire = Time.time + fireRate;
     }
 
-    private void LazerShoot(Transform pos) {
+    private IEnumerator LazerShoot(Transform pos) {
+        Instantiate(charge, pos.position, pos.rotation, pos);
+        canShoot = false;
+        yield return new WaitForSeconds(0.45f);
+        canShoot = true;
         Instantiate(lazerPrefab, pos.position, pos.rotation, pos);
         nextFire = Time.time + fireRate;
     }

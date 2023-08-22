@@ -2242,6 +2242,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7497951523025942297}
     m_Modifications:
+    - target: {fileID: 1140469447468449810, guid: b6a1b01e76a63fa4b97467e7b36e622f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 1140469447468449812, guid: b6a1b01e76a63fa4b97467e7b36e622f,
         type: 3}
       propertyPath: angularSpeed
@@ -2312,10 +2317,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1140469448612954939, guid: b6a1b01e76a63fa4b97467e7b36e622f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 1140469448612954941, guid: b6a1b01e76a63fa4b97467e7b36e622f,
         type: 3}
       propertyPath: angularSpeed
       value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1140469448658677285, guid: b6a1b01e76a63fa4b97467e7b36e622f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 1140469448658677291, guid: b6a1b01e76a63fa4b97467e7b36e622f,
         type: 3}
@@ -2327,15 +2342,30 @@ PrefabInstance:
       propertyPath: angularSpeed
       value: 1.25
       objectReference: {fileID: 0}
+    - target: {fileID: 1140469448785244014, guid: b6a1b01e76a63fa4b97467e7b36e622f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 1140469448911681104, guid: b6a1b01e76a63fa4b97467e7b36e622f,
         type: 3}
       propertyPath: angularSpeed
       value: 1.25
       objectReference: {fileID: 0}
+    - target: {fileID: 1140469448911681135, guid: b6a1b01e76a63fa4b97467e7b36e622f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 1140469449068344625, guid: b6a1b01e76a63fa4b97467e7b36e622f,
         type: 3}
       propertyPath: angularSpeed
       value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1140469449068344655, guid: b6a1b01e76a63fa4b97467e7b36e622f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6a1b01e76a63fa4b97467e7b36e622f, type: 3}
