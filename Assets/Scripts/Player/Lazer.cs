@@ -7,19 +7,14 @@ public class Lazer : MonoBehaviour
     private static float nextFire = 0f;
     private static float fireRate = 0.25f;
     public List<GameObject> enemies = new List<GameObject>();
-    void Update()
-    {
-        //Destroy(this.gameObject, 0.5f);
-    }
 
     private void Start() {
         Destroy(this.gameObject, 0.5f);
     }
     private void OnTriggerEnter2D(Collider2D collision) {
-        if (collision.gameObject.CompareTag("Enemy")) {
+        if (collision.GetComponent<Enemy>()) {
             enemies.Add(collision.gameObject);
             Debug.Log(enemies.Count);
-            //collision.gameObject.GetComponent<Enemy>().TakeDamage(1);
         }
     }
 
@@ -27,9 +22,12 @@ public class Lazer : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy") && Time.time > nextFire) {          
             foreach (GameObject enemy in enemies) {
                 enemy.GetComponent<Enemy>().TakeDamage(1);
-                Debug.Log(enemy.name);
+                if(enemy.GetComponent<Enemy>().Health <= 0) {
+                    enemies.Remove(enemy);
+                    Debug.Log("Removed " + enemy.name);
+                }
+                nextFire = Time.time + fireRate;
             }
-            nextFire = Time.time + fireRate;
         }
     }
 
