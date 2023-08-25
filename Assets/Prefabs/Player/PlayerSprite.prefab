@@ -238,6 +238,8 @@ MonoBehaviour:
     type: 3}
   lazerPrefab: {fileID: 7943511896457345484, guid: c909b40b06b19e440aa379ebde0fe07e,
     type: 3}
+  slime: {fileID: 2411335992645965101, guid: ee2d755fdd65ffb4288f1c44dfbc1e28, type: 3}
+  charge: {fileID: 2878499501968654866, guid: a1123377932ee0e4d9cc0afc30a75dbc, type: 3}
   shootU: {fileID: 4818163633763036903}
   shootD: {fileID: 5164669591716482500}
   shootL: {fileID: 5374825756203040756}

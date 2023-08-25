@@ -5,7 +5,8 @@ using UnityEngine;
 
 public enum Weapon {
     Gun,
-    Lazer
+    Lazer,
+    Slime
 }
 public class PlayerMovement : MonoBehaviour
 {
@@ -15,12 +16,13 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 movement;
 
     //Shooting Variables
-    private Weapon currentWeapon = Weapon.Lazer;
+    private Weapon currentWeapon = Weapon.Slime;
     private float nextFire = 0f;
     bool canShoot = true;
     [SerializeField] private float fireRate = 0.5f;
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private GameObject lazerPrefab;
+    [SerializeField] private GameObject slime;
     [SerializeField] private GameObject charge;
     [SerializeField] private Transform shootU;
     [SerializeField] private Transform shootD;
@@ -70,6 +72,12 @@ public class PlayerMovement : MonoBehaviour
                     StartCoroutine(LazerShoot(shootU));
                 }
                 break;
+
+            case Weapon.Slime:
+                if(Time.time > nextFire) {
+                    SpawnSlime();
+                }
+                break;
         } 
     }
 
@@ -101,6 +109,11 @@ public class PlayerMovement : MonoBehaviour
         yield return new WaitForSeconds(0.45f);
         canShoot = true;
         Instantiate(lazerPrefab, pos.position, pos.rotation, pos);
+        nextFire = Time.time + fireRate;
+    }
+
+    private void SpawnSlime() {
+        Instantiate(slime, this.transform.position, transform.rotation);
         nextFire = Time.time + fireRate;
     }
 }
