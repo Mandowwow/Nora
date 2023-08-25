@@ -7,9 +7,11 @@ using System;
 public class AudioManager : MonoBehaviour
 {
     public Sound[] sounds;
+    private static bool music = true;
     // Start is called before the first frame update
     void Awake()
     {
+        DontDestroyOnLoad(this.gameObject);
         foreach (Sound s in sounds) {
             s.source = gameObject.AddComponent<AudioSource>();
             s.source.clip = s.clip;
@@ -20,7 +22,10 @@ public class AudioManager : MonoBehaviour
     }
 
     private void Start() {
-        FindObjectOfType<AudioManager>().Play("Theme");
+        if (music == true) {
+            FindObjectOfType<AudioManager>().Play("Theme");
+            music = false;
+        }
     }
 
     public void Play (string name) {

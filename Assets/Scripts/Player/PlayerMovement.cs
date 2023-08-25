@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 movement;
 
     //Shooting Variables
-    private Weapon currentWeapon = Weapon.Slime;
+    private Weapon currentWeapon = Weapon.Gun;
     private float nextFire = 0f;
     bool canShoot = true;
     [SerializeField] private float fireRate = 0.5f;
