@@ -101,6 +101,7 @@ GameObject:
   - component: {fileID: 4215631996708417874}
   - component: {fileID: 4215631996708417875}
   - component: {fileID: 1064075819978608482}
+  - component: {fileID: 2593033838056496943}
   m_Layer: 13
   m_Name: PlayerSprite
   m_TagString: Controller
@@ -233,17 +234,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 4215631996708417873}
   runSpeed: 0.1
-  fireRate: 0.6
-  bulletPrefab: {fileID: 4840111131752450870, guid: 2b477207b6843c740a0472e52a1bf510,
-    type: 3}
-  lazerPrefab: {fileID: 7943511896457345484, guid: c909b40b06b19e440aa379ebde0fe07e,
-    type: 3}
-  slime: {fileID: 2411335992645965101, guid: ee2d755fdd65ffb4288f1c44dfbc1e28, type: 3}
-  charge: {fileID: 2878499501968654866, guid: a1123377932ee0e4d9cc0afc30a75dbc, type: 3}
-  shootU: {fileID: 4818163633763036903}
-  shootD: {fileID: 5164669591716482500}
-  shootL: {fileID: 5374825756203040756}
-  shootR: {fileID: 5230250731857284665}
   KBCounter: 0
   KBTotalTime: 0.2
   KBForce: 6
@@ -269,6 +259,29 @@ MonoBehaviour:
   - {fileID: 0}
   fullHeart: {fileID: 21300000, guid: d75db4c9d3448a14f91c186882bec3a8, type: 3}
   emptyHeart: {fileID: 21300000, guid: 0afee2d4bb3da2c44b30a1807447480c, type: 3}
+--- !u!114 &2593033838056496943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4215631996708417876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a481487412b12aa4f89714b4d8006ae8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireRate: 1
+  bulletPrefab: {fileID: 4840111131752450870, guid: 2b477207b6843c740a0472e52a1bf510,
+    type: 3}
+  lazerPrefab: {fileID: 7943511896457345484, guid: c909b40b06b19e440aa379ebde0fe07e,
+    type: 3}
+  slime: {fileID: 2411335992645965101, guid: ee2d755fdd65ffb4288f1c44dfbc1e28, type: 3}
+  charge: {fileID: 2878499501968654866, guid: a1123377932ee0e4d9cc0afc30a75dbc, type: 3}
+  shootU: {fileID: 4818163633763036903}
+  shootD: {fileID: 5164669591716482500}
+  shootL: {fileID: 5374825756203040756}
+  shootR: {fileID: 5230250731857284665}
 --- !u!1 &5795380473033663518
 GameObject:
   m_ObjectHideFlags: 0

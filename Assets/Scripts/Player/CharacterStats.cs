@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class CharacterStats : MonoBehaviour
 {
+    public enum Weapon {
+        Gun,
+        Lazer,
+        Slime
+    }
     [SerializeField] private static int health = 6;
     [SerializeField] private static int numOfHearts = 3;
     [SerializeField] private static bool shield = false;

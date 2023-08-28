@@ -1616,8 +1616,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: Theme
-    clip: {fileID: 8300000, guid: 1667b29c128677b4291254ab511915e8, type: 3}
-    volume: 0.5
+    clip: {fileID: 8300000, guid: adab85452927cd749a9768962830f870, type: 3}
+    volume: 1
     pitch: 1
     source: {fileID: 0}
 --- !u!4 &1162609315
@@ -2932,7 +2932,7 @@ PrefabInstance:
     - target: {fileID: 4215631996708417875, guid: 644b0bf6538aee340932cf8e894ed934,
         type: 3}
       propertyPath: fireRate
-      value: 0.6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4215631996708417875, guid: 644b0bf6538aee340932cf8e894ed934,
         type: 3}
