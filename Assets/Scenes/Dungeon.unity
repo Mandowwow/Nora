@@ -1619,11 +1619,13 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: babd48c138c6ada4e9932ec9d4e281f6, type: 3}
     volume: 1
     pitch: 1
+    loop: 1
     source: {fileID: 0}
-  - name: Theme
-    clip: {fileID: 8300000, guid: 1667b29c128677b4291254ab511915e8, type: 3}
+  - name: Pause
+    clip: {fileID: 8300000, guid: e13ce4ce5c79e4e4488d83973edab2eb, type: 3}
     volume: 1
     pitch: 1
+    loop: 0
     source: {fileID: 0}
 --- !u!4 &1162609315
 Transform:
@@ -2917,7 +2919,7 @@ PrefabInstance:
     - target: {fileID: 2593033838056496943, guid: 644b0bf6538aee340932cf8e894ed934,
         type: 3}
       propertyPath: fireRate
-      value: 0.6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4038363057434655650, guid: 644b0bf6538aee340932cf8e894ed934,
         type: 3}
@@ -2978,7 +2980,7 @@ PrefabInstance:
     - target: {fileID: 4215631996708417878, guid: 644b0bf6538aee340932cf8e894ed934,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.12
+      value: -3.79
       objectReference: {fileID: 0}
     - target: {fileID: 4215631996708417878, guid: 644b0bf6538aee340932cf8e894ed934,
         type: 3}

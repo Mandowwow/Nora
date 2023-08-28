@@ -5,7 +5,7 @@ using UnityEngine;
 public class WeaponController : MonoBehaviour
 {
     //Shooting Variables
-    private CharacterStats.Weapon currentWeapon = CharacterStats.Weapon.Slime;
+    private CharacterStats.Weapon currentWeapon = CharacterStats.Weapon.Lazer;
     private float nextFire = 0f;
     bool canShoot = true;
     bool canSlime = true;
