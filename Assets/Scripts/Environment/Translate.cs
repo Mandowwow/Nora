@@ -6,11 +6,11 @@ public class Translate : MonoBehaviour
 {
     float nextMovement = 0f;
     float movementRate = 4f;
-    bool moveRight = true;
+    [SerializeField] bool moveRight = true;
 
     private void Start() {
-        InvokeRepeating("ChangeDirection", 13.5f, 13.5f);
-        Invoke("Destroy", 13.5f);
+        InvokeRepeating("ChangeDirection", 5.5f, 5.5f);
+        Invoke("Destroy", 16.5f);
     }
     void Update()
     {

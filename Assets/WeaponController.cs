@@ -5,9 +5,10 @@ using UnityEngine;
 public class WeaponController : MonoBehaviour
 {
     //Shooting Variables
-    private CharacterStats.Weapon currentWeapon = CharacterStats.Weapon.Gun;
+    private CharacterStats.Weapon currentWeapon = CharacterStats.Weapon.Slime;
     private float nextFire = 0f;
     bool canShoot = true;
+    bool canSlime = true;
     [SerializeField] private float fireRate = 0.5f;
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private GameObject lazerPrefab;
@@ -51,8 +52,20 @@ public class WeaponController : MonoBehaviour
                 break;
 
             case CharacterStats.Weapon.Slime:
-                if (Time.time > nextFire) {
-                    SpawnSlime();
+                if (canSlime) {
+                    StartCoroutine(SpawnSlime());
+                }
+                if (Input.GetKey("right") && Time.time > nextFire) {
+                    Shoot(shootR);
+                }
+                else if (Input.GetKey("left") && Time.time > nextFire) {
+                    Shoot(shootL);
+                }
+                else if (Input.GetKey("down") && Time.time > nextFire) {
+                    Shoot(shootD);
+                }
+                else if (Input.GetKey("up") && Time.time > nextFire) {
+                    Shoot(shootU);
                 }
                 break;
         }
@@ -72,8 +85,10 @@ public class WeaponController : MonoBehaviour
         nextFire = Time.time + fireRate;
     }
 
-    private void SpawnSlime() {
+    private IEnumerator SpawnSlime() {
         Instantiate(slime, this.transform.position, transform.rotation);
-        nextFire = Time.time + fireRate;
+        canSlime = false;
+        yield return new WaitForSeconds(1.5f);
+        canSlime = true;
     }
 }

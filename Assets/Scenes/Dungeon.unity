@@ -356,7 +356,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   source: {fileID: 105135604}
-  clip: {fileID: 8300000, guid: 1667b29c128677b4291254ab511915e8, type: 3}
+  clip: {fileID: 8300000, guid: babd48c138c6ada4e9932ec9d4e281f6, type: 3}
 --- !u!4 &105135603
 Transform:
   m_ObjectHideFlags: 0
@@ -381,11 +381,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 1667b29c128677b4291254ab511915e8, type: 3}
+  m_audioClip: {fileID: 8300000, guid: babd48c138c6ada4e9932ec9d4e281f6, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1616,7 +1616,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: Theme
-    clip: {fileID: 8300000, guid: adab85452927cd749a9768962830f870, type: 3}
+    clip: {fileID: 8300000, guid: babd48c138c6ada4e9932ec9d4e281f6, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Theme
+    clip: {fileID: 8300000, guid: 1667b29c128677b4291254ab511915e8, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
@@ -1665,7 +1670,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 0.5
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -2909,6 +2914,11 @@ PrefabInstance:
       propertyPath: hearts.Array.data[5]
       value: 
       objectReference: {fileID: 817419972}
+    - target: {fileID: 2593033838056496943, guid: 644b0bf6538aee340932cf8e894ed934,
+        type: 3}
+      propertyPath: fireRate
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 4038363057434655650, guid: 644b0bf6538aee340932cf8e894ed934,
         type: 3}
       propertyPath: m_Enabled
