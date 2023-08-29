@@ -5,7 +5,6 @@ using UnityEngine;
 public class WeaponController : MonoBehaviour
 {
     //Shooting Variables
-    private CharacterStats.Weapon currentWeapon = CharacterStats.Weapon.Lazer;
     private float nextFire = 0f;
     bool canShoot = true;
     bool canSlime = true;
@@ -20,7 +19,7 @@ public class WeaponController : MonoBehaviour
     [SerializeField] private Transform shootR;
 
     private void Update() {
-        switch (currentWeapon) {
+        switch (CharacterStats.CurrentWeapon) {
             case CharacterStats.Weapon.Gun:
                 if (Input.GetKey("right") && Time.time > nextFire) {
                     Shoot(shootR);

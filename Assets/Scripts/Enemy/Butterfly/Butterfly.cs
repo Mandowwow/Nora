@@ -10,6 +10,7 @@ public class Butterfly : Enemy
     [SerializeField] private GameObject gun;
     [SerializeField] private GameObject charge;
     [SerializeField] private GameObject[] randPos;
+    [SerializeField] private GameObject drop;
     private int rand = 0;
     private bool move = false;
     protected override void Start() {
@@ -20,6 +21,10 @@ public class Butterfly : Enemy
         InvokeRepeating("DealDmg", 1f, 0.20f);
     }
 
+    protected override void Dying() {
+        base.Dying();
+        Instantiate(drop, transform.position, transform.rotation);
+    }
     private void DealDmg() {
         if(Health >= 30 ) {
             Instantiate(beam, gun.transform.position, Quaternion.identity);

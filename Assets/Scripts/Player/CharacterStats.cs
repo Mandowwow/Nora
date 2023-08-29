@@ -9,6 +9,7 @@ public class CharacterStats : MonoBehaviour
         Lazer,
         Slime
     }
+    private static Weapon currentWeapon = CharacterStats.Weapon.Gun;
     [SerializeField] private static int health = 6;
     [SerializeField] private static int numOfHearts = 3;
     [SerializeField] private static bool shield = false;
@@ -34,5 +35,10 @@ public class CharacterStats : MonoBehaviour
     {
         get => bulletSpeed;
         set => bulletSpeed = value;
+    }
+    public static Weapon CurrentWeapon
+    {
+        get => currentWeapon;
+        set => currentWeapon = value;
     }
 }

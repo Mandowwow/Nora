@@ -14,8 +14,9 @@ public class ButtonUI : MonoBehaviour
         CharacterStats.NumOfHearts = 3;
         CharacterStats.Health = 6;
         CharacterStats.Shield = false;
-        AbilityController.state = AbilityController.State.Inactive;
         CharacterStats.BulletSpeed = 6;
+        CharacterStats.CurrentWeapon = CharacterStats.Weapon.Gun;
+        AbilityController.state = AbilityController.State.Inactive;
         FindEnemies.Enemies.Clear();
         LevelGeneration.PlayerPoints = 0;
     }
