@@ -5,6 +5,7 @@ using UnityEngine;
 public class Spider : Enemy
 {
     [SerializeField] private GameObject slime;
+    [SerializeField] private GameObject drop;
     private float instantiateRate = 0f;
     private float nextInstantiate = 0.2f;
 
@@ -29,6 +30,7 @@ public class Spider : Enemy
             foreach(GameObject obj in slime) {
                 GameObject.Destroy(obj);
             }
+            Instantiate(drop, transform.position, drop.transform.rotation);
         }
     }
 

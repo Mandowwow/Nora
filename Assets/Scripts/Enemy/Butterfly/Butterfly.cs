@@ -23,7 +23,9 @@ public class Butterfly : Enemy
 
     protected override void Dying() {
         base.Dying();
-        Instantiate(drop, transform.position, transform.rotation);
+        if(health <= 0) {
+            Instantiate(drop, transform.position, drop.transform.rotation);
+        }
     }
     private void DealDmg() {
         if(Health >= 30 ) {

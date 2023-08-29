@@ -246,6 +246,7 @@ MonoBehaviour:
   gun: {fileID: 5694335482950426905}
   charge: {fileID: 2878499501968654866, guid: a1123377932ee0e4d9cc0afc30a75dbc, type: 3}
   randPos: []
+  drop: {fileID: 3003912528199260804, guid: 09e1d3bc3ce68614b92b47dba6db261c, type: 3}
 --- !u!61 &7375224027167047604
 BoxCollider2D:
   m_ObjectHideFlags: 0
