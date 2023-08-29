@@ -7,7 +7,8 @@ public class CharacterStats : MonoBehaviour
     public enum Weapon {
         Gun,
         Lazer,
-        Slime
+        Slime,
+        Bat
     }
     private static Weapon currentWeapon = CharacterStats.Weapon.Gun;
     [SerializeField] private static int health = 6;
