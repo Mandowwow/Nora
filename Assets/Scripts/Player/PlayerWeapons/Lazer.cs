@@ -16,7 +16,9 @@ public class Lazer : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision) {
         StartCoroutine(Damage());
-        collision.GetComponent<Enemy>().TakeDamage(1);
+        if (collision.GetComponent<Enemy>()) {
+            collision.GetComponent<Enemy>().TakeDamage(1);
+        }
     }
 
     private IEnumerator Damage() {

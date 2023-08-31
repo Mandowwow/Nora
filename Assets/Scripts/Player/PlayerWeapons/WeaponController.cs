@@ -8,7 +8,9 @@ public class WeaponController : MonoBehaviour
     private float nextFire = 0f;
     bool canShoot = true;
     bool canSlime = true;
+    bool canBat = true;
     [SerializeField] private float fireRate = 0.5f;
+    [SerializeField] private GameObject batPrefab;
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private GameObject lazerPrefab;
     [SerializeField] private GameObject slime;
@@ -67,6 +69,23 @@ public class WeaponController : MonoBehaviour
                     Shoot(shootU);
                 }
                 break;
+            case CharacterStats.Weapon.Bat:
+                if (canBat) {
+                    StartCoroutine(SpawnBat());
+                }
+                if (Input.GetKey("right") && Time.time > nextFire) {
+                    Shoot(shootR);
+                }
+                else if (Input.GetKey("left") && Time.time > nextFire) {
+                    Shoot(shootL);
+                }
+                else if (Input.GetKey("down") && Time.time > nextFire) {
+                    Shoot(shootD);
+                }
+                else if (Input.GetKey("up") && Time.time > nextFire) {
+                    Shoot(shootU);
+                }
+                break;
         }
     }
 
@@ -89,5 +108,15 @@ public class WeaponController : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         Instantiate(slime, this.transform.position, transform.rotation);
         canSlime = true;
+    }
+
+    private IEnumerator SpawnBat() {
+        canBat = false;
+        yield return new WaitForSeconds(4f);
+        //randPos
+        Vector2 randPos = new Vector2(Random.Range(-5.5f, 5.5f), Random.Range(-3f, 0.75f));
+        //Instantiate Bat
+        Instantiate(batPrefab, randPos, Quaternion.identity);
+        canBat = true;
     }
 }

@@ -271,7 +271,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a481487412b12aa4f89714b4d8006ae8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireRate: 1
+  fireRate: 0.6
+  batPrefab: {fileID: 3784541576377970280, guid: 1e7efc9327ff252419eb56899666f9db,
+    type: 3}
   bulletPrefab: {fileID: 4840111131752450870, guid: 2b477207b6843c740a0472e52a1bf510,
     type: 3}
   lazerPrefab: {fileID: 7943511896457345484, guid: c909b40b06b19e440aa379ebde0fe07e,
