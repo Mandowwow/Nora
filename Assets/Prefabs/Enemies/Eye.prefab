@@ -301,6 +301,7 @@ MonoBehaviour:
   portal: {fileID: 6676095875542809022, guid: 1fef088c10806014a8badd7725f9f63d, type: 3}
   wayPoint: {fileID: 3834336736234178038, guid: 8f323c5b32e96044091b31a31472d1f8,
     type: 3}
+  drop: {fileID: 8488839783320332185, guid: aaecb022f1175f04c97b5f4c4099f11e, type: 3}
 --- !u!58 &1491394084604073198
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -6,6 +6,7 @@ public class Eye : Enemy
 {
     [SerializeField] private GameObject portal;
     [SerializeField] private GameObject wayPoint;
+    [SerializeField] private GameObject drop;
     private Vector2 randPos;
     private float instantiateRate = 3f;
     private float nextInstantiate = 3f;
@@ -17,6 +18,12 @@ public class Eye : Enemy
         InvokeRepeating("Charge", instantiateRate, 4.5f);
     }
 
+    protected override void Dying() {
+        base.Dying();
+        if(Health <= 0) {
+            Instantiate(drop, transform.position, drop.transform.rotation);
+        }
+    }
     protected override void ChasePlayer() {
         Vector3 playerPos = player.transform.position;
 

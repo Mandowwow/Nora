@@ -11,6 +11,7 @@ public class PlayerBat : MonoBehaviour
     }
 
     private void Start() {
+        Destroy(this.gameObject, 3f);
         rb = GetComponent<Rigidbody2D>();
         FindClosestEnemy();
     }
