@@ -12,12 +12,15 @@ public class BlueAnt : Enemy
     protected override void Start() {
         base.Start();
         anim = GetComponent<Animator>();
-        anim.Play("Spit");
+        InvokeRepeating("DealDmg", 1f, 4f);
     }
-
 
     public void Spit() {
         //Projectile Attack
         Instantiate(ball, barrel.transform.position, Quaternion.identity);
+    }
+
+    public void DealDmg() {
+        anim.Play("Spit");
     }
 }

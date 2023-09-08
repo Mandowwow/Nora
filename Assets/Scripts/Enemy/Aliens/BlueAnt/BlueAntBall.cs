@@ -24,7 +24,8 @@ public class BlueAntBall : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.CompareTag("Wall")) {
-            Destroy(this.gameObject);
+            rb.velocity = new Vector2(0f,0f);
+            //Destroy(this.gameObject);
         }
         else if (collision.CompareTag("Player")) {
             collision.gameObject.GetComponentInParent<Health>().TakeDamage(1);
