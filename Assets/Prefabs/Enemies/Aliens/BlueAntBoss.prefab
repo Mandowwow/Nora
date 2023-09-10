@@ -13,10 +13,10 @@ GameObject:
   - component: {fileID: 3842475945185653760}
   - component: {fileID: 3842475945185653767}
   - component: {fileID: 5350980076885828274}
-  - component: {fileID: 1256056389731981686}
+  - component: {fileID: 8683718217715877544}
   m_Layer: 9
   m_Name: BlueAntBoss
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -136,8 +136,11 @@ MonoBehaviour:
   heart: {fileID: 7268758921841377277, guid: d51346bfc6da7784ba9e835950155f64, type: 3}
   fireRate: 0.6
   spit: {fileID: 0}
-  barrel: {fileID: 0}
-  ball: {fileID: 0}
+  barrel: {fileID: 5926989645619730787}
+  ball: {fileID: 3921211812162892150, guid: e34376b49d45c224aa8f3035fbc7003a, type: 3}
+  blueThunder: {fileID: 2179049239145417336, guid: defe80a9e64e33846bc55ad148d629dd,
+    type: 3}
+  randPos: []
 --- !u!50 &5350980076885828274
 Rigidbody2D:
   serializedVersion: 4
@@ -159,8 +162,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &1256056389731981686
-BoxCollider2D:
+--- !u!68 &8683718217715877544
+EdgeCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -172,19 +175,37 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.034766555, y: -0.6530455}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.83}
-    oldSize: {x: 2, y: 2}
-    newSize: {x: 0.32, y: 0.32}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.624522, y: 1.2349716}
+  m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.8611418, y: -1.1567931}
+  - {x: -0.8674954, y: -1.0831348}
+  - {x: -0.839603, y: -0.843394}
+  - {x: -0.6154423, y: -0.5617189}
+  - {x: -0.527655, y: -0.53929394}
+  - {x: -0.43325397, y: -0.47317123}
+  - {x: -0.42180043, y: -0.08921504}
+  - {x: -0.33655196, y: 0.012905091}
+  - {x: 0.014849571, y: 0.022952512}
+  - {x: 0.3710952, y: 0.013146266}
+  - {x: 0.50794446, y: -0.12229266}
+  - {x: 0.5073052, y: -0.45305902}
+  - {x: 0.79217386, y: -0.6599312}
+  - {x: 0.9249783, y: -0.9171943}
+  - {x: 0.9403317, y: -1.1360363}
+  - {x: 0.8943023, y: -1.2070253}
+  - {x: 0.7543884, y: -1.2252452}
+  - {x: 0.74082804, y: -1.2838429}
+  - {x: 0.58611435, y: -1.27294}
+  - {x: 0.5544107, y: -1.3439244}
+  - {x: 0.33038518, y: -1.3514321}
+  - {x: 0.30087405, y: -1.2736137}
+  - {x: -0.2360647, y: -1.2560278}
+  - {x: -0.24003541, y: -1.3300698}
+  - {x: -0.46327472, y: -1.3425487}
+  - {x: -0.50390255, y: -1.2905064}
+  - {x: -0.6880154, y: -1.2820035}
+  - {x: -0.89595073, y: -1.1514513}
 --- !u!1 &5926989645619730787
 GameObject:
   m_ObjectHideFlags: 0
@@ -292,6 +313,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlueSphere (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1624413268249774222, guid: e2a4e6ef80dbbae4aa93892482fee513,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2a4e6ef80dbbae4aa93892482fee513, type: 3}
 --- !u!4 &2582854798824439961 stripped
@@ -376,6 +402,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BlueSphere (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1624413268249774222, guid: e2a4e6ef80dbbae4aa93892482fee513,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2a4e6ef80dbbae4aa93892482fee513, type: 3}
@@ -462,6 +493,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlueSphere (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 1624413268249774222, guid: e2a4e6ef80dbbae4aa93892482fee513,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2a4e6ef80dbbae4aa93892482fee513, type: 3}
 --- !u!4 &2582854799220312772 stripped
@@ -546,6 +582,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BlueSphere (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1624413268249774222, guid: e2a4e6ef80dbbae4aa93892482fee513,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2a4e6ef80dbbae4aa93892482fee513, type: 3}
@@ -632,6 +673,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlueSphere (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 1624413268249774222, guid: e2a4e6ef80dbbae4aa93892482fee513,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2a4e6ef80dbbae4aa93892482fee513, type: 3}
 --- !u!4 &2582854799366663374 stripped
@@ -716,6 +762,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BlueSphere (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1624413268249774222, guid: e2a4e6ef80dbbae4aa93892482fee513,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2a4e6ef80dbbae4aa93892482fee513, type: 3}
@@ -802,6 +853,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlueSphere (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 1624413268249774222, guid: e2a4e6ef80dbbae4aa93892482fee513,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2a4e6ef80dbbae4aa93892482fee513, type: 3}
 --- !u!4 &2582854797849573931 stripped
@@ -886,6 +942,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BlueSphere (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1624413268249774222, guid: e2a4e6ef80dbbae4aa93892482fee513,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2a4e6ef80dbbae4aa93892482fee513, type: 3}
@@ -972,6 +1033,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlueSphere (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1624413268249774222, guid: e2a4e6ef80dbbae4aa93892482fee513,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2a4e6ef80dbbae4aa93892482fee513, type: 3}
 --- !u!4 &2582854797694231843 stripped
@@ -1056,6 +1122,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BlueSphere (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1624413268249774222, guid: e2a4e6ef80dbbae4aa93892482fee513,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2a4e6ef80dbbae4aa93892482fee513, type: 3}
@@ -1142,6 +1213,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlueSphere (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1624413268249774222, guid: e2a4e6ef80dbbae4aa93892482fee513,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2a4e6ef80dbbae4aa93892482fee513, type: 3}
 --- !u!4 &2582854798456057813 stripped
@@ -1226,6 +1302,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BlueSphere
+      objectReference: {fileID: 0}
+    - target: {fileID: 1624413268249774222, guid: e2a4e6ef80dbbae4aa93892482fee513,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2a4e6ef80dbbae4aa93892482fee513, type: 3}
