@@ -5,13 +5,16 @@ using UnityEngine;
 public class BlueThunder : MonoBehaviour
 {
     private Transform player = null;
-    [SerializeField] private float speed = 2f;
     private Rigidbody2D rb = null;
+    private Animator anim = null;
+    [SerializeField] private float speed = 2f;
     void Start()
     {
+        anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        Destroy(this.gameObject, 20f);
+        //Destroy(this.gameObject, 20f);
+        StartCoroutine(Stop());
     }
 
     private void FixedUpdate() {
@@ -29,5 +32,17 @@ public class BlueThunder : MonoBehaviour
         if(collision.GetComponentInParent<Health>()){
             collision.GetComponentInParent<Health>().TakeDamage(1);
         }
+    }
+
+    private IEnumerator Stop() {
+        yield return new WaitForSeconds(20f);
+        speed = 0f;
+        yield return new WaitForSeconds(5f);
+        anim.Play("explode");
+        //Destroy(this.gameObject);
+    }
+
+    public void DestroyAnimation() {
+        Destroy(this.gameObject);
     }
 }

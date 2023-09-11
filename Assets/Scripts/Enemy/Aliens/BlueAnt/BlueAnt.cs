@@ -15,8 +15,8 @@ public class BlueAnt : Enemy
     protected override void Start() {
         base.Start();
         anim = GetComponent<Animator>();
-        InvokeRepeating("DealDmg", 1f, 4f);
-        InvokeRepeating("BlueThunder", 10f, 10f);
+        InvokeRepeating("DealDmg", 1f, 0.5f);
+        InvokeRepeating("BlueThunder", 5f, 10f);
         randPos = GameObject.FindGameObjectsWithTag("RandPos");
     }
 
