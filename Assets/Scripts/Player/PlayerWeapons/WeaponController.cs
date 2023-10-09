@@ -23,31 +23,31 @@ public class WeaponController : MonoBehaviour
     private void Update() {
         switch (CharacterStats.CurrentWeapon) {
             case CharacterStats.Weapon.Gun:
-                if (Input.GetKey("right") && Time.time > nextFire) {
+                if (Input.GetKey("right") && Time.time > nextFire || Input.GetKey("joystick button 1") && Time.time > nextFire && canShoot) {
                     Shoot(shootR);
                 }
-                else if (Input.GetKey("left") && Time.time > nextFire) {
+                else if (Input.GetKey("left") && Time.time > nextFire || Input.GetKey("joystick button 2") && Time.time > nextFire && canShoot) {
                     Shoot(shootL);
                 }
-                else if (Input.GetKey("down") && Time.time > nextFire) {
+                else if (Input.GetKey("down") && Time.time > nextFire || Input.GetKey("joystick button 0") && Time.time > nextFire && canShoot) {
                     Shoot(shootD);
                 }
-                else if (Input.GetKey("up") && Time.time > nextFire) {
+                else if (Input.GetKey("up") && Time.time > nextFire || Input.GetKey("joystick button 3") && Time.time > nextFire && canShoot) {
                     Shoot(shootU);
                 }
                 break;
 
             case CharacterStats.Weapon.Lazer:
-                if (Input.GetKey("right") && Time.time > nextFire && canShoot) {
+                if (Input.GetKey("right") && Time.time > nextFire && canShoot || Input.GetKey("joystick button 1") && Time.time > nextFire && canShoot) {
                     StartCoroutine(LazerShoot(shootR));
                 }
-                else if (Input.GetKey("left") && Time.time > nextFire && canShoot) {
+                else if (Input.GetKey("left") && Time.time > nextFire && canShoot || Input.GetKey("joystick button 2") && Time.time > nextFire && canShoot) {
                     StartCoroutine(LazerShoot(shootL));
                 }
-                else if (Input.GetKey("down") && Time.time > nextFire && canShoot) {
+                else if (Input.GetKey("down") && Time.time > nextFire && canShoot || Input.GetKey("joystick button 0") && Time.time > nextFire && canShoot) {
                     StartCoroutine(LazerShoot(shootD));
                 }
-                else if (Input.GetKey("up") && Time.time > nextFire && canShoot) {
+                else if (Input.GetKey("up") && Time.time > nextFire && canShoot || Input.GetKey("joystick button 3") && Time.time > nextFire && canShoot) {
                     StartCoroutine(LazerShoot(shootU));
                 }
                 break;
@@ -56,16 +56,16 @@ public class WeaponController : MonoBehaviour
                 if (canSlime) {
                     StartCoroutine(SpawnSlime());
                 }
-                if (Input.GetKey("right") && Time.time > nextFire) {
+                if (Input.GetKey("right") && Time.time > nextFire || Input.GetKey("joystick button 1") && Time.time > nextFire && canShoot) {
                     Shoot(shootR);
                 }
-                else if (Input.GetKey("left") && Time.time > nextFire) {
+                else if (Input.GetKey("left") && Time.time > nextFire || Input.GetKey("joystick button 2") && Time.time > nextFire && canShoot) {
                     Shoot(shootL);
                 }
-                else if (Input.GetKey("down") && Time.time > nextFire) {
+                else if (Input.GetKey("down") && Time.time > nextFire || Input.GetKey("joystick button 0") && Time.time > nextFire && canShoot) {
                     Shoot(shootD);
                 }
-                else if (Input.GetKey("up") && Time.time > nextFire) {
+                else if (Input.GetKey("up") && Time.time > nextFire || Input.GetKey("joystick button 3") && Time.time > nextFire && canShoot) {
                     Shoot(shootU);
                 }
                 break;
@@ -73,16 +73,16 @@ public class WeaponController : MonoBehaviour
                 if (canBat) {
                     StartCoroutine(SpawnBat());
                 }
-                if (Input.GetKey("right") && Time.time > nextFire) {
+                if (Input.GetKey("right") && Time.time > nextFire || Input.GetKey("joystick button 1") && Time.time > nextFire && canShoot) {
                     Shoot(shootR);
                 }
-                else if (Input.GetKey("left") && Time.time > nextFire) {
+                else if (Input.GetKey("left") && Time.time > nextFire || Input.GetKey("joystick button 2") && Time.time > nextFire && canShoot) {
                     Shoot(shootL);
                 }
-                else if (Input.GetKey("down") && Time.time > nextFire) {
+                else if (Input.GetKey("down") && Time.time > nextFire || Input.GetKey("joystick button 0") && Time.time > nextFire && canShoot) {
                     Shoot(shootD);
                 }
-                else if (Input.GetKey("up") && Time.time > nextFire) {
+                else if (Input.GetKey("up") && Time.time > nextFire || Input.GetKey("joystick button 3") && Time.time > nextFire && canShoot) {
                     Shoot(shootU);
                 }
                 break;
