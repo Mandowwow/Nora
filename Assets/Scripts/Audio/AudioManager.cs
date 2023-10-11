@@ -29,8 +29,8 @@ public class AudioManager : MonoBehaviour
     }
 
     private void Start() {
-        Play("Theme");
-        //StartCoroutine(Song());
+        
+        StartCoroutine(Song());
     }
 
     public void Play (string name) {
@@ -41,7 +41,8 @@ public class AudioManager : MonoBehaviour
     }
 
     private IEnumerator Song() {
-        yield return new WaitForSeconds(28f);
         Play("Theme");
+        yield return new WaitForSeconds(78f);
+        Play("Pause");
     }
 }

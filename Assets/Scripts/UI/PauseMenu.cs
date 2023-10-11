@@ -30,13 +30,13 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         gameIsPaused = false;
         HideMouse();
-        source.GetComponent<AudioSource>().UnPause();
-        source2.GetComponent<AudioSource>().Pause();
+        //source.GetComponent<AudioSource>().UnPause();
+        //source2.GetComponent<AudioSource>().Pause();
     }
 
     void Pause() {
         pauseMenuUi.SetActive(true);
-        source.GetComponent<AudioSource>().Pause();
+        //source.GetComponent<AudioSource>().Pause();
         Time.timeScale = 0f;
         gameIsPaused = true;
         source2.PlayOneShot(clip);
