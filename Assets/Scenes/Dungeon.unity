@@ -1400,10 +1400,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: Theme
-    clip: {fileID: 8300000, guid: 80377ea9b951689499b36673a447f258, type: 3}
+    clip: {fileID: 8300000, guid: 42fbe3be30636a04d8141dd2bd8abe45, type: 3}
     volume: 1
     pitch: 1
-    loop: 0
+    loop: 1
     source: {fileID: 0}
   - name: Pause
     clip: {fileID: 8300000, guid: f850957a1edee8e47aed664288b60a82, type: 3}

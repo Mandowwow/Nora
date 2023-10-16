@@ -29,8 +29,7 @@ public class AudioManager : MonoBehaviour
     }
 
     private void Start() {
-        
-        StartCoroutine(Song());
+        Play("Theme");
     }
 
     public void Play (string name) {
