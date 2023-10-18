@@ -15,6 +15,7 @@ public class CharacterStats : MonoBehaviour
     [SerializeField] private static int numOfHearts = 3;
     [SerializeField] private static bool shield = false;
     [SerializeField] private static float bulletSpeed = 6;
+    [SerializeField] private static float fireRate = 0.6f;
     public static int Health
     {
         get => health;
@@ -25,13 +26,11 @@ public class CharacterStats : MonoBehaviour
         get => shield;
         set => shield = value;
     }
-
     public static int NumOfHearts
     {
         get => numOfHearts;
         set => numOfHearts = value;
     }
-
     public static float BulletSpeed
     {
         get => bulletSpeed;
@@ -41,5 +40,10 @@ public class CharacterStats : MonoBehaviour
     {
         get => currentWeapon;
         set => currentWeapon = value;
+    }
+    public static float FireRate
+    {
+        get => fireRate;
+        set => fireRate = value;
     }
 }

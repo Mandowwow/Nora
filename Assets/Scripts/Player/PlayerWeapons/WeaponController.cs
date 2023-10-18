@@ -91,7 +91,7 @@ public class WeaponController : MonoBehaviour
 
     private void Shoot(Transform pos) {
         Instantiate(bulletPrefab, pos.position, pos.rotation);
-        nextFire = Time.time + fireRate;
+        nextFire = Time.time + CharacterStats.FireRate;
     }
 
     private IEnumerator LazerShoot(Transform pos) {
@@ -100,7 +100,7 @@ public class WeaponController : MonoBehaviour
         yield return new WaitForSeconds(0.45f);
         canShoot = true;
         Instantiate(lazerPrefab, pos.position, pos.rotation, pos);
-        nextFire = Time.time + fireRate;
+        nextFire = Time.time + CharacterStats.FireRate;
     }
 
     private IEnumerator SpawnSlime() {

@@ -18,34 +18,28 @@ public class PauseMenu : MonoBehaviour
             }
         }
     }
-
     public void Resume() {
         pauseMenuUi.SetActive(false);
         Time.timeScale = 1f;
         gameIsPaused = false;
         HideMouse();
     }
-
     void Pause() {
         pauseMenuUi.SetActive(true);
         Time.timeScale = 0f;
         gameIsPaused = true;
     }
-
     public void LoadMenu() {
         Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
     }
-
     public void QuitGame() {
         Application.Quit();
     }
-
     static public void ShowMouse() {
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
     }
-
     static public void HideMouse() {
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;

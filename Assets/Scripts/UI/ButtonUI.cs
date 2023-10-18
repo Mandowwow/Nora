@@ -16,6 +16,7 @@ public class ButtonUI : MonoBehaviour
         CharacterStats.Shield = false;
         CharacterStats.BulletSpeed = 6;
         CharacterStats.CurrentWeapon = CharacterStats.Weapon.Gun;
+        CharacterStats.FireRate = 0.6f;
         AbilityController.state = AbilityController.State.Inactive;
         FindEnemies.Enemies.Clear();
         LevelGeneration.PlayerPoints = 0;
