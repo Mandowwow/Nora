@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class LevelGeneration : MonoBehaviour
 {
-    public GameObject[] objects = null;
     private static int playerPoints = 0;
     private static bool firstLevel = true;
 
