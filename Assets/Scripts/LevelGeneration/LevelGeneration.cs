@@ -6,29 +6,63 @@ public class LevelGeneration : MonoBehaviour
 {
     public GameObject[] objects = null;
     private static int playerPoints = 0;
+    private static bool firstLevel = true;
+
+    public List<GameObject> levels = new List<GameObject>();
+    public static List<GameObject> newLevels = null;
 
     public static int PlayerPoints
     {
         get => playerPoints;
         set => playerPoints = value;
     }
+    public static bool FirstLevel
+    {
+        get => firstLevel;
+        set => firstLevel = value;
+    }
 
     private void Start() {
         playerPoints += 1;
-        if(playerPoints >= 1 && playerPoints < 4) {
-            int rand = Random.Range(0, 4);
-            Instantiate(objects[rand], transform.position, Quaternion.identity);
-            Debug.Log(playerPoints);
 
-        } else if (playerPoints >= 4 && playerPoints < 5) {
-            int rand = Random.Range(4, 7);
-            Instantiate(objects[rand], transform.position, Quaternion.identity);
-        } else if (playerPoints >= 5 && playerPoints < 8) {
-            int rand = Random.Range(7, 11);
-            Instantiate(objects[rand], transform.position, Quaternion.identity);
-        } else if (playerPoints >= 8) {
-            Instantiate(objects[11], transform.position, Quaternion.identity);
+        if (firstLevel == true) {
+            newLevels = new List<GameObject>(levels);
+            firstLevel = false;
         }
+             
+        switch (playerPoints) {
+            case 1:
+            case 2:
+            case 3:
+                int rand = Random.Range(0, 4);
+                while (newLevels[rand] == null) {
+                    rand = Random.Range(0, 4);
+                }
+                Instantiate(newLevels[rand], transform.position, Quaternion.identity);
+                newLevels[rand] = null;
+                break;
+            case 4:
+                rand = Random.Range(4, 8);
+                while (newLevels[rand] == null) {
+                    rand = Random.Range(4, 8);
+                }
+                Instantiate(newLevels[rand], transform.position, Quaternion.identity);
+                newLevels[rand] = null;
+                break;
+            case 5:
+            case 6:
+            case 7:
+                rand = Random.Range(8, 11);
+                while (newLevels[rand] == null) {
+                    rand = Random.Range(8, 11);
+                }
+                Instantiate(newLevels[rand], transform.position, Quaternion.identity);
+                newLevels[rand] = null;
+                break;
+            case 8:
+                Instantiate(newLevels[11], transform.position, Quaternion.identity);
+                break;
 
+        }
     }
 }
