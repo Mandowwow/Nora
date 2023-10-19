@@ -20,5 +20,6 @@ public class ButtonUI : MonoBehaviour
         AbilityController.state = AbilityController.State.Inactive;
         FindEnemies.Enemies.Clear();
         LevelGeneration.PlayerPoints = 0;
+        LevelGeneration.FirstLevel = true;
     }
 }
