@@ -56,7 +56,6 @@ public class Eye : Enemy
         sprite.color = Color.white;
     }
 
-
     private void OnCollisionStay2D(Collision2D collision) {
         if (collision.collider.gameObject.CompareTag("Player") && Time.time > nextFire) {
             collision.gameObject.GetComponent<Health>().TakeDamage(1);
