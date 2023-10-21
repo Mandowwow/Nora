@@ -9,6 +9,10 @@ public class BossCell : Enemy
         two,
         three
     }
+    [SerializeField] private GameObject spike = null;
+    [SerializeField] private GameObject crystal = null;
+    [SerializeField] private GameObject crystalLoc = null;
+    [SerializeField] private GameObject[] shootPos = null;
     private Vector3 moveDirection;
     private Vector2 direction;
     private Vector2 center = new Vector2(0,0);
@@ -28,15 +32,19 @@ public class BossCell : Enemy
                 transform.up = direction;
                 break;
             case Phase.two:
-                Vector3 directionPos = center;
-                direction = new Vector2(
-                   directionPos.x - transform.position.x,
-                   directionPos.y - transform.position.y);
-                transform.up = direction;
-                transform.position = Vector2.MoveTowards(transform.position, center, speed * Time.fixedDeltaTime);
+                
                 if(Vector2.Distance(transform.position, center) < 0.1f) {
                     Debug.Log("<color=red> Here </color>");
-
+                    transform.Rotate(new Vector3(0f, 0f, 148f) * Time.deltaTime);
+                    StartCoroutine(Spawn());
+                    //transform.up = direction;
+                } else {
+                    Vector3 directionPos = center;
+                    direction = new Vector2(
+                       directionPos.x - transform.position.x,
+                       directionPos.y - transform.position.y);
+                    transform.up = direction;
+                    transform.position = Vector2.MoveTowards(transform.position, center, speed * Time.fixedDeltaTime);
                 }
                 break;
             case Phase.three:
@@ -48,7 +56,8 @@ public class BossCell : Enemy
     }
     public override void TakeDamage(int damage) {
         base.TakeDamage(damage);
-        if(Health <= 30) {
+        if(Health == 30) {            
+            Instantiate(crystal, crystalLoc.transform.position, crystalLoc.transform.rotation);
             currentPhase = Phase.two;
         }
     }
@@ -59,5 +68,14 @@ public class BossCell : Enemy
             moveDirection = collision.gameObject.GetComponent<Rigidbody2D>().transform.position - transform.position;
             collision.gameObject.GetComponent<Rigidbody2D>().AddForce(-moveDirection.normalized * -0.065f);
         }
+    }
+
+    private IEnumerator Spawn() {
+        foreach (var item in shootPos) {
+            Instantiate(spike, item.transform.position, item.transform.rotation);
+        }
+        yield return new WaitForSeconds(3.5f);
+        currentPhase = Phase.one;
+        Destroy(crystal.gameObject);
     }
 }
