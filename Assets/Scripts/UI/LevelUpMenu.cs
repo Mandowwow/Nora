@@ -9,12 +9,12 @@ public class LevelUpMenu : MonoBehaviour
 
     void Update()
     {
-        if (PauseMenu.gameIsPaused == false) {
-            if (Input.GetKeyDown(KeyCode.Q)) {
-                OpenMenu();
-                PauseMenu.ShowMouse();
-            }
-        }
+        //if (PauseMenu.gameIsPaused == false) {
+        //    if (Input.GetKeyDown(KeyCode.Q)) {
+        //        OpenMenu();
+        //        PauseMenu.ShowMouse();
+        //    }
+        //}
        
     }
 

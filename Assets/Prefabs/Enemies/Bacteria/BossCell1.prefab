@@ -261,14 +261,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.9
-  health: 40
+  health: 60
   sprite: {fileID: 0}
   rb: {fileID: 0}
   heart: {fileID: 7268758921841377277, guid: d51346bfc6da7784ba9e835950155f64, type: 3}
   fireRate: 0.6
+  cell: {fileID: 338453520208034058, guid: 887fa0d3c11e36c41811d8d67566aa9d, type: 3}
   spike: {fileID: 5398541527752247878, guid: 1dcdd5518cd3e7141b6f370433b749f2, type: 3}
   crystal: {fileID: 1951416479541151564, guid: 60e6c2c829c8a544bb98190e7a58cc8f, type: 3}
-  crystalLoc: {fileID: 0}
   shootPos:
   - {fileID: 1677786038266368892}
   - {fileID: 3121398325887212935}
@@ -286,6 +286,11 @@ MonoBehaviour:
   - {fileID: 8904932696855562383}
   - {fileID: 8076614655557483110}
   - {fileID: 3930146487176732752}
+  crystalLocations:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   currentPhase: 0
 --- !u!1 &1677786038266368892
 GameObject:
