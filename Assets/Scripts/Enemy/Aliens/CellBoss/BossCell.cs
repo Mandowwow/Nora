@@ -13,18 +13,13 @@ public class BossCell : Enemy
     [SerializeField] private GameObject spike = null;
     [SerializeField] private GameObject crystal = null;
     [SerializeField] private GameObject[] shootPos = null;
-    [SerializeField] private GameObject[] crystalLocations = null;
     private int rand = 0;
-    private float randF = 0f;
     private Vector3 moveDirection;
     private Vector2 direction;
+    private bool leftSide = true;
     private Vector2 center = new Vector2(0,0);
+    private Vector2 randPos = new Vector2(0, 0);
     public Phase currentPhase = Phase.one;
-
-    protected override void Start() {
-        base.Start();
-        InvokeRepeating("SpawnCells", 1, 5);
-    }
     protected override void ChasePlayer() {
         switch (currentPhase) {
             case Phase.one:
@@ -35,42 +30,38 @@ public class BossCell : Enemy
                     playerPos.y - transform.position.y);
                 transform.up = direction;
                 break;
-            case Phase.two:
-                if (Vector2.Distance(transform.position, center) < 0.1f) {
-                    Debug.Log("<color=red> Here </color>");
-                    transform.Rotate(new Vector3(0f, 0f, 148f) * Time.deltaTime);
-                    StartCoroutine(SpawnSpikes());
-                    //transform.up = direction;
-                }
-                else {
-                    Vector3 directionPos = center;
-                    direction = new Vector2(
-                       directionPos.x - transform.position.x,
-                       directionPos.y - transform.position.y);
-                    transform.up = direction;
-                    transform.position = Vector2.MoveTowards(transform.position, center, speed * Time.fixedDeltaTime);
-                }
+            case Phase.two:               
+                transform.Rotate(new Vector3(0f, 0f, 148f) * Time.deltaTime);
                 break;
             case Phase.three:
-
+                Vector3 directionPos = center;
+                direction = new Vector2(
+                   directionPos.x - transform.position.x,
+                   directionPos.y - transform.position.y);
+                transform.up = direction;
+                transform.position = Vector2.MoveTowards(transform.position, center, speed * Time.fixedDeltaTime);
                 break;
             default:
                 break;
         }
-        
     }
     public override void TakeDamage(int damage) {
         base.TakeDamage(damage);
         if(Health == 50) {
-            SpawnCrystal(RandomNumber(0,4));
+            SpawnCrystal();
+            InvokeRepeating("SpawnSpikes", 5f, 0.01f);
+            StartCoroutine(StopSpikes());
         } else if (Health == 40) {
-            SpawnCrystal(RandomNumber(0,4));
+            SpawnCrystal();
+            InvokeRepeating("SpawnSpikes", 5f, 0.01f);
+            StartCoroutine(StopSpikes());
         } else if (Health == 30) {
-            SpawnCrystal(RandomNumber(0,4));
+            SpawnCrystal();
+            InvokeRepeating("SpawnSpikes", 5f, 0.01f);
+            StartCoroutine(StopSpikes());
         } else if (Health == 20) {
-            SpawnCrystal(RandomNumber(0,4));
-        } else if (Health == 10) {
             currentPhase = Phase.three;
+            InvokeRepeating("SpawnCells", 2f, 2.5f);
         }
     }
     private void OnCollisionStay2D(Collision2D collision) {
@@ -81,26 +72,42 @@ public class BossCell : Enemy
             collision.gameObject.GetComponent<Rigidbody2D>().AddForce(-moveDirection.normalized * -0.065f);
         }
     }
-    private IEnumerator SpawnSpikes() {
-        foreach (var item in shootPos) {
-            Instantiate(spike, item.transform.position, item.transform.rotation);
-        }
-        yield return new WaitForSeconds(3.5f);
+    private IEnumerator StopSpikes() {
+        yield return new WaitForSeconds(7.5f);
         GameObject sceneCrystal = GameObject.Find("CellBossCrystal(Clone)");
+        CancelInvoke();
         currentPhase = Phase.one;
         yield return new WaitForSeconds(1f);
         Destroy(sceneCrystal.gameObject);
     }
-    private void SpawnCrystal(int rand) {
-        Instantiate(crystal, crystalLocations[rand].transform.position, crystalLocations[rand].transform.rotation);
+    private void SpawnSpikes() {
+        if(currentPhase == Phase.two) {
+            foreach (var item in shootPos) {
+                Instantiate(spike, item.transform.position, item.transform.rotation);
+            }
+        }
+    }
+    private void SpawnCrystal() {
+        if(transform.position.x < 0) {
+            randPos = new Vector2(Random.Range(2f, 6f), Random.Range(-2f, 2f));
+            Instantiate(crystal, randPos, Quaternion.identity);
+        } else {
+            randPos = new Vector2(Random.Range(-2f, -6f), Random.Range(-2f, 2f));
+            Instantiate(crystal, randPos, Quaternion.identity);
+        }
         currentPhase = Phase.two;
     }
     private void SpawnCells() {
         if(currentPhase == Phase.three) {
-            Instantiate(cell, new Vector3(-7, 2, 0), transform.rotation);
+            if (leftSide) {
+                randPos = new Vector2(-7.25f, Random.Range(2.5f, -2.5f));
+                Instantiate(cell, randPos, Quaternion.identity);
+                leftSide = false;
+            } else {
+                randPos = new Vector2(7.25f, Random.Range(2.5f, -2.5f));
+                Instantiate(cell, randPos, Quaternion.identity);
+                leftSide = true;
+            }
         }
-    }
-    private int RandomNumber(int min, int max) {
-       return rand = Random.Range(min, max);
     }
 }
