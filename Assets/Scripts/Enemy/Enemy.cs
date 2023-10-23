@@ -14,6 +14,7 @@ public class Enemy : MonoBehaviour
     protected private float nextFire = 0f;
     protected private PlayerMovement playerMovement;
     protected private Transform player;
+    protected private Collider2D col;
     //protected private static int playerPoints;
     protected private FindEnemies findEnemies;
 
@@ -30,6 +31,7 @@ public class Enemy : MonoBehaviour
 
     protected virtual void Start() {
         rb = GetComponent<Rigidbody2D>();
+        col = GetComponent<Collider2D>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         playerMovement = GameObject.FindGameObjectWithTag("Controller").GetComponent<PlayerMovement>();
         findEnemies = GameObject.FindGameObjectWithTag("Manager").GetComponent<FindEnemies>();

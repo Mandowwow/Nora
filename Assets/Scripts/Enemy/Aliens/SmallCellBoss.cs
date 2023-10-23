@@ -16,10 +16,13 @@ public class SmallCellBoss : Enemy
         rb.MovePosition(rb.position + direction * Time.deltaTime * speed);
         transform.up = direction;
     }
-    private void OnCollisionEnter2D(Collision2D collision) {
+
+    private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.GetComponent<BossCell>()) {
             Debug.Log("<color=green> Touch! </color>");
             //call explosion function
+            collision.gameObject.GetComponent<BossCell>().Explosion();
+            Destroy(gameObject);
             //Destroy this object
         }
     }

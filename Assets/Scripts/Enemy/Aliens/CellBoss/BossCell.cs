@@ -12,6 +12,7 @@ public class BossCell : Enemy
     [SerializeField] private GameObject cell = null;
     [SerializeField] private GameObject spike = null;
     [SerializeField] private GameObject crystal = null;
+    [SerializeField] public GameObject explosion;
     [SerializeField] private GameObject[] shootPos = null;
     private int rand = 0;
     private Vector3 moveDirection;
@@ -20,6 +21,10 @@ public class BossCell : Enemy
     private Vector2 center = new Vector2(0,0);
     private Vector2 randPos = new Vector2(0, 0);
     public Phase currentPhase = Phase.one;
+
+    protected override void Start() {
+        base.Start();
+    }
     protected override void ChasePlayer() {
         switch (currentPhase) {
             case Phase.one:
@@ -47,19 +52,19 @@ public class BossCell : Enemy
     }
     public override void TakeDamage(int damage) {
         base.TakeDamage(damage);
-        if(Health == 50) {
+        if(Health == 55) {
             SpawnCrystal();
             InvokeRepeating("SpawnSpikes", 5f, 0.01f);
             StartCoroutine(StopSpikes());
-        } else if (Health == 40) {
+        } else if (Health == 45) {
             SpawnCrystal();
             InvokeRepeating("SpawnSpikes", 5f, 0.01f);
             StartCoroutine(StopSpikes());
-        } else if (Health == 30) {
+        } else if (Health == 35) {
             SpawnCrystal();
             InvokeRepeating("SpawnSpikes", 5f, 0.01f);
             StartCoroutine(StopSpikes());
-        } else if (Health == 20) {
+        } else if (Health == 25) {
             currentPhase = Phase.three;
             InvokeRepeating("SpawnCells", 2f, 2.5f);
         }
@@ -78,6 +83,7 @@ public class BossCell : Enemy
         CancelInvoke();
         currentPhase = Phase.one;
         yield return new WaitForSeconds(1f);
+        col.enabled = true;
         Destroy(sceneCrystal.gameObject);
     }
     private void SpawnSpikes() {
@@ -95,6 +101,7 @@ public class BossCell : Enemy
             randPos = new Vector2(Random.Range(-2f, -6f), Random.Range(-2f, 2f));
             Instantiate(crystal, randPos, Quaternion.identity);
         }
+        col.enabled = false;
         currentPhase = Phase.two;
     }
     private void SpawnCells() {
@@ -109,5 +116,8 @@ public class BossCell : Enemy
                 leftSide = true;
             }
         }
+    }
+    public void Explosion() {
+        Instantiate(explosion, transform.position, transform.rotation);
     }
 }
