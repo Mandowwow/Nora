@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Health : MonoBehaviour
 {
     private CharacterStats stats;
+    private int damage;
 
     [SerializeField] private Image[] hearts;
     [SerializeField] private Sprite fullHeart;
@@ -47,6 +48,10 @@ public class Health : MonoBehaviour
 
     public void TakeDamage(int dmg) {
         if(CharacterStats.Shield == false) {
+            damage += 1;
+            if(damage > 1) {
+                return;
+            }
             CharacterStats.Health = CharacterStats.Health - dmg;
             StartCoroutine(Change());
         }
@@ -56,6 +61,7 @@ public class Health : MonoBehaviour
         col.enabled = false;
         player.color = Color.red;
         yield return new WaitForSeconds(1f);
+        damage = 0;
         player.color = Color.white;        
         col.enabled = true;
     }
