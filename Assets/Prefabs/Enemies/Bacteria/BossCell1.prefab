@@ -269,7 +269,7 @@ MonoBehaviour:
   fireRate: 0.6
   cell: {fileID: 338453520208034058, guid: 887fa0d3c11e36c41811d8d67566aa9d, type: 3}
   spike: {fileID: 5398541527752247878, guid: 1dcdd5518cd3e7141b6f370433b749f2, type: 3}
-  crystal: {fileID: 1951416479541151564, guid: 60e6c2c829c8a544bb98190e7a58cc8f, type: 3}
+  crystal: {fileID: 3781452025045168876, guid: cd04906e0072bb44d950726cdb93d5c9, type: 3}
   explosion: {fileID: 3677999546713543203, guid: ab98b59ff93d1a241b02736f313e2f7c,
     type: 3}
   shootPos:
