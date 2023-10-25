@@ -66,6 +66,14 @@ public class LevelGeneration : MonoBehaviour
                 Instantiate(newLevels[rand], transform.position, Quaternion.identity);
                 newLevels[rand] = null;
                 break;
+            case 9:
+                rand = Random.Range(13,14);
+                while (newLevels[rand] == null) {
+                    rand = Random.Range(13,14);
+                }
+                Instantiate(newLevels[rand], transform.position, Quaternion.identity);
+                newLevels[rand] = null;
+                break;
 
         }
     }
