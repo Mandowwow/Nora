@@ -11,7 +11,7 @@ public class ButtonUI : MonoBehaviour
     
     private void StartGame() {
         SceneManager.LoadScene("Dungeon");
-        CharacterStats.NumOfHearts = 6;
+        CharacterStats.NumOfHearts = 3;
         CharacterStats.Health = 6;
         CharacterStats.Shield = false;
         CharacterStats.BulletSpeed = 6;
