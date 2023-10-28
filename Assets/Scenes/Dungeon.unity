@@ -1436,7 +1436,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: Theme
-    clip: {fileID: 8300000, guid: 5925468c092e25141aa4c141279b1f8a, type: 3}
+    clip: {fileID: 8300000, guid: 152c544094f10b04f814d14bcea4624c, type: 3}
     volume: 1
     pitch: 1
     loop: 1
@@ -1792,6 +1792,7 @@ MonoBehaviour:
   - {fileID: 5018632986533350539, guid: 7424ef4b05d0b0643a6e438d59b5d098, type: 3}
   - {fileID: 145669956439032875, guid: 4e812d8dee62ec24ebeeb84021376374, type: 3}
   - {fileID: 2362489145792780609, guid: b94b93d37b2b9334893d34b4637fe180, type: 3}
+  - {fileID: 2019733339664902667, guid: 48842cf681292fe4ca022f80b9bf4762, type: 3}
 --- !u!1001 &1784820323
 PrefabInstance:
   m_ObjectHideFlags: 0
