@@ -120,4 +120,13 @@ public class BossCell : Enemy
     public void Explosion() {
         Instantiate(explosion, transform.position, transform.rotation);
     }
+    protected override void Dying() {
+        base.Dying();
+        if (Health <= 0) {
+            GameObject[] cells = GameObject.FindGameObjectsWithTag("Enemy");
+            foreach (GameObject obj in cells) {
+                GameObject.Destroy(obj);
+            }
+        }
+    }
 }
