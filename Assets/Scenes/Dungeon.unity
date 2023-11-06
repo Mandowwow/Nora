@@ -1793,6 +1793,7 @@ MonoBehaviour:
   - {fileID: 145669956439032875, guid: 4e812d8dee62ec24ebeeb84021376374, type: 3}
   - {fileID: 2362489145792780609, guid: b94b93d37b2b9334893d34b4637fe180, type: 3}
   - {fileID: 2019733339664902667, guid: 48842cf681292fe4ca022f80b9bf4762, type: 3}
+  - {fileID: 9000959411216695363, guid: b7e7b006a96af0f4f987c6f83f3fbe98, type: 3}
 --- !u!1001 &1784820323
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2676,7 +2677,7 @@ PrefabInstance:
     - target: {fileID: 4215631996708417878, guid: 644b0bf6538aee340932cf8e894ed934,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.75
+      value: -3.65
       objectReference: {fileID: 0}
     - target: {fileID: 4215631996708417878, guid: 644b0bf6538aee340932cf8e894ed934,
         type: 3}
