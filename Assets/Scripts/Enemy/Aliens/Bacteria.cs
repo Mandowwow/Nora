@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class Bacteria : Enemy
 {
+
+    protected override void Start() {
+        base.Start();
+        speed = Random.Range(0.75f, 2f);
+    }
+
     protected override void ChasePlayer() {
         base.ChasePlayer();
         Vector3 playerPos = player.transform.position;
