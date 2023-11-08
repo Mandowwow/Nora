@@ -4,10 +4,7 @@ using UnityEngine;
 
 public class Lazer : MonoBehaviour
 {
-    private static float nextFire = 0f;
-    private static float fireRate = 0.25f;
     private Collider2D col;
-    public List<GameObject> enemies = new List<GameObject>();
 
     private void Start() {
         Destroy(this.gameObject, 0.5f);

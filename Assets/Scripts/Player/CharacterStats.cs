@@ -12,10 +12,11 @@ public class CharacterStats : MonoBehaviour
     }
     private static Weapon currentWeapon = CharacterStats.Weapon.Lazer;
     [SerializeField] private static int health = 6;
-    [SerializeField] private static int numOfHearts = 3;
+    [SerializeField] private static int numOfHearts = 6;
     [SerializeField] private static bool shield = false;
     [SerializeField] private static float bulletSpeed = 6;
     [SerializeField] private static float fireRate = 0.6f;
+
     public static int Health
     {
         get => health;
