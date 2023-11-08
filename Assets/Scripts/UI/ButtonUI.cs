@@ -15,6 +15,7 @@ public class ButtonUI : MonoBehaviour
         CharacterStats.Health = 6;
         CharacterStats.Shield = false;
         CharacterStats.BulletSpeed = 6;
+        CharacterStats.PlayerSpeed = 0.1f;
         CharacterStats.CurrentWeapon = CharacterStats.Weapon.Gun;
         CharacterStats.FireRate = 0.6f;
         AbilityController.state = AbilityController.State.Inactive;

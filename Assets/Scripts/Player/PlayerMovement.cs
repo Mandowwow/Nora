@@ -6,7 +6,6 @@ public class PlayerMovement : MonoBehaviour
 {
     //Movement Variables
     [SerializeField] private Rigidbody2D rb = null;
-    [SerializeField] private float runSpeed = 0;
     private Vector2 movement;
 
     //Knockback Variables
@@ -27,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate() {
         if (KBCounter <= 0) {
             //rb.MovePosition(rb.position + movement.normalized * runSpeed * Time.fixedDeltaTime);
-            rb.AddForce(movement.normalized * runSpeed * Time.fixedDeltaTime);
+            rb.AddForce(movement.normalized * CharacterStats.PlayerSpeed * Time.fixedDeltaTime);
             //rb.velocity = movement.normalized * runSpeed * Time.fixedDeltaTime;
         }
         else {
