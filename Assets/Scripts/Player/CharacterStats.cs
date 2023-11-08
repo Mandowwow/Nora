@@ -10,7 +10,7 @@ public class CharacterStats : MonoBehaviour
         Slime,
         Bat
     }
-    private static Weapon currentWeapon = CharacterStats.Weapon.Lazer;
+    private static Weapon currentWeapon = CharacterStats.Weapon.Gun;
     [SerializeField] private static int health = 6;
     [SerializeField] private static int numOfHearts = 6;
     [SerializeField] private static bool shield = false;
