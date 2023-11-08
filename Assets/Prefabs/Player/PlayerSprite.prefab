@@ -236,7 +236,7 @@ MonoBehaviour:
   runSpeed: 0.1
   KBCounter: 0
   KBTotalTime: 0.2
-  KBForce: 6
+  KBForce: 5
   knockFromRight: 1
 --- !u!114 &1064075819978608482
 MonoBehaviour:
@@ -516,22 +516,22 @@ PrefabInstance:
     - target: {fileID: 5573235696065473984, guid: 64450e7f8928ddb498a0a9b5f96b2725,
         type: 3}
       propertyPath: m_Offset.y
-      value: -0.04051894
+      value: 0.0006811321
       objectReference: {fileID: 0}
     - target: {fileID: 5573235696065473984, guid: 64450e7f8928ddb498a0a9b5f96b2725,
         type: 3}
       propertyPath: m_Size.y
-      value: 0.61796427
+      value: 0.71684426
       objectReference: {fileID: 0}
     - target: {fileID: 5573235696065473984, guid: 64450e7f8928ddb498a0a9b5f96b2725,
         type: 3}
       propertyPath: m_Offset.x
-      value: 0.01478976
+      value: 0.00012770295
       objectReference: {fileID: 0}
     - target: {fileID: 5573235696065473984, guid: 64450e7f8928ddb498a0a9b5f96b2725,
         type: 3}
       propertyPath: m_Size.x
-      value: 0.5478562
+      value: 0.5771803
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64450e7f8928ddb498a0a9b5f96b2725, type: 3}

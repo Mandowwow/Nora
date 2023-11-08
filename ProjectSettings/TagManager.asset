@@ -40,7 +40,7 @@ TagManager:
   - Shield
   - PickUp
   - Boulder
-  - 
+  - Bacteria
   - 
   - 
   - 
@@ -50,4 +50,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Weapons
+    uniqueID: 1583644415
+    locked: 0
+  - name: Enemies
+    uniqueID: 2527500655
     locked: 0
