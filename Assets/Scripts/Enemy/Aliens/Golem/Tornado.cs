@@ -35,7 +35,7 @@ public class Tornado : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        if (collision.gameObject.GetComponentInParent<Health>()) {
+        if (collision.gameObject.CompareTag("Player")) {
             collision.gameObject.GetComponentInParent<Health>().TakeDamage(1);
             Vector3 moveDirection = collision.gameObject.GetComponentInParent<Rigidbody2D>().transform.position - transform.position;
             collision.gameObject.GetComponentInParent<Rigidbody2D>().AddForce(-moveDirection.normalized * -0.065f);
