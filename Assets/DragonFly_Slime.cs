@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class DragonFly_Slime : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    private void Start() {
+        StartCoroutine(DestroyThis());
+    }
+    private void OnTriggerStay2D(Collider2D collision) {
+        if (collision.GetComponentInParent<PlayerMovement>()) {
+            CharacterStats.PlayerSpeed = 0.025f;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    private void OnTriggerExit2D(Collider2D collision) {
+        if (collision.GetComponentInParent<PlayerMovement>()) {
+            CharacterStats.PlayerSpeed = 0.1f;
+        }
+    }
+
+    IEnumerator DestroyThis() {
+        yield return new WaitForSeconds(7.5f);
+        CharacterStats.PlayerSpeed = 0.1f;
+        Destroy(this.gameObject);
     }
 }

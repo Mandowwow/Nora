@@ -38,7 +38,6 @@ public class DragonFly : Enemy
     }
     private void BlowUp() {
         Instantiate(bullet, transform.position, Quaternion.identity);
-        Instantiate(bullet, transform.position, Quaternion.identity);
     }
     private IEnumerator Wait() {
         canMove = false;
