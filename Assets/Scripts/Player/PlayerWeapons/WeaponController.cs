@@ -20,6 +20,13 @@ public class WeaponController : MonoBehaviour
     [SerializeField] private Transform shootL;
     [SerializeField] private Transform shootR;
 
+    //Sprite Renderer
+    private SpriteRenderer render;
+
+    private void Start() {
+        render = GetComponent<SpriteRenderer>();
+    }
+
     private void Update() {
         switch (CharacterStats.CurrentWeapon) {
             case CharacterStats.Weapon.Gun:
@@ -100,7 +107,9 @@ public class WeaponController : MonoBehaviour
         yield return new WaitForSeconds(0.45f);
         canShoot = true;
         Instantiate(lazerPrefab, pos.position, pos.rotation, pos);
+        StartCoroutine(RevertLayer());
         nextFire = Time.time + CharacterStats.FireRate;
+        
     }
 
     private IEnumerator SpawnSlime() {
@@ -118,5 +127,11 @@ public class WeaponController : MonoBehaviour
         //Instantiate Bat
         Instantiate(batPrefab, randPos, Quaternion.identity);
         canBat = true;
+    }
+
+    private IEnumerator RevertLayer() {
+        render.sortingOrder = -3;
+        yield return new WaitForSeconds(0.5f);
+        render.sortingOrder = 0;
     }
 }
