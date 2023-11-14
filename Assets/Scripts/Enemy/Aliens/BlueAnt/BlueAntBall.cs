@@ -14,12 +14,14 @@ public class BlueAntBall : MonoBehaviour
     }
 
     private void Shoot() {
-        Vector3 targetPos = target.transform.position;
-        Vector2 direction = new Vector2(
-            targetPos.x - transform.position.x,
-            targetPos.y - transform.position.y);
-        //transform.up = direction;
-        rb.velocity = direction.normalized * speed;
+        if (target != null) {
+            Vector3 targetPos = target.transform.position;
+            Vector2 direction = new Vector2(
+                targetPos.x - transform.position.x,
+                targetPos.y - transform.position.y);
+            //transform.up = direction;
+            rb.velocity = direction.normalized * speed;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {

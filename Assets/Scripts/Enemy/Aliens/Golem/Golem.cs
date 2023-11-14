@@ -35,11 +35,13 @@ public class Golem : Enemy
     }
 
     private void TurnDirection() {
-        if (transform.position.x > player.transform.position.x) {
-            sprite.flipX = true;
-        }
-        else {
-            sprite.flipX = false;
+        if (player != null) {
+            if (transform.position.x > player.transform.position.x) {
+                sprite.flipX = true;
+            }
+            else {
+                sprite.flipX = false;
+            }
         }
     }
 

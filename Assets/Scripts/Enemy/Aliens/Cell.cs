@@ -8,12 +8,7 @@ public class Cell : Enemy
     [SerializeField] private GameObject smallCell;
     protected override void ChasePlayer() {
         base.ChasePlayer();
-        Vector3 playerPos = player.transform.position;
-
-        Vector2 direction = new Vector2(
-            playerPos.x - transform.position.x,
-            playerPos.y - transform.position.y);
-        transform.up = direction;
+        PlayerDirection();
     }
 
     protected override void Dying() {

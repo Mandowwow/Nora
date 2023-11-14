@@ -20,11 +20,13 @@ public class Purple_Common : Enemy
         TurnDirection();
     }
     private void TurnDirection() {
-        if (transform.position.x > player.transform.position.x) {
-            sprite.flipX = true;
-        }
-        else {
-            sprite.flipX = false;
+        if(player != null) {
+            if (transform.position.x > player.transform.position.x) {
+                sprite.flipX = true;
+            }
+            else {
+                sprite.flipX = false;
+            }
         }
     }
     private void OnCollisionStay2D(Collision2D collision) {

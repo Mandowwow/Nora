@@ -16,7 +16,6 @@ public class BossCell : Enemy
     [SerializeField] private GameObject[] shootPos = null;
     private int rand = 0;
     private Vector3 moveDirection;
-    private Vector2 direction;
     private bool leftSide = true;
     private Vector2 center = new Vector2(0,0);
     private Vector2 randPos = new Vector2(0, 0);
@@ -29,11 +28,7 @@ public class BossCell : Enemy
         switch (currentPhase) {
             case Phase.one:
                 base.ChasePlayer();
-                Vector3 playerPos = player.transform.position;
-                direction = new Vector2(
-                    playerPos.x - transform.position.x,
-                    playerPos.y - transform.position.y);
-                transform.up = direction;
+                PlayerDirection();
                 break;
             case Phase.two:               
                 transform.Rotate(new Vector3(0f, 0f, 148f) * Time.deltaTime);

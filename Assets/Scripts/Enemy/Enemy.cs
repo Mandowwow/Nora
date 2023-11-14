@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private GameObject heart;
     [SerializeField] protected private float fireRate = 0.6f;
     private LevelUpMenu levelUpMenuUi;
+    protected Vector2 direction;
     protected private float nextFire = 0f;
     protected private PlayerMovement playerMovement;
     protected private Transform player;
@@ -57,9 +58,11 @@ public class Enemy : MonoBehaviour
     }
 
     protected virtual void ChasePlayer() {
-        if (Vector2.Distance(transform.position, player.position) < 12 && Vector2.Distance(transform.position, player.position) > 0.35f) {
-            Vector2 direction = (player.position - transform.position).normalized;
-            rb.MovePosition(rb.position + direction * Time.deltaTime * speed);
+        if (player != null) {
+            if (Vector2.Distance(transform.position, player.position) < 12 && Vector2.Distance(transform.position, player.position) > 0.35f) {
+                Vector2 direction = (player.position - transform.position).normalized;
+                rb.MovePosition(rb.position + direction * Time.deltaTime * speed);
+            }
         }
     }
 
@@ -87,6 +90,16 @@ public class Enemy : MonoBehaviour
     protected virtual void LevelUp()
     {
         levelUpMenuUi.OpenMenu();
+    }
+
+    protected void PlayerDirection() {
+        if (player != null) {
+            Vector3 playerPos = player.transform.position;
+            direction = new Vector2(
+                playerPos.x - transform.position.x,
+                playerPos.y - transform.position.y);
+            transform.up = direction;
+        }
     }
 
     protected void RandomDrop() {

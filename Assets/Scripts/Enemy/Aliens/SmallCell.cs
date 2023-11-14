@@ -6,12 +6,7 @@ public class SmallCell : Enemy
 {
     protected override void ChasePlayer() {
         base.ChasePlayer();
-        Vector3 playerPos = player.transform.position;
-
-        Vector2 direction = new Vector2(
-            playerPos.x - transform.position.x,
-            playerPos.y - transform.position.y);
-        transform.up = direction;
+        PlayerDirection();
     }
 
     private void OnCollisionStay2D(Collision2D collision) {
