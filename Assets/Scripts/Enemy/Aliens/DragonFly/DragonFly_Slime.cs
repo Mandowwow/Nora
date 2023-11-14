@@ -20,7 +20,7 @@ public class DragonFly_Slime : MonoBehaviour
     }
 
     IEnumerator DestroyThis() {
-        yield return new WaitForSeconds(7.5f);
+        yield return new WaitForSeconds(10f);
         CharacterStats.PlayerSpeed = 0.1f;
         Destroy(this.gameObject);
     }
