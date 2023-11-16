@@ -1436,8 +1436,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: Theme
-    clip: {fileID: 8300000, guid: 3f773e4e48b27a74f80eb4c578b638e0, type: 3}
-    volume: 0
+    clip: {fileID: 8300000, guid: 42fbe3be30636a04d8141dd2bd8abe45, type: 3}
+    volume: 0.501
     pitch: 1
     loop: 1
     source: {fileID: 0}
@@ -1748,7 +1748,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1727870068
 Transform:
   m_ObjectHideFlags: 0

@@ -59,7 +59,7 @@ public class Enemy : MonoBehaviour
 
     protected virtual void ChasePlayer() {
         if (player != null) {
-            if (Vector2.Distance(transform.position, player.position) < 12 && Vector2.Distance(transform.position, player.position) > 0.35f) {
+            if (Vector2.Distance(transform.position, player.position) < 20 && Vector2.Distance(transform.position, player.position) > 0.35f) {
                 Vector2 direction = (player.position - transform.position).normalized;
                 rb.MovePosition(rb.position + direction * Time.deltaTime * speed);
             }

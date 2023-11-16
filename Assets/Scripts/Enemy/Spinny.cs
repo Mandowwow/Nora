@@ -16,8 +16,10 @@ public class Spinny : Enemy
     }
 
     protected override void Attack() {
-        if (Vector2.Distance(transform.position, player.position) < attackRange && Time.time > nextFire) {
-            DealDmg();
+        if(player != null) {
+            if (Vector2.Distance(transform.position, player.position) < attackRange && Time.time > nextFire) {
+                DealDmg();
+            }
         }
     }
 

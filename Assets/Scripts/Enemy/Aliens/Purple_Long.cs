@@ -13,8 +13,10 @@ public class Purple_Long : Enemy
         anim = GetComponent<Animator>();
     }
     protected override void ChasePlayer() {
-        if (Vector2.Distance(transform.position, player.position) >= 0f) {
-            anim.Play("Spit");
+        if(player != null) {
+            if (Vector2.Distance(transform.position, player.position) >= 0f) {
+                anim.Play("Spit");
+            }
         }
     }
     
