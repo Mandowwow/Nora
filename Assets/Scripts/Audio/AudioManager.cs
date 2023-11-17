@@ -29,7 +29,7 @@ public class AudioManager : MonoBehaviour
     }
 
     private void Start() {
-        Play("Theme");
+        Play("MainMenu");
     }
 
     public void Play (string name) {
@@ -39,9 +39,10 @@ public class AudioManager : MonoBehaviour
         s.source.Play();
     }
 
-    private IEnumerator Song() {
-        Play("Theme");
-        yield return new WaitForSeconds(78f);
-        Play("Pause");
+    public void StopMusic(string name) {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        if (s == null)
+            return;
+        s.source.Stop();
     }
 }

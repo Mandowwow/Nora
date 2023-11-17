@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class ButtonUI : MonoBehaviour
 {
     public void NewGameButton() {
+        FindObjectOfType<AudioManager>().StopMusic("MainMenu");
         Invoke("StartGame", 1f);
     }
     
@@ -22,5 +23,8 @@ public class ButtonUI : MonoBehaviour
         FindEnemies.Enemies.Clear();
         LevelGeneration.PlayerPoints = 0;
         LevelGeneration.FirstLevel = true;
+
+        
+        FindObjectOfType<AudioManager>().Play("Theme");
     }
 }

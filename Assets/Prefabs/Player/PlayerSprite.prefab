@@ -233,7 +233,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 4215631996708417873}
-  runSpeed: 0.1
   KBCounter: 0
   KBTotalTime: 0.2
   KBForce: 5
