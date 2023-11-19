@@ -21,8 +21,10 @@ public class LevelUpMenu : MonoBehaviour
     }
 
     private void Start() {
-        rand = Random.Range(0, butImgs.Length);
-        rand2 = Random.Range(0, butImgs.Length);
+        do {
+            rand = Random.Range(0, butImgs.Length);
+            rand2 = Random.Range(0, butImgs.Length);
+        } while (rand == rand2);
         button1.GetComponent<Image>().sprite = butImgs[rand];
         button2.GetComponent<Image>().sprite = butImgs[rand2];
     }
@@ -42,6 +44,7 @@ public class LevelUpMenu : MonoBehaviour
                 Shield();
                 break;
             case 3:
+                LaserWeapon();
                 Debug.Log("Ability 4");
                 break;
         }
@@ -63,6 +66,7 @@ public class LevelUpMenu : MonoBehaviour
                 Shield();
                 break;
             case 3:
+                LaserWeapon();
                 Debug.Log("Ability 4");
                 break;
         }
@@ -97,6 +101,11 @@ public class LevelUpMenu : MonoBehaviour
 
     public void IncreaseBulletSpeed() {
         CharacterStats.BulletSpeed += 3;
+        CloseMenu();
+    }
+
+    public void LaserWeapon() {
+        CharacterStats.CurrentWeapon = CharacterStats.Weapon.Lazer;
         CloseMenu();
     }
 }
