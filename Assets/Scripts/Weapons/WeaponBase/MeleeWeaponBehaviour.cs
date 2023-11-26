@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// [To be placed on a prefab of a weapon that is melee]
+/// For melee prefab weapons to inherit
 /// </summary>
 public class MeleeWeaponBehaviour : MonoBehaviour
 {

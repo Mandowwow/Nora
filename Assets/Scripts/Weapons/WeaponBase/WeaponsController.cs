@@ -15,6 +15,8 @@ public class WeaponsController : MonoBehaviour
     float currentCooldown;
     public int pierce;
 
+    protected Rigidbody2D rb;
+
     virtual protected void Start() {
         currentCooldown = cooldownDuration; //Weapons not to immediately fire when scene starts; 
     }
