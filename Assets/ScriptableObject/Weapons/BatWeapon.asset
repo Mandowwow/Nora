@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07e333a50debad24ebda6368b3806825, type: 3}
   m_Name: BatWeapon
   m_EditorClassIdentifier: 
-  prefab: {fileID: 71275680528837305, guid: 5a1c734261606f34e9c3e0f8bb7be4e8, type: 3}
-  damage: 0
-  speed: 6
-  cooldownDuration: 4
-  pierce: 0
+  _prefab: {fileID: 0}
+  _damage: 0
+  _speed: 0
+  _cooldownDuration: 0
+  _pierce: 0

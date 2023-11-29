@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07e333a50debad24ebda6368b3806825, type: 3}
   m_Name: SlimeWeapon
   m_EditorClassIdentifier: 
-  prefab: {fileID: 8982202681565296391, guid: cc10790ea918a0740b90fb15f6e55d1d, type: 3}
-  damage: 0
-  speed: 0
-  cooldownDuration: 2.5
-  pierce: 0
+  _prefab: {fileID: 0}
+  _damage: 0
+  _speed: 0
+  _cooldownDuration: 0
+  _pierce: 0
