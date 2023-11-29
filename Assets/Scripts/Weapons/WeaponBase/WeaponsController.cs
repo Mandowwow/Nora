@@ -8,17 +8,14 @@ using UnityEngine;
 public class WeaponsController : MonoBehaviour
 {
     [Header("Weapon Stats")]
-    public GameObject prefab;
-    public int damage;
-    public float speed;
-    public float cooldownDuration;
+    public WeaponScritpableObject weaponData;
     float currentCooldown;
-    public int pierce;
+
 
     protected Rigidbody2D rb;
 
     virtual protected void Start() {
-        currentCooldown = cooldownDuration; //Weapons not to immediately fire when scene starts; 
+        currentCooldown = weaponData.CooldownDuration; //Weapons not to immediately fire when scene starts; 
     }
 
     virtual protected void Update() {
@@ -30,6 +27,6 @@ public class WeaponsController : MonoBehaviour
     }
 
     virtual protected void Attack() {
-        currentCooldown = cooldownDuration;
+        currentCooldown = weaponData.CooldownDuration;
     }
 }

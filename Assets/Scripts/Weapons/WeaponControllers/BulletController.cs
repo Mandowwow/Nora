@@ -23,7 +23,7 @@ public class BulletController : WeaponsController
 
     void Shoot(Vector3 dir) {
         base.Attack();
-        GameObject spawnedBullet = Instantiate(prefab);
+        GameObject spawnedBullet = Instantiate(weaponData.Prefab);
         spawnedBullet.transform.position = transform.position;
         spawnedBullet.GetComponent<BulletBehaviour>().DirectionCalc(dir);
     }

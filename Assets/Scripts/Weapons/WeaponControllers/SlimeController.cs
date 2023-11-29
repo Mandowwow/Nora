@@ -12,7 +12,7 @@ public class SlimeController : WeaponsController
 
     protected override void Attack() {
         base.Attack();
-        GameObject spawnedSlime = Instantiate(prefab);
+        GameObject spawnedSlime = Instantiate(weaponData.Prefab);
         spawnedSlime.transform.position = transform.position; //Spawn at parent position (which is player)
     }
 

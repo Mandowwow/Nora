@@ -153,4 +153,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c37f0ca4f4572b74d8e1c291aa6f1f7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponData: {fileID: 11400000, guid: 9889f6772606db848bdca417b5cdf39f, type: 2}
   destroyAfterSeconds: 1

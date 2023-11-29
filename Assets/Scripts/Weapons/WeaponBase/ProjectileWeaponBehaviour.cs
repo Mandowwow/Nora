@@ -7,6 +7,8 @@ using UnityEngine;
 /// </summary>
 public class ProjectileWeaponBehaviour : MonoBehaviour
 {
+    public WeaponScritpableObject weaponData;
+
     protected Animator anim;
     protected Rigidbody2D rb;
     protected Vector3 direction;

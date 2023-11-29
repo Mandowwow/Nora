@@ -4,17 +4,14 @@ using UnityEngine;
 
 public class BulletBehaviour : ProjectileWeaponBehaviour
 {
-    BulletController bc;
-
     protected override void Start() {
         base.Start();
-        bc = FindObjectOfType<BulletController>();
-        rb.velocity = direction * bc.speed;
+        rb.velocity = direction * weaponData.Speed;
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.CompareTag("Enemy")) {
-            collision.GetComponent<Enemy>().TakeDamage(1);
+            collision.GetComponent<Enemy>().TakeDamage(weaponData.Damage);
             GetComponent<Collider2D>().enabled = false;
             gameObject.transform.localScale += new Vector3(0.2f, 0.2f);
             anim.Play("Impact");

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class BatController : WeaponsController
 {
-    GameObject prefabBat;
     // Start is called before the first frame update
     protected override void Start()
     {
@@ -14,7 +13,7 @@ public class BatController : WeaponsController
     protected override void Attack() {
         base.Attack();
         Vector2 randPos = new Vector2(Random.Range(-5.5f, 5.5f), Random.Range(-3f, 0.75f));
-        GameObject spawnedPortal = Instantiate(prefab);
+        GameObject spawnedPortal = Instantiate(weaponData.Prefab);
         spawnedPortal.transform.position = randPos;
     }
 
@@ -35,7 +34,7 @@ public class BatController : WeaponsController
         Vector2 direction = new Vector2(
             targetPos.x - vector.x,
             targetPos.y - vector.y);
-        rb.velocity = direction.normalized * speed;
+        rb.velocity = direction.normalized * weaponData.Speed;
     }
 
 }
