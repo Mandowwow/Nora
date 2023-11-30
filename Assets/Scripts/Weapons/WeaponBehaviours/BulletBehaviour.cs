@@ -9,7 +9,7 @@ public class BulletBehaviour : ProjectileWeaponBehaviour
         rb.velocity = direction * weaponData.Speed;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision) {
+    protected override void OnTriggerEnter2D(Collider2D collision) {
         if (collision.CompareTag("Enemy")) {
             collision.GetComponent<Enemy>().TakeDamage(weaponData.Damage);
             GetComponent<Collider2D>().enabled = false;

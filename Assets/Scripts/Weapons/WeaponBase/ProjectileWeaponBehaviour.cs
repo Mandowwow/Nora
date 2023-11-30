@@ -14,6 +14,18 @@ public class ProjectileWeaponBehaviour : MonoBehaviour
     protected Vector3 direction;
     public float destroyAfterSeconds;
 
+    //Current stats
+    protected int currentDamage;
+    protected float currentSpeed;
+    protected float currentCooldownDuration;
+    protected int currentPierce;
+
+    private void Awake() {
+        currentDamage = weaponData.Damage;
+        currentSpeed = weaponData.Speed;
+        currentCooldownDuration = weaponData.CooldownDuration;
+        currentPierce = weaponData.Pierce;
+    }
     protected virtual void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -23,5 +35,13 @@ public class ProjectileWeaponBehaviour : MonoBehaviour
 
     public void DirectionCalc(Vector3 dir) {
         direction = dir;
+    }
+
+    protected virtual void OnTriggerEnter2D(Collider2D collision) {
+        if (collision.CompareTag("Enemy")) {
+            collision.GetComponent<Enemy>().TakeDamage(currentDamage);
+        } else if (collision.CompareTag("Wall")) {
+            Destroy(this.gameObject);
+        }
     }
 }
