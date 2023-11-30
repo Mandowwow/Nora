@@ -40,8 +40,15 @@ public class ProjectileWeaponBehaviour : MonoBehaviour
     protected virtual void OnTriggerEnter2D(Collider2D collision) {
         if (collision.CompareTag("Enemy")) {
             collision.GetComponent<Enemy>().TakeDamage(currentDamage);
+            ReducePierce();
         } else if (collision.CompareTag("Wall")) {
             Destroy(this.gameObject);
         }
+    }
+
+    void ReducePierce() {
+        currentPierce--;
+        if (currentPierce <= 0)
+            Destroy(this.gameObject);
     }
 }

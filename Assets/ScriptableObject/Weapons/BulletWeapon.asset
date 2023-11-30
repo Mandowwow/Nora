@@ -16,4 +16,4 @@ MonoBehaviour:
   _damage: 1
   _speed: 6
   _cooldownDuration: 0.6
-  _pierce: 0
+  _pierce: 1

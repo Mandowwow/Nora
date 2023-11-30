@@ -30,11 +30,13 @@ public class BatController : WeaponsController
             }
         }
 
-        Vector3 targetPos = closestEnemy.transform.position;
-        Vector2 direction = new Vector2(
-            targetPos.x - vector.x,
-            targetPos.y - vector.y);
-        rb.velocity = direction.normalized * weaponData.Speed;
+        if(closestEnemy!= null) {
+            Vector3 targetPos = closestEnemy.transform.position;
+            Vector2 direction = new Vector2(
+                targetPos.x - vector.x,
+                targetPos.y - vector.y);
+            rb.velocity = direction.normalized * weaponData.Speed;
+        }
     }
 
 }
