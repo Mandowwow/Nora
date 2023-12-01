@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2559f6ea2d4a8d540825bab328e5fa9d, type: 3}
   m_Name: Nora
   m_EditorClassIdentifier: 
-  _maxHealth: 0
-  _numOfHearts: 0
-  _moveSpeed: 0
+  _maxHealth: 6
+  _numOfHearts: 3
+  _moveSpeed: 0.1
