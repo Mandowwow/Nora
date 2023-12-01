@@ -57,3 +57,12 @@ TagManager:
   - name: Enemies
     uniqueID: 2527500655
     locked: 0
+  - name: Background
+    uniqueID: 2445342967
+    locked: 0
+  - name: Midground
+    uniqueID: 437846227
+    locked: 0
+  - name: Foreground
+    uniqueID: 3734737551
+    locked: 0
