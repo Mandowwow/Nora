@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     //Movement Variables
-    [SerializeField] private Rigidbody2D rb = null;
     private Vector2 movement;
 
     //Knockback Variables
@@ -14,6 +13,10 @@ public class PlayerMovement : MonoBehaviour
     public float KBForce;
 
     public bool knockFromRight;
+
+    //Refrences
+    [SerializeField] private Rigidbody2D rb = null;
+    public PlayerScriptableObject playerData;
 
     // Update is called once per frame
     void Update()
@@ -26,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate() {
         if (KBCounter <= 0) {
             //rb.MovePosition(rb.position + movement.normalized * runSpeed * Time.fixedDeltaTime);
-            rb.AddForce(movement.normalized * CharacterStats.PlayerSpeed * Time.fixedDeltaTime);
+            rb.AddForce(movement.normalized * playerData.MoveSpeed * Time.fixedDeltaTime);
             //rb.velocity = movement.normalized * runSpeed * Time.fixedDeltaTime;
         }
         else {

@@ -2,17 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerScriptableObject : MonoBehaviour
+[CreateAssetMenu(fileName ="PlayerScriptableObject", menuName ="ScriptableObjects/Player")]
+public class PlayerScriptableObject : ScriptableObject
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] int _maxHealth;
+    [SerializeField] int _numOfHearts;
+    [SerializeField] float _moveSpeed;
+    
+    public int MaxHealth
     {
-        
+        get => _maxHealth;
+        set => _maxHealth = value;
     }
 
-    // Update is called once per frame
-    void Update()
+    public int NumOfHearts
     {
-        
+        get => _numOfHearts;
+        set => _numOfHearts = value;
     }
+
+    public float MoveSpeed
+    {
+        get => _moveSpeed;
+        set => _moveSpeed = value;
+    }
+
 }

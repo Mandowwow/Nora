@@ -278,11 +278,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32e46d1be1a956e40a6a4b4a5d7d9cfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 4215631996708417873}
   KBCounter: 0
   KBTotalTime: 0.2
   KBForce: 5
   knockFromRight: 1
+  rb: {fileID: 4215631996708417873}
+  playerData: {fileID: 11400000, guid: 2d837c846d87a08498dc9a76d2a7819a, type: 2}
 --- !u!114 &1064075819978608482
 MonoBehaviour:
   m_ObjectHideFlags: 0

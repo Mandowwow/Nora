@@ -14,47 +14,56 @@ public class Health : MonoBehaviour
     private Collider2D col;
     private SpriteRenderer player;
 
+    private PlayerStats ps;
+
     private void Start() {
         stats = GameObject.FindGameObjectWithTag("Manager").GetComponent<CharacterStats>();
         col = GameObject.FindGameObjectWithTag("Player").GetComponent<Collider2D>();
         player = GetComponent<SpriteRenderer>();
+        ps = FindObjectOfType<PlayerStats>();
     }
 
     private void Update() {
 
-        if(CharacterStats.Health <= 0) {
+        if(ps.CurrentHealth <= 0) {
+            Debug.Log("dead");
             Destroy(this.gameObject);
         }
 
-        if(CharacterStats.Health > CharacterStats.NumOfHearts) {
-            CharacterStats.Health = CharacterStats.NumOfHearts;
+        if(ps.CurrentHealth > ps.CurrentNumOfHearts) {
+            ps.CurrentHealth = ps.CurrentNumOfHearts;
         }
 
         for (int i = 0; i < hearts.Length; i++) {
 
-            if(i < CharacterStats.Health) {
+            if (i < ps.CurrentHealth) {
                 hearts[i].sprite = fullHeart;
-            } else {
+            }
+            else {
                 hearts[i].sprite = emptyHeart;
             }
 
-            if(i < CharacterStats.NumOfHearts) {
+            if (i < ps.CurrentNumOfHearts) {
                 hearts[i].enabled = true;
-            } else {
+            }
+            else {
                 hearts[i].enabled = false;
             }
         }
     }
 
     public void TakeDamage(int dmg) {
-        if(CharacterStats.Shield == false) {
-            damage += 1;
-            if(damage > 1) {
-                return;
-            }
-            CharacterStats.Health = CharacterStats.Health - dmg;
-            StartCoroutine(Change());
-        }
+        //if(CharacterStats.Shield == false) {
+        //    damage += 1;
+        //    if(damage > 1) {
+        //        return;
+        //    }
+        //    CharacterStats.Health = CharacterStats.Health - dmg;
+        //    StartCoroutine(Change());
+        //}
+
+        ps.CurrentHealth -= dmg;
+        StartCoroutine(Change());
     }
 
     IEnumerator Change() {

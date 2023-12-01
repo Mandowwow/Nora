@@ -5,10 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class Portal : MonoBehaviour
 {
+    //refrences
+    public PlayerScriptableObject playerData;
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.CompareTag("Player")) {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            CharacterStats.PlayerSpeed = 0.1f;
+            playerData.MoveSpeed = 0.1f;
         }
     }
 
