@@ -46,7 +46,7 @@ public class ProjectileWeaponBehaviour : MonoBehaviour
         }
     }
 
-    void ReducePierce() {
+    public void ReducePierce() {
         currentPierce--;
         if (currentPierce <= 0)
             Destroy(this.gameObject);
