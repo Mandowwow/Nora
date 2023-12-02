@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SlimeWeapon
   m_EditorClassIdentifier: 
   _prefab: {fileID: 8982202681565296391, guid: cc10790ea918a0740b90fb15f6e55d1d, type: 3}
-  _damage: 0
+  _damage: 1
   _speed: 0
   _cooldownDuration: 2.5
   _pierce: 0

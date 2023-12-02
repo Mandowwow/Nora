@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// Weapon Script for all weapons to inherit
+/// Weapon Script for all weapons controllers to inherit
 /// </summary>
 public class WeaponsController : MonoBehaviour
 {

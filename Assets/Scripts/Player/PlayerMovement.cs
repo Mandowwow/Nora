@@ -16,7 +16,11 @@ public class PlayerMovement : MonoBehaviour
 
     //Refrences
     [SerializeField] private Rigidbody2D rb = null;
-    public PlayerScriptableObject playerData;
+    PlayerStats ps;
+
+    private void Start() {
+        ps = GetComponent<PlayerStats>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -29,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate() {
         if (KBCounter <= 0) {
             //rb.MovePosition(rb.position + movement.normalized * runSpeed * Time.fixedDeltaTime);
-            rb.AddForce(movement.normalized * playerData.MoveSpeed * Time.fixedDeltaTime);
+            rb.AddForce(movement.normalized * ps.CurrentMoveSpeed * Time.fixedDeltaTime);
             //rb.velocity = movement.normalized * runSpeed * Time.fixedDeltaTime;
         }
         else {

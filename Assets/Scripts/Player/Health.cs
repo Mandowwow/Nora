@@ -25,18 +25,18 @@ public class Health : MonoBehaviour
 
     private void Update() {
 
-        if(ps.CurrentHealth <= 0) {
+        if(PlayerStats.CurrentHealth <= 0) {
             Debug.Log("dead");
             Destroy(this.gameObject);
         }
 
-        if(ps.CurrentHealth > ps.CurrentNumOfHearts) {
-            ps.CurrentHealth = ps.CurrentNumOfHearts;
+        if(PlayerStats.CurrentHealth > ps.CurrentNumOfHearts) {
+            PlayerStats.CurrentHealth = ps.CurrentNumOfHearts;
         }
 
         for (int i = 0; i < hearts.Length; i++) {
 
-            if (i < ps.CurrentHealth) {
+            if (i < PlayerStats.CurrentHealth) {
                 hearts[i].sprite = fullHeart;
             }
             else {
@@ -62,7 +62,7 @@ public class Health : MonoBehaviour
         //    StartCoroutine(Change());
         //}
 
-        ps.CurrentHealth -= dmg;
+        PlayerStats.CurrentHealth -= dmg;
         StartCoroutine(Change());
     }
 

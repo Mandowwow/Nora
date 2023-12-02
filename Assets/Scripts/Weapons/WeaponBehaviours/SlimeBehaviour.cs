@@ -14,7 +14,7 @@ public class SlimeBehaviour : MeleeWeaponBehaviour
 
     private void OnTriggerStay2D(Collider2D collision) {
         if (collision.GetComponent<Enemy>() && Time.time > nextFire) {
-            collision.GetComponent<Enemy>().TakeDamage(1);
+            collision.GetComponent<Enemy>().TakeDamage(currentDamage);
             nextFire = Time.time + fireRate;
         }
     }

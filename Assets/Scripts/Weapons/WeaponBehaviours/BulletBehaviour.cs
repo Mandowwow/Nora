@@ -6,12 +6,12 @@ public class BulletBehaviour : ProjectileWeaponBehaviour
 {
     protected override void Start() {
         base.Start();
-        rb.velocity = direction * weaponData.Speed;
+        rb.velocity = direction * currentSpeed;
     }
 
     protected override void OnTriggerEnter2D(Collider2D collision) {
         if (collision.CompareTag("Enemy")) {
-            collision.GetComponent<Enemy>().TakeDamage(weaponData.Damage);
+            collision.GetComponent<Enemy>().TakeDamage(currentDamage);
             ReducePierceBullet();
         }
         else if (collision.CompareTag("Wall")) {

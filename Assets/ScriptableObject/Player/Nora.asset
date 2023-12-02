@@ -15,3 +15,5 @@ MonoBehaviour:
   _maxHealth: 6
   _numOfHearts: 3
   _moveSpeed: 0.1
+  _startingWeapon: {fileID: 8371001319109914369, guid: fe9187acd0dc3b94f8938e0eee57e5fd,
+    type: 3}

@@ -8,6 +8,7 @@ public class PlayerScriptableObject : ScriptableObject
     [SerializeField] int _maxHealth;
     [SerializeField] int _numOfHearts;
     [SerializeField] float _moveSpeed;
+    [SerializeField] GameObject _startingWeapon;
     
     public int MaxHealth
     {
@@ -25,6 +26,12 @@ public class PlayerScriptableObject : ScriptableObject
     {
         get => _moveSpeed;
         set => _moveSpeed = value;
+    }
+
+    public GameObject StartingWeapon
+    {
+        get => _startingWeapon;
+        set => _startingWeapon = value;
     }
 
 }
