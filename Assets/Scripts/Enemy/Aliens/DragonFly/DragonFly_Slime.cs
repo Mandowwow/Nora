@@ -19,14 +19,14 @@ public class DragonFly_Slime : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision) {
         if (collision.GetComponentInParent<PlayerMovement>()) {
             //CharacterStats.PlayerSpeed = 0.1f;
-            ps.CurrentMoveSpeed = 0.1f;
+            ps.CurrentMoveSpeed = 0.09f;
         }
     }
 
     IEnumerator DestroyThis() {
         yield return new WaitForSeconds(10f);
         //CharacterStats.PlayerSpeed = 0.1f;
-        ps.CurrentMoveSpeed = 0.1f;
+        ps.CurrentMoveSpeed = 0.09f;
         Destroy(this.gameObject);
     }
 }
