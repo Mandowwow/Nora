@@ -102,6 +102,7 @@ GameObject:
   - component: {fileID: 4215631996708417875}
   - component: {fileID: 1064075819978608482}
   - component: {fileID: 1029436792}
+  - component: {fileID: 848989754295883383}
   m_Layer: 13
   m_Name: PlayerSprite
   m_TagString: Controller
@@ -271,7 +272,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerData: {fileID: 11400000, guid: 2d837c846d87a08498dc9a76d2a7819a, type: 2}
-  spawnedWeapons: []
+  weaponIndex: 0
+  passiveItemIndex: 0
+--- !u!114 &848989754295883383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4215631996708417876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcaa54114145b284484ca00505e01f6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponSlots: []
+  weaponLevels: 000000000000000000000000000000000000000000000000
+  passiveItemSlots: []
+  passiveItemLevels: 000000000000000000000000000000000000000000000000
 --- !u!1 &5795380473033663518
 GameObject:
   m_ObjectHideFlags: 0

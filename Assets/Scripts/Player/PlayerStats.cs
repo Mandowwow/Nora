@@ -6,6 +6,12 @@ public class PlayerStats : MonoBehaviour
 {
     //Refrences
     public PlayerScriptableObject playerData;
+    InventoryManager inventory;
+
+    //inventory variables for weapons and items
+    public int weaponIndex;
+    public int passiveItemIndex;
+
 
     //current Stats
     static int _currentHealth;
@@ -13,7 +19,7 @@ public class PlayerStats : MonoBehaviour
     int _currentNumOfHearts;
 
     //Spawned Weapon
-    public List<GameObject> spawnedWeapons;
+    //public List<GameObject> spawnedWeapons;
 
     public static int CurrentHealth
     {
@@ -33,6 +39,10 @@ public class PlayerStats : MonoBehaviour
         set => _currentMoveSpeed = value;
     }
     private void Awake() {
+
+        inventory = GetComponent<InventoryManager>();
+
+        //assign variables from scriptable object to player
         if(_currentHealth == 0) {
             _currentHealth = playerData.MaxHealth;
         }
@@ -44,9 +54,17 @@ public class PlayerStats : MonoBehaviour
     }
 
     public void SpawnWeapon(GameObject weapon) {
+
+        if(weaponIndex >= inventory.weaponSlots.Count - 1) {
+            Debug.LogError("Inventory is full");
+            return;
+        }
         //Spawn the starting weapon
         GameObject spawnedWeapon = Instantiate(weapon, new Vector3(0f,-3.1f), Quaternion.identity);
         spawnedWeapon.transform.SetParent(transform);
-        spawnedWeapons.Add(spawnedWeapon);
+        //spawnedWeapons.Add(spawnedWeapon);
+        inventory.AddWeapon(weaponIndex, spawnedWeapon.GetComponent<WeaponsController>());//Add weapon to inventory slot
+
+        weaponIndex++;//this increment ensures that each weapon is assigned to the next slot in the invetory and prevents overlapping
     }
 }

@@ -2414,6 +2414,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 848989754295883383, guid: 644b0bf6538aee340932cf8e894ed934,
+        type: 3}
+      propertyPath: weaponSlots.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 848989754295883383, guid: 644b0bf6538aee340932cf8e894ed934,
+        type: 3}
+      propertyPath: passiveItemSlots.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1064075819978608482, guid: 644b0bf6538aee340932cf8e894ed934,
         type: 3}
       propertyPath: hearts.Array.data[0]
