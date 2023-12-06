@@ -12,14 +12,13 @@ public class PlayerStats : MonoBehaviour
     public int weaponIndex;
     public int passiveItemIndex;
 
-
     //current Stats
     static int _currentHealth;
     float _currentMoveSpeed;
     int _currentNumOfHearts;
 
-    //Spawned Weapon
-    //public List<GameObject> spawnedWeapons;
+    public GameObject firstPassiveItemTest, secondPassiveItemTest;
+    public GameObject secondWeaponTest;
 
     public static int CurrentHealth
     {
@@ -51,6 +50,11 @@ public class PlayerStats : MonoBehaviour
 
         //Starting weapon
         SpawnWeapon(playerData.StartingWeapon);
+        inventory.LevelUpWeapon(0);
+        SpawnWeapon(secondWeaponTest);
+        SpawnPassiveItems(firstPassiveItemTest);
+        inventory.LevelUpPassiveItem(0);
+        SpawnPassiveItems(secondPassiveItemTest);
     }
 
     public void SpawnWeapon(GameObject weapon) {
@@ -62,9 +66,22 @@ public class PlayerStats : MonoBehaviour
         //Spawn the starting weapon
         GameObject spawnedWeapon = Instantiate(weapon, new Vector3(0f,-3.1f), Quaternion.identity);
         spawnedWeapon.transform.SetParent(transform);
-        //spawnedWeapons.Add(spawnedWeapon);
         inventory.AddWeapon(weaponIndex, spawnedWeapon.GetComponent<WeaponsController>());//Add weapon to inventory slot
 
         weaponIndex++;//this increment ensures that each weapon is assigned to the next slot in the invetory and prevents overlapping
+    }
+
+    public void SpawnPassiveItems(GameObject passiveItem) {
+
+        if (passiveItemIndex >= inventory.passiveItemSlots.Count - 1) {
+            Debug.LogError("Inventory is full");
+            return;
+        }
+        //Spawn the starting passive item
+        GameObject spawnedPassiveItem = Instantiate(passiveItem, new Vector3(0f, -3.1f), Quaternion.identity);
+        spawnedPassiveItem.transform.SetParent(transform);
+        inventory.AddPassiveItem(passiveItemIndex, spawnedPassiveItem.GetComponent<PassiveItem>());//Add passive item to inventory slot
+
+        passiveItemIndex++;//this increment ensures that each passive item is assigned to the next slot in the invetory and prevents overlapping
     }
 }

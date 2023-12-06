@@ -6,6 +6,8 @@ using UnityEngine;
 public class PassiveItemScriptableObject : ScriptableObject
 {
     [SerializeField] int _multiplier;
+    [SerializeField] int _level;
+    [SerializeField] GameObject _nextLevelPrefab;
 
     public int Multiplier
     {
@@ -13,4 +15,15 @@ public class PassiveItemScriptableObject : ScriptableObject
         set => _multiplier = value;
     }
 
+    public int Level
+    {
+        get => _level;
+        set => _level = value;
+    }
+
+    public GameObject NextLevelPrefab
+    {
+        get => _nextLevelPrefab;
+        set => _nextLevelPrefab = value;
+    } 
 }

@@ -10,6 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 43142ea6cd442d8458690169159db495, type: 3}
-  m_Name: MotorPassiveItem
+  m_Name: MotorPassiveItemLevel2
   m_EditorClassIdentifier: 
-  _multiplier: 10
+  _multiplier: 20
+  _level: 2
+  _nextLevelPrefab: {fileID: 0}

@@ -2414,6 +2414,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1029436792, guid: 644b0bf6538aee340932cf8e894ed934, type: 3}
+      propertyPath: secondWeaponTest
+      value: 
+      objectReference: {fileID: 1013406773728155853, guid: ee522453143989344bc92eb957a649af,
+        type: 3}
+    - target: {fileID: 1029436792, guid: 644b0bf6538aee340932cf8e894ed934, type: 3}
+      propertyPath: firstPassiveItemTest
+      value: 
+      objectReference: {fileID: 6885198795602271565, guid: b443c41d096254445853c2d4f5512dae,
+        type: 3}
+    - target: {fileID: 1029436792, guid: 644b0bf6538aee340932cf8e894ed934, type: 3}
+      propertyPath: secondPassiveItemTest
+      value: 
+      objectReference: {fileID: 6216355384359485842, guid: d231821d1d9481c4f88a4ba2c2e807d4,
+        type: 3}
     - target: {fileID: 848989754295883383, guid: 644b0bf6538aee340932cf8e894ed934,
         type: 3}
       propertyPath: weaponSlots.Array.size

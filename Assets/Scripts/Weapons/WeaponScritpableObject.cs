@@ -9,6 +9,8 @@ public class WeaponScritpableObject : ScriptableObject {
     [SerializeField] float _speed;
     [SerializeField] float _cooldownDuration;
     [SerializeField] int _pierce;
+    [SerializeField] int _level;
+    [SerializeField] GameObject _nextLevelPrefab;
 
     public GameObject Prefab
     {
@@ -38,5 +40,17 @@ public class WeaponScritpableObject : ScriptableObject {
     {
         get => _pierce;
         set => _pierce = value;
+    }
+
+    public int Level
+    {
+        get => _level;
+        set => _level = value;
+    }
+
+    public GameObject NextLevelPrefab
+    {
+        get => _nextLevelPrefab;
+        set => _nextLevelPrefab = value;
     }
 }
