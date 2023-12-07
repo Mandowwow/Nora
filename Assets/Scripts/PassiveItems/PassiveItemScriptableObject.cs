@@ -8,6 +8,7 @@ public class PassiveItemScriptableObject : ScriptableObject
     [SerializeField] int _multiplier;
     [SerializeField] int _level;
     [SerializeField] GameObject _nextLevelPrefab;
+    [SerializeField] Sprite _icon;
 
     public int Multiplier
     {
@@ -25,5 +26,11 @@ public class PassiveItemScriptableObject : ScriptableObject
     {
         get => _nextLevelPrefab;
         set => _nextLevelPrefab = value;
-    } 
+    }
+
+    public Sprite Icon
+    {
+        get => _icon;
+        set => _icon = value;
+    }
 }

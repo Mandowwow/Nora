@@ -49,11 +49,11 @@ public class PlayerStats : MonoBehaviour
         _currentNumOfHearts = playerData.NumOfHearts;
 
         //Starting weapon
-        SpawnWeapon(playerData.StartingWeapon);
-        inventory.LevelUpWeapon(0);
         SpawnWeapon(secondWeaponTest);
+        SpawnWeapon(playerData.StartingWeapon);
+        //inventory.LevelUpWeapon(0);
         SpawnPassiveItems(firstPassiveItemTest);
-        inventory.LevelUpPassiveItem(0);
+        //inventory.LevelUpPassiveItem(0);
         SpawnPassiveItems(secondPassiveItemTest);
     }
 

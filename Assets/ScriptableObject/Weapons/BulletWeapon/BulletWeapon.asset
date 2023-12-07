@@ -20,3 +20,4 @@ MonoBehaviour:
   _level: 1
   _nextLevelPrefab: {fileID: 8371001319109914369, guid: 66b4a80289b52b1459174d9b3af6f781,
     type: 3}
+  _icon: {fileID: 21300000, guid: 9e911266b68a9cd4ab44bf133f5304ac, type: 3}
