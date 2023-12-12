@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Health : MonoBehaviour
 {
     private CharacterStats stats;
-    private int damage;
+    private int damage = 0;
 
     [SerializeField] private Image[] hearts;
     [SerializeField] private Sprite fullHeart;
@@ -26,8 +26,10 @@ public class Health : MonoBehaviour
     private void Update() {
 
         if(PlayerStats.CurrentHealth <= 0) {
-            Debug.Log("dead");
-            Destroy(this.gameObject);
+            if (!GameManager.instance.isGameOver) {
+                GameManager.instance.GameOver();
+                Destroy(this.gameObject);
+            }
         }
 
         if(PlayerStats.CurrentHealth > ps.CurrentNumOfHearts) {
@@ -61,7 +63,10 @@ public class Health : MonoBehaviour
         //    CharacterStats.Health = CharacterStats.Health - dmg;
         //    StartCoroutine(Change());
         //}
-
+        damage += 1;
+        if(damage > 1) {
+            return;
+        }
         PlayerStats.CurrentHealth -= dmg;
         StartCoroutine(Change());
     }

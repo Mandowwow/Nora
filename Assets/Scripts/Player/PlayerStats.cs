@@ -20,6 +20,7 @@ public class PlayerStats : MonoBehaviour
     public GameObject firstPassiveItemTest, secondPassiveItemTest;
     public GameObject secondWeaponTest;
 
+    #region Current Stat Properties
     public static int CurrentHealth
     {
         get => _currentHealth;
@@ -37,6 +38,8 @@ public class PlayerStats : MonoBehaviour
         get => _currentMoveSpeed;
         set => _currentMoveSpeed = value;
     }
+    #endregion
+
     private void Awake() {
 
         inventory = GetComponent<InventoryManager>();

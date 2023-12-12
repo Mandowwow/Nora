@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    //singleton pattern
+    public static GameManager instance;
     public enum GameState {
         Gameplay,
         Paused,
@@ -15,22 +17,44 @@ public class GameManager : MonoBehaviour
 
     public GameState previousState;
 
+    public bool isGameOver = false;
+
     private void Awake() {
+
+        if(instance == null) {
+            instance = this;
+        } else {
+            Debug.LogWarning("Extra " + this + " Deleted");
+            Destroy(gameObject);
+        }
+
         DisableScreens();
     }
+
     [Header("UI")]
     public GameObject pauseMenuUI;
+    public GameObject resultsScreenUI;
 
     private void Update() {
         switch (currentState) {
+
             case GameState.Gameplay:
                 CheckForPauseAndResume();
                 break;
+
             case GameState.Paused:
                 CheckForPauseAndResume();
                 break;
+
             case GameState.GameOver:
+                if (!isGameOver) {
+                    isGameOver = true;
+                    Time.timeScale = 0f;
+                    Debug.Log("Game Over!");
+                    DisplayResults();
+                }
                 break;
+
             default:
                 Debug.LogWarning("Invalid State!");
                 break;
@@ -72,6 +96,7 @@ public class GameManager : MonoBehaviour
 
     void DisableScreens() {
         pauseMenuUI.SetActive(false);
+        resultsScreenUI.SetActive(false);
     }
 
     static public void ShowMouse() {
@@ -93,5 +118,14 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
         FindObjectOfType<AudioManager>().StopMusic("Theme");
         FindObjectOfType<AudioManager>().Play("MainMenu");
+    }
+
+    public void GameOver() {
+        ChangeState(GameState.GameOver);
+        ShowMouse();
+    }
+
+    void DisplayResults() {
+        resultsScreenUI.SetActive(true);
     }
 }
