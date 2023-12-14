@@ -10,7 +10,8 @@ public class GameManager : MonoBehaviour
     public enum GameState {
         Gameplay,
         Paused,
-        GameOver
+        GameOver,
+        LevelUp
     }
 
     public GameState currentState;
@@ -18,6 +19,11 @@ public class GameManager : MonoBehaviour
     public GameState previousState;
 
     public bool isGameOver = false;
+
+    public bool choosingUpgrade;
+
+    //Refrence to the player
+    public GameObject playerObject;
 
     private void Awake() {
 
@@ -34,6 +40,7 @@ public class GameManager : MonoBehaviour
     [Header("UI")]
     public GameObject pauseMenuUI;
     public GameObject resultsScreenUI;
+    public GameObject levelUpUI;
 
     private void Update() {
         switch (currentState) {
@@ -52,6 +59,15 @@ public class GameManager : MonoBehaviour
                     Time.timeScale = 0f;
                     Debug.Log("Game Over!");
                     DisplayResults();
+                }
+                break;
+            case GameState.LevelUp:
+                if (!choosingUpgrade) {
+                    choosingUpgrade = true;
+                    Time.timeScale = 0f;
+                    Debug.Log("Choosing Upgrades!");
+                    levelUpUI.SetActive(true);
+
                 }
                 break;
 
@@ -97,6 +113,7 @@ public class GameManager : MonoBehaviour
     void DisableScreens() {
         pauseMenuUI.SetActive(false);
         resultsScreenUI.SetActive(false);
+        levelUpUI.SetActive(false);
     }
 
     static public void ShowMouse() {
@@ -127,5 +144,19 @@ public class GameManager : MonoBehaviour
 
     void DisplayResults() {
         resultsScreenUI.SetActive(true);
+    }
+
+    public void StartLevelUp() {
+        ChangeState(GameState.LevelUp);
+        ShowMouse();
+        playerObject.SendMessage("RemoveAndApplyUpgrades");
+    }
+
+    public void EndLevelUp() {
+        choosingUpgrade = false;
+        Time.timeScale = 1f;
+        levelUpUI.SetActive(false);
+        HideMouse();
+        ChangeState(GameState.Gameplay);
     }
 }

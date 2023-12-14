@@ -21,3 +21,6 @@ MonoBehaviour:
   _nextLevelPrefab: {fileID: 1013406773728155853, guid: 1882e180615a7504d90b9dc676ff7a3d,
     type: 3}
   _icon: {fileID: 21300000, guid: 96ae0daa45401e0448929c030095e147, type: 3}
+  _name: Slime
+  _description: Eject slime on the players location dealing damage to enemies that
+    pass through.

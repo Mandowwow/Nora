@@ -310,6 +310,32 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  weaponUpgradeOptions:
+  - initialWeapon: {fileID: 8371001319109914369, guid: fe9187acd0dc3b94f8938e0eee57e5fd,
+      type: 3}
+    weaponData: {fileID: 11400000, guid: 9889f6772606db848bdca417b5cdf39f, type: 2}
+  - initialWeapon: {fileID: 4956137477647419634, guid: a11f7d3bee67e5741b83ad2ef7b7b95b,
+      type: 3}
+    weaponData: {fileID: 11400000, guid: c928b7fac43e64643b034370db3e26ef, type: 2}
+  - initialWeapon: {fileID: 1013406773728155853, guid: ee522453143989344bc92eb957a649af,
+      type: 3}
+    weaponData: {fileID: 11400000, guid: 95f55366b8f6aa64f881897c2c39c1c1, type: 2}
+  passiveItemUpgradeOptions:
+  - initialPassiveItem: {fileID: 0}
+    passiveItemData: {fileID: 0}
+  upgradeUIOptions:
+  - upgradeNameDisplay: {fileID: 0}
+    upgradeDescriptionDisplay: {fileID: 0}
+    upgradeIcon: {fileID: 0}
+    upgradeButton: {fileID: 0}
+  - upgradeNameDisplay: {fileID: 0}
+    upgradeDescriptionDisplay: {fileID: 0}
+    upgradeIcon: {fileID: 0}
+    upgradeButton: {fileID: 0}
+  - upgradeNameDisplay: {fileID: 0}
+    upgradeDescriptionDisplay: {fileID: 0}
+    upgradeIcon: {fileID: 0}
+    upgradeButton: {fileID: 0}
 --- !u!1 &5795380473033663518
 GameObject:
   m_ObjectHideFlags: 0

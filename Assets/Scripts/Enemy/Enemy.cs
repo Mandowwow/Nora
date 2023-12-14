@@ -82,6 +82,7 @@ public class Enemy : MonoBehaviour
             if (FindEnemies.Enemies.Count <= 0) {
                 Instantiate(findEnemies.Portal, new Vector3(0,0,0), Quaternion.identity);
                 //LevelUp();
+                GameManager.instance.StartLevelUp();
             }
 
         }

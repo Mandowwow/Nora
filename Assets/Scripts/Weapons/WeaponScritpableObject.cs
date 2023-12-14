@@ -12,6 +12,8 @@ public class WeaponScritpableObject : ScriptableObject {
     [SerializeField] int _level;
     [SerializeField] GameObject _nextLevelPrefab;
     [SerializeField] Sprite _icon;
+    [SerializeField] string _name;
+    [SerializeField] string _description;
 
     public GameObject Prefab
     {
@@ -59,5 +61,17 @@ public class WeaponScritpableObject : ScriptableObject {
     {
         get => _icon;
         set => _icon = value;
+    }
+
+    public string Name
+    {
+        get => _name;
+        private set => _name = value;
+    }
+
+    public string Description
+    {
+        get => _description;
+        private set => _description = value;
     }
 }
