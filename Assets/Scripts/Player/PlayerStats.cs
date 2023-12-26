@@ -58,6 +58,8 @@ public class PlayerStats : MonoBehaviour
         //SpawnPassiveItems(firstPassiveItemTest);
         //inventory.LevelUpPassiveItem(0);
         //SpawnPassiveItems(secondPassiveItemTest);
+        //inventory.SpawnAllWeapons();
+        
     }
 
     public void SpawnWeapon(GameObject weapon) {

@@ -188,4 +188,22 @@ public class InventoryManager : MonoBehaviour
         RemoveUpgradeOption();
         ApplyUpgradeOptions();
     }
+
+    /// <summary>
+    /// Trying to get my weapons to spawn every scene
+    /// </summary>
+
+    //public static List<WeaponsController> CurrentWeaponsList = new List<WeaponsController>();
+    //public void SpawnAllWeapons() {
+    //    foreach (var weapon in weaponSlots) {
+    //        CurrentWeaponsList.Add(weapon);
+    //        Debug.LogWarning(CurrentWeaponsList.Count);
+    //    }
+    //    for (int i = 0; i < CurrentWeaponsList.Count; i++) {
+    //        player.SpawnWeapon();
+    //        Debug.Log("Tried");
+    //    }
+
+
+    //}
 }
