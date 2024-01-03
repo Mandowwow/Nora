@@ -76,7 +76,7 @@ public class InventoryManager : MonoBehaviour
                 Debug.LogError("No next level for " + weapon);
                 return;
             }
-            GameObject upgradedWeapon = Instantiate(weapon.weaponData.NextLevelPrefab, transform.position, Quaternion.identity);
+            GameObject upgradedWeapon = Instantiate(weapon.weaponData.NextLevelPrefab, player.pos.transform.position, Quaternion.identity);
             upgradedWeapon.transform.SetParent(transform);
             AddWeapon(slotIndex, upgradedWeapon.GetComponent<WeaponsController>());
             Destroy(weapon.gameObject);

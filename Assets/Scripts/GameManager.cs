@@ -25,6 +25,11 @@ public class GameManager : MonoBehaviour
     //Refrence to the player
     public GameObject playerObject;
 
+    //Singleton objects in the scene
+    public GameObject singleton1 = null;
+    public GameObject singleton2 = null;
+    public GameObject singleton3 = null;
+
     private void Awake() {
 
         if(instance == null) {
@@ -132,6 +137,9 @@ public class GameManager : MonoBehaviour
 
     public void LoadMenu() {
         Time.timeScale = 1f;
+        Destroy(singleton1.gameObject);
+        Destroy(singleton2.gameObject);
+        Destroy(singleton3.gameObject);
         SceneManager.LoadScene("MainMenu");
         FindObjectOfType<AudioManager>().StopMusic("Theme");
         FindObjectOfType<AudioManager>().Play("MainMenu");

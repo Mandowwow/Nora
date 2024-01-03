@@ -15,7 +15,7 @@ public class Blob : Enemy
         randPos = new Vector2(Random.Range(-6.4f, 6.4f), Random.Range(-3.5f, 3f));
     }
     protected override void ChasePlayer() {
-        Debug.Log(Vector2.Distance(transform.position, randPos));
+        //Debug.Log(Vector2.Distance(transform.position, randPos));
         if (Vector2.Distance(transform.position, randPos) > 0.1) {
             transform.position = Vector2.MoveTowards(transform.position, randPos, speed * Time.deltaTime);
         } else if (Vector2.Distance(transform.position, randPos) <= 0.1 && canMove == true) {    
