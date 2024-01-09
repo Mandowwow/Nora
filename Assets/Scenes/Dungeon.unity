@@ -1823,18 +1823,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1064075820880886291}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &890547253
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 890547244}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5dc04e29cc084934e8d79ab599dce971, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &922264189
 GameObject:
   m_ObjectHideFlags: 0
@@ -5341,8 +5329,8 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 848989754295883383, guid: 644b0bf6538aee340932cf8e894ed934,
         type: 3}
-      propertyPath: passiveItemUpgradeOptions.Array.size
-      value: 2
+      propertyPath: weaponSlots.Array.size
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 848989754295883383, guid: 644b0bf6538aee340932cf8e894ed934,
         type: 3}
@@ -5434,35 +5422,6 @@ PrefabInstance:
       propertyPath: upgradeUIOptions.Array.data[2].upgradeButton
       value: 
       objectReference: {fileID: 1194795556}
-    - target: {fileID: 848989754295883383, guid: 644b0bf6538aee340932cf8e894ed934,
-        type: 3}
-      propertyPath: passiveItemUpgradeOptions.Array.data[0].initialPassiveItem
-      value: 
-      objectReference: {fileID: 6216355384359485842, guid: d231821d1d9481c4f88a4ba2c2e807d4,
-        type: 3}
-    - target: {fileID: 848989754295883383, guid: 644b0bf6538aee340932cf8e894ed934,
-        type: 3}
-      propertyPath: passiveItemUpgradeOptions.Array.data[0].passiveItemData
-      value: 
-      objectReference: {fileID: 11400000, guid: 82f1d8758630fa4478061536a722d305,
-        type: 2}
-    - target: {fileID: 848989754295883383, guid: 644b0bf6538aee340932cf8e894ed934,
-        type: 3}
-      propertyPath: passiveItemUpgradeOptions.Array.data[1].initialPassiveItem
-      value: 
-      objectReference: {fileID: 6885198795602271565, guid: b443c41d096254445853c2d4f5512dae,
-        type: 3}
-    - target: {fileID: 848989754295883383, guid: 644b0bf6538aee340932cf8e894ed934,
-        type: 3}
-      propertyPath: passiveItemUpgradeOptions.Array.data[1].passiveItemData
-      value: 
-      objectReference: {fileID: 11400000, guid: 0e6902d7da7372c48b2bc74b19d12219,
-        type: 2}
-    - target: {fileID: 848989754295883383, guid: 644b0bf6538aee340932cf8e894ed934,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1064075819978608482, guid: 644b0bf6538aee340932cf8e894ed934,
         type: 3}
       propertyPath: hearts.Array.data[0]

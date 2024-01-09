@@ -10,6 +10,7 @@ public class Portal : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.CompareTag("Player")) {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            collision.transform.parent.position = new Vector3(0f, -3.5f, 0f);
             //playerData.MoveSpeed = 0.1f;
         }
     }

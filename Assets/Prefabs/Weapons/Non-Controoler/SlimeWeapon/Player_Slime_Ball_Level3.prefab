@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8356845144871068681}
   - component: {fileID: -2444916154349666532}
   m_Layer: 0
-  m_Name: Player_Slime_Ball_Level2
+  m_Name: Player_Slime_Ball_Level3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -95,8 +95,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d5079d7834173246a09fa78312a46e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponData: {fileID: 11400000, guid: 2735476dca95a7c4a80a0b69fb2ed09c, type: 2}
-  destroyAfterSeconds: 5
+  weaponData: {fileID: 11400000, guid: be7e726613b5d1e42abc2a6ee6d77a22, type: 2}
+  destroyAfterSeconds: 6
 --- !u!58 &-2444916154349666532
 CircleCollider2D:
   m_ObjectHideFlags: 0

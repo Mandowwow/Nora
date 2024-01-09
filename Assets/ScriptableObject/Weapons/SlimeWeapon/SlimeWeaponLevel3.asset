@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 07e333a50debad24ebda6368b3806825, type: 3}
-  m_Name: BulletWeaponLevel2
+  m_Name: SlimeWeaponLevel3
   m_EditorClassIdentifier: 
-  _prefab: {fileID: 5757239122816901133, guid: 8cc308c92c2661142bb59ce11c4b889a, type: 3}
+  _prefab: {fileID: 8982202681565296391, guid: 6705f7ccea390284aaa0214664671d27, type: 3}
   _damage: 1
-  _speed: 7
-  _cooldownDuration: 0.6
-  _pierce: 1
-  _level: 2
+  _speed: 0
+  _cooldownDuration: 2.5
+  _pierce: 0
+  _level: 3
   _nextLevelPrefab: {fileID: 0}
-  _icon: {fileID: 21300000, guid: 9e911266b68a9cd4ab44bf133f5304ac, type: 3}
-  _name: Gun Level 2
-  _description: Increase bullet speed.
+  _icon: {fileID: 21300000, guid: 96ae0daa45401e0448929c030095e147, type: 3}
+  _name: Slime Level 3
+  _description: Slime stays for a longer time.

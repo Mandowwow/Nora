@@ -72,7 +72,6 @@ public class PlayerStats : MonoBehaviour
             return;
         }
         //Spawn the starting weapon
-        Debug.Log("Trying to spawn weapon");
         GameObject spawnedWeapon = Instantiate(weapon, pos.transform.position, Quaternion.identity);
         spawnedWeapon.transform.SetParent(transform);
         inventory.AddWeapon(weaponIndex, spawnedWeapon.GetComponent<WeaponsController>());//Add weapon to inventory slot
