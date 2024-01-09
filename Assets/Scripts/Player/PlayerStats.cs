@@ -67,7 +67,7 @@ public class PlayerStats : MonoBehaviour
 
     public void SpawnWeapon(GameObject weapon) {
 
-        if(weaponIndex >= inventory.weaponSlots.Count - 1) {
+        if(weaponIndex >= inventory.weaponSlots.Count) {
             Debug.LogError("Inventory is full");
             return;
         }

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2363013160958143454}
   - component: {fileID: 7188195161418380227}
   m_Layer: 0
-  m_Name: Player_Bat_Portal_Level2
+  m_Name: Player_Bat_Portal_Level3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -114,6 +114,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d46d53dfcb034bc4cb2473788ac3cb1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponData: {fileID: 11400000, guid: 099d72f6f0600a24f9d665d703bb9027, type: 2}
+  weaponData: {fileID: 11400000, guid: c4ab8344a654a0a4688647154a49a329, type: 2}
   destroyAfterSeconds: 0
-  prefab: {fileID: 8634637759111709183, guid: f68a9041fd6c99547b710fb25445c615, type: 3}
+  prefab: {fileID: 8634637759111709183, guid: 37b36d3b4d915164c9be75bef6fa7a8a, type: 3}

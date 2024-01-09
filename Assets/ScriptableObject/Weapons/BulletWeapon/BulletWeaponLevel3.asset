@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07e333a50debad24ebda6368b3806825, type: 3}
+  m_Name: BulletWeaponLevel3
+  m_EditorClassIdentifier: 
+  _prefab: {fileID: 5757239122816901133, guid: 8cc308c92c2661142bb59ce11c4b889a, type: 3}
+  _damage: 1
+  _speed: 8
+  _cooldownDuration: 0.6
+  _pierce: 1
+  _level: 3
+  _nextLevelPrefab: {fileID: 0}
+  _icon: {fileID: 21300000, guid: 9e911266b68a9cd4ab44bf133f5304ac, type: 3}
+  _name: Gun Level 3
+  _description: Increase bullet speed.
