@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07e333a50debad24ebda6368b3806825, type: 3}
   m_Name: SlimeWeaponLevel3
   m_EditorClassIdentifier: 
-  _prefab: {fileID: 8982202681565296391, guid: 6705f7ccea390284aaa0214664671d27, type: 3}
+  _prefab: {fileID: 8982202681565296391, guid: 793aa218af1a97f4cbf3b7b77ac6c66f, type: 3}
   _damage: 1
   _speed: 0
   _cooldownDuration: 2.5

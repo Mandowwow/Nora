@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07e333a50debad24ebda6368b3806825, type: 3}
   m_Name: BulletWeaponLevel3
   m_EditorClassIdentifier: 
-  _prefab: {fileID: 5757239122816901133, guid: 8cc308c92c2661142bb59ce11c4b889a, type: 3}
+  _prefab: {fileID: 5757239122816901133, guid: e2870fd308fd41a4d8ec7b960a798245, type: 3}
   _damage: 1
   _speed: 8
   _cooldownDuration: 0.6

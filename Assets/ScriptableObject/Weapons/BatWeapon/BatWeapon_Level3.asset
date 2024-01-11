@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07e333a50debad24ebda6368b3806825, type: 3}
   m_Name: BatWeapon_Level3
   m_EditorClassIdentifier: 
-  _prefab: {fileID: 71275680528837305, guid: 7e533f8d84caf934eab15fe2b39799a1, type: 3}
+  _prefab: {fileID: 71275680528837305, guid: fc730e45614f6204681d9e37b1f070e6, type: 3}
   _damage: 1
   _speed: 6
   _cooldownDuration: 3
@@ -20,5 +20,5 @@ MonoBehaviour:
   _level: 3
   _nextLevelPrefab: {fileID: 0}
   _icon: {fileID: 21300000, guid: b802b00f260268249a31a440847d64ac, type: 3}
-  _name: Eye of Uru Level 2
+  _name: Eye of Uru Level 3
   _description: Uru pierces through enemies.
