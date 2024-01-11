@@ -10,6 +10,7 @@ public class ProjectileWeaponBehaviour : MonoBehaviour
     public WeaponScritpableObject weaponData;
 
     protected Animator anim;
+    protected Collider2D col;
     protected Rigidbody2D rb;
     protected Vector3 direction;
     public float destroyAfterSeconds;
@@ -30,6 +31,7 @@ public class ProjectileWeaponBehaviour : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        col = GetComponent<Collider2D>();
         Destroy(gameObject, destroyAfterSeconds);
     }
 

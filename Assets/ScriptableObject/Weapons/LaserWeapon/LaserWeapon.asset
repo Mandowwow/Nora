@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07e333a50debad24ebda6368b3806825, type: 3}
+  m_Name: LaserWeapon
+  m_EditorClassIdentifier: 
+  _prefab: {fileID: 6893175042571393887, guid: 93141be3bc35f954fbf7f433d8a2b1a7, type: 3}
+  _damage: 1
+  _speed: 0
+  _cooldownDuration: 1
+  _pierce: 100
+  _level: 1
+  _nextLevelPrefab: {fileID: 0}
+  _icon: {fileID: 21300000, guid: 0ec5312f7c20ea34e9c917cf21ecdf14, type: 3}
+  _name: Laser Gun
+  _description: A laser beam passing through all enemies.

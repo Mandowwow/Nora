@@ -4170,36 +4170,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1654711863}
   m_CullTransparentMesh: 0
---- !u!1 &1708659301
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1708659302}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1708659302
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1708659301}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.5203035, y: -3.2338936, z: -0.17625736}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1713902543
 GameObject:
   m_ObjectHideFlags: 0
@@ -5334,6 +5304,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 848989754295883383, guid: 644b0bf6538aee340932cf8e894ed934,
         type: 3}
+      propertyPath: weaponUpgradeOptions.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 848989754295883383, guid: 644b0bf6538aee340932cf8e894ed934,
+        type: 3}
       propertyPath: weaponUISlots.Array.data[0]
       value: 
       objectReference: {fileID: 2001392963}
@@ -5422,6 +5397,23 @@ PrefabInstance:
       propertyPath: upgradeUIOptions.Array.data[2].upgradeButton
       value: 
       objectReference: {fileID: 1194795556}
+    - target: {fileID: 848989754295883383, guid: 644b0bf6538aee340932cf8e894ed934,
+        type: 3}
+      propertyPath: weaponUpgradeOptions.Array.data[3].weaponUpgradeIndex
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 848989754295883383, guid: 644b0bf6538aee340932cf8e894ed934,
+        type: 3}
+      propertyPath: weaponUpgradeOptions.Array.data[3].initialWeapon
+      value: 
+      objectReference: {fileID: 6137662730725956734, guid: 6ad1d2c9e90408b47aa7a99bffc32594,
+        type: 3}
+    - target: {fileID: 848989754295883383, guid: 644b0bf6538aee340932cf8e894ed934,
+        type: 3}
+      propertyPath: weaponUpgradeOptions.Array.data[3].weaponData
+      value: 
+      objectReference: {fileID: 11400000, guid: 526a6b1fd8fe6e1468e72b9848c32816,
+        type: 2}
     - target: {fileID: 1064075819978608482, guid: 644b0bf6538aee340932cf8e894ed934,
         type: 3}
       propertyPath: hearts.Array.data[0]
