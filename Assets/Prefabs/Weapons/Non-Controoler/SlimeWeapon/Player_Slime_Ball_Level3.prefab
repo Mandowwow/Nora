@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8356845144871068681}
   - component: {fileID: -2444916154349666532}
   m_Layer: 0
-  m_Name: Player_Slime_Ball
+  m_Name: Player_Slime_Ball_Level3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -71,7 +71,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -560229745
   m_SortingLayer: 5
-  m_SortingOrder: -3
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 96ae0daa45401e0448929c030095e147, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -95,8 +95,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d5079d7834173246a09fa78312a46e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponData: {fileID: 11400000, guid: 95f55366b8f6aa64f881897c2c39c1c1, type: 2}
-  destroyAfterSeconds: 4
+  weaponData: {fileID: 11400000, guid: be7e726613b5d1e42abc2a6ee6d77a22, type: 2}
+  destroyAfterSeconds: 6
 --- !u!58 &-2444916154349666532
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -26,5 +26,6 @@ public class BulletController : WeaponsController
         GameObject spawnedBullet = Instantiate(weaponData.Prefab);
         spawnedBullet.transform.position = transform.position;
         spawnedBullet.GetComponent<BulletBehaviour>().DirectionCalc(dir);
+
     }
 }

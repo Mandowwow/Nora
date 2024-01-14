@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &563684463080448859
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4878539309365194250}
+  m_Layer: 0
+  m_Name: ShootPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4878539309365194250
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 563684463080448859}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.45, z: 0}
+  m_LocalScale: {x: 1.1111112, y: 1.1111112, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4215631996708417878}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3177817837296508275
 GameObject:
   m_ObjectHideFlags: 0
@@ -103,6 +133,7 @@ GameObject:
   - component: {fileID: 1064075819978608482}
   - component: {fileID: 1029436792}
   - component: {fileID: 848989754295883383}
+  - component: {fileID: 890547253}
   m_Layer: 13
   m_Name: PlayerSprite
   m_TagString: Controller
@@ -128,6 +159,7 @@ Transform:
   - {fileID: 5164669591716482500}
   - {fileID: 2315423230228287717}
   - {fileID: 8383360076945742690}
+  - {fileID: 4878539309365194250}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -274,6 +306,7 @@ MonoBehaviour:
   playerData: {fileID: 11400000, guid: 2d837c846d87a08498dc9a76d2a7819a, type: 2}
   weaponIndex: 0
   passiveItemIndex: 0
+  pos: {fileID: 563684463080448859}
   firstPassiveItemTest: {fileID: 6885198795602271565, guid: b443c41d096254445853c2d4f5512dae,
     type: 3}
   secondPassiveItemTest: {fileID: 6216355384359485842, guid: d231821d1d9481c4f88a4ba2c2e807d4,
@@ -296,6 +329,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
   weaponLevels: 000000000000000000000000000000000000000000000000
   weaponUISlots:
   - {fileID: 0}
@@ -311,18 +345,27 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   weaponUpgradeOptions:
-  - initialWeapon: {fileID: 8371001319109914369, guid: fe9187acd0dc3b94f8938e0eee57e5fd,
+  - weaponUpgradeIndex: 0
+    initialWeapon: {fileID: 8371001319109914369, guid: fe9187acd0dc3b94f8938e0eee57e5fd,
       type: 3}
     weaponData: {fileID: 11400000, guid: 9889f6772606db848bdca417b5cdf39f, type: 2}
-  - initialWeapon: {fileID: 4956137477647419634, guid: a11f7d3bee67e5741b83ad2ef7b7b95b,
+  - weaponUpgradeIndex: 1
+    initialWeapon: {fileID: 4956137477647419634, guid: a11f7d3bee67e5741b83ad2ef7b7b95b,
       type: 3}
     weaponData: {fileID: 11400000, guid: c928b7fac43e64643b034370db3e26ef, type: 2}
-  - initialWeapon: {fileID: 1013406773728155853, guid: ee522453143989344bc92eb957a649af,
+  - weaponUpgradeIndex: 2
+    initialWeapon: {fileID: 1013406773728155853, guid: ee522453143989344bc92eb957a649af,
       type: 3}
     weaponData: {fileID: 11400000, guid: 95f55366b8f6aa64f881897c2c39c1c1, type: 2}
   passiveItemUpgradeOptions:
-  - initialPassiveItem: {fileID: 0}
-    passiveItemData: {fileID: 0}
+  - passiveItemUpgradeIndex: 0
+    initialPassiveItem: {fileID: 6216355384359485842, guid: d231821d1d9481c4f88a4ba2c2e807d4,
+      type: 3}
+    passiveItemData: {fileID: 11400000, guid: 82f1d8758630fa4478061536a722d305, type: 2}
+  - passiveItemUpgradeIndex: 1
+    initialPassiveItem: {fileID: 6885198795602271565, guid: b443c41d096254445853c2d4f5512dae,
+      type: 3}
+    passiveItemData: {fileID: 11400000, guid: 0e6902d7da7372c48b2bc74b19d12219, type: 2}
   upgradeUIOptions:
   - upgradeNameDisplay: {fileID: 0}
     upgradeDescriptionDisplay: {fileID: 0}
@@ -336,6 +379,18 @@ MonoBehaviour:
     upgradeDescriptionDisplay: {fileID: 0}
     upgradeIcon: {fileID: 0}
     upgradeButton: {fileID: 0}
+--- !u!114 &890547253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4215631996708417876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dc04e29cc084934e8d79ab599dce971, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5795380473033663518
 GameObject:
   m_ObjectHideFlags: 0

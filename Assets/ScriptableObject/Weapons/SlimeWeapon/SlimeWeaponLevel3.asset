@@ -10,16 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 07e333a50debad24ebda6368b3806825, type: 3}
-  m_Name: SlimeWeaponLevel2
+  m_Name: SlimeWeaponLevel3
   m_EditorClassIdentifier: 
-  _prefab: {fileID: 8982202681565296391, guid: 6705f7ccea390284aaa0214664671d27, type: 3}
+  _prefab: {fileID: 8982202681565296391, guid: 793aa218af1a97f4cbf3b7b77ac6c66f, type: 3}
   _damage: 1
   _speed: 0
   _cooldownDuration: 2.5
   _pierce: 0
-  _level: 2
-  _nextLevelPrefab: {fileID: 1013406773728155853, guid: a8a4fad7bd5bcd54b8e3dec9531d9a03,
-    type: 3}
+  _level: 3
+  _nextLevelPrefab: {fileID: 0}
   _icon: {fileID: 21300000, guid: 96ae0daa45401e0448929c030095e147, type: 3}
-  _name: Slime Level 2
+  _name: Slime Level 3
   _description: Slime stays for a longer time.

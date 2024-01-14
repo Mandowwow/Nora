@@ -11,6 +11,8 @@ public class WeaponsController : MonoBehaviour
     public WeaponScritpableObject weaponData;
     float currentCooldown;
 
+        
+
 
     protected Rigidbody2D rb;
 

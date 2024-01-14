@@ -12,6 +12,9 @@ public class PlayerStats : MonoBehaviour
     public int weaponIndex;
     public int passiveItemIndex;
 
+    //Player instantiate pos
+    public GameObject pos;
+
     //current Stats
     static int _currentHealth;
     float _currentMoveSpeed;
@@ -64,12 +67,12 @@ public class PlayerStats : MonoBehaviour
 
     public void SpawnWeapon(GameObject weapon) {
 
-        if(weaponIndex >= inventory.weaponSlots.Count - 1) {
+        if(weaponIndex >= inventory.weaponSlots.Count) {
             Debug.LogError("Inventory is full");
             return;
         }
         //Spawn the starting weapon
-        GameObject spawnedWeapon = Instantiate(weapon, new Vector3(0f,-3.1f), Quaternion.identity);
+        GameObject spawnedWeapon = Instantiate(weapon, pos.transform.position, Quaternion.identity);
         spawnedWeapon.transform.SetParent(transform);
         inventory.AddWeapon(weaponIndex, spawnedWeapon.GetComponent<WeaponsController>());//Add weapon to inventory slot
 

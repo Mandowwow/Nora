@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1013406773728155853
+--- !u!1 &4956137477647419634
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,22 +8,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5901334006482947609}
-  - component: {fileID: 4663049964860269982}
-  m_Layer: 13
-  m_Name: SlimeController
+  - component: {fileID: 4039227977598821064}
+  - component: {fileID: 4171329488761396328}
+  m_Layer: 0
+  m_Name: BatControllerLevel2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5901334006482947609
+--- !u!4 &4039227977598821064
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1013406773728155853}
+  m_GameObject: {fileID: 4956137477647419634}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.275, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -31,17 +31,16 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4663049964860269982
+--- !u!114 &4171329488761396328
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1013406773728155853}
+  m_GameObject: {fileID: 4956137477647419634}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b851c8f16b37d8a49bd98a476fc22101, type: 3}
+  m_Script: {fileID: 11500000, guid: dd9ce2b1d5988644c972932e0ac4f102, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponData: {fileID: 11400000, guid: 95f55366b8f6aa64f881897c2c39c1c1, type: 2}
-  pos: {fileID: 0}
+  weaponData: {fileID: 11400000, guid: 099d72f6f0600a24f9d665d703bb9027, type: 2}
