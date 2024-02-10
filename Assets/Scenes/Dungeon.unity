@@ -378,10 +378,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e07eba18b455c1449934cd371e6035fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttoninfoList:
-  - {fileID: 11400000, guid: c0098b5c96028d1498cf44c304809637, type: 2}
-  - {fileID: 11400000, guid: baec5046f011f1142b3b07afd0c3245b, type: 2}
-  - {fileID: 11400000, guid: d671330580e56444d868119154972a66, type: 2}
+  WeaponList:
+  - {fileID: 11400000, guid: c928b7fac43e64643b034370db3e26ef, type: 2}
+  - {fileID: 11400000, guid: 9889f6772606db848bdca417b5cdf39f, type: 2}
+  - {fileID: 11400000, guid: 526a6b1fd8fe6e1468e72b9848c32816, type: 2}
+  - {fileID: 11400000, guid: 95f55366b8f6aa64f881897c2c39c1c1, type: 2}
+  manager: {fileID: 0}
 --- !u!114 &171613340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1001,10 +1003,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e07eba18b455c1449934cd371e6035fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttoninfoList:
-  - {fileID: 11400000, guid: c0098b5c96028d1498cf44c304809637, type: 2}
-  - {fileID: 11400000, guid: baec5046f011f1142b3b07afd0c3245b, type: 2}
-  - {fileID: 11400000, guid: d671330580e56444d868119154972a66, type: 2}
+  WeaponList:
+  - {fileID: 11400000, guid: c928b7fac43e64643b034370db3e26ef, type: 2}
+  - {fileID: 11400000, guid: 9889f6772606db848bdca417b5cdf39f, type: 2}
+  - {fileID: 11400000, guid: 526a6b1fd8fe6e1468e72b9848c32816, type: 2}
+  - {fileID: 11400000, guid: 95f55366b8f6aa64f881897c2c39c1c1, type: 2}
+  manager: {fileID: 0}
 --- !u!114 &382637071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1996,10 +2000,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e07eba18b455c1449934cd371e6035fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttoninfoList:
-  - {fileID: 11400000, guid: c0098b5c96028d1498cf44c304809637, type: 2}
-  - {fileID: 11400000, guid: baec5046f011f1142b3b07afd0c3245b, type: 2}
-  - {fileID: 11400000, guid: d671330580e56444d868119154972a66, type: 2}
+  WeaponList:
+  - {fileID: 11400000, guid: c928b7fac43e64643b034370db3e26ef, type: 2}
+  - {fileID: 11400000, guid: 9889f6772606db848bdca417b5cdf39f, type: 2}
+  - {fileID: 11400000, guid: 526a6b1fd8fe6e1468e72b9848c32816, type: 2}
+  - {fileID: 11400000, guid: 95f55366b8f6aa64f881897c2c39c1c1, type: 2}
+  manager: {fileID: 0}
 --- !u!114 &696184659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6958,6 +6964,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 526a6b1fd8fe6e1468e72b9848c32816,
         type: 2}
+    - target: {fileID: 848989754295883383, guid: 644b0bf6538aee340932cf8e894ed934,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1064075819978608482, guid: 644b0bf6538aee340932cf8e894ed934,
         type: 3}
       propertyPath: hearts.Array.data[0]

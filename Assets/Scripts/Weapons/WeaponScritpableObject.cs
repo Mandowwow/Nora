@@ -74,4 +74,8 @@ public class WeaponScritpableObject : ScriptableObject {
         get => _description;
         private set => _description = value;
     }
+
+    public void OnButtonClick() {
+        Debug.Log(Name);
+    }
 }
