@@ -13,10 +13,14 @@ public class ButtonManager : MonoBehaviour
 
 
     //Refrence to WeaponManager
-    public WeaponManager manager;
+    private GameObject player;
+    private WeaponManager manager;
 
     void Start()
     {
+        player = GameObject.Find("PlayerSprite");
+        manager = player.GetComponent<WeaponManager>();
+
         button = GetComponent<Button>();
 
         WeaponScritpableObject randomButtonInfo = GetRandomButtonInfo();
@@ -50,7 +54,7 @@ public class ButtonManager : MonoBehaviour
         textComponents[0].text = buttonInfo.Name;
         textComponents[1].text = buttonInfo.Description;
         button.onClick.AddListener(() => buttonInfo.OnButtonClick());
-        button.onClick.AddListener(() => manager.SpawnWeapon(buttonInfo.Prefab));
+        button.onClick.AddListener(() => manager.SpawnWeapon(buttonInfo.Controller));
     }
 
 }

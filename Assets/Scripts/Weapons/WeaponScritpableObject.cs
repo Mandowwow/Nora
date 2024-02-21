@@ -5,6 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "WeaponScriptableObject", menuName = "ScriptableObjects/Weapon")]
 public class WeaponScritpableObject : ScriptableObject {
     [SerializeField] GameObject _prefab;
+    [SerializeField] GameObject _controller;
     [SerializeField] int _damage;
     [SerializeField] float _speed;
     [SerializeField] float _cooldownDuration;
@@ -19,6 +20,12 @@ public class WeaponScritpableObject : ScriptableObject {
     {
         get => _prefab;
         set => _prefab = value;
+    }
+
+    public GameObject Controller
+    {
+        get => _controller;
+        set => _controller = value;
     }
 
     public int Damage
