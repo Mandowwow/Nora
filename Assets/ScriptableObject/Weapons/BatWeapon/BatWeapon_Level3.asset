@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: BatWeapon_Level3
   m_EditorClassIdentifier: 
   _prefab: {fileID: 71275680528837305, guid: fc730e45614f6204681d9e37b1f070e6, type: 3}
+  _controller: {fileID: 4956137477647419634, guid: 9995d7ff468cc794bb697784f8dee9d5,
+    type: 3}
+  _nextData: {fileID: 0}
   _damage: 1
   _speed: 6
   _cooldownDuration: 3

@@ -15,6 +15,7 @@ MonoBehaviour:
   _prefab: {fileID: 8982202681565296391, guid: cc10790ea918a0740b90fb15f6e55d1d, type: 3}
   _controller: {fileID: 1013406773728155853, guid: ee522453143989344bc92eb957a649af,
     type: 3}
+  _nextData: {fileID: 11400000, guid: 2735476dca95a7c4a80a0b69fb2ed09c, type: 2}
   _damage: 1
   _speed: 0
   _cooldownDuration: 2.5

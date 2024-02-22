@@ -6,6 +6,7 @@ using UnityEngine;
 public class WeaponScritpableObject : ScriptableObject {
     [SerializeField] GameObject _prefab;
     [SerializeField] GameObject _controller;
+    [SerializeField] WeaponScritpableObject _nextData;
     [SerializeField] int _damage;
     [SerializeField] float _speed;
     [SerializeField] float _cooldownDuration;
@@ -26,6 +27,11 @@ public class WeaponScritpableObject : ScriptableObject {
     {
         get => _controller;
         set => _controller = value;
+    }
+    public WeaponScritpableObject NextData
+    {
+        get => _nextData;
+        set => _nextData = value;
     }
 
     public int Damage

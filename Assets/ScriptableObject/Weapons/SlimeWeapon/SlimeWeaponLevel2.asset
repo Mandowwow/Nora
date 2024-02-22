@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: SlimeWeaponLevel2
   m_EditorClassIdentifier: 
   _prefab: {fileID: 8982202681565296391, guid: 6705f7ccea390284aaa0214664671d27, type: 3}
+  _controller: {fileID: 1013406773728155853, guid: 1882e180615a7504d90b9dc676ff7a3d,
+    type: 3}
+  _nextData: {fileID: 11400000, guid: be7e726613b5d1e42abc2a6ee6d77a22, type: 2}
   _damage: 1
   _speed: 0
   _cooldownDuration: 2.5

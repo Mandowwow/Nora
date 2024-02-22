@@ -337,7 +337,6 @@ GameObject:
   - component: {fileID: 171613342}
   - component: {fileID: 171613341}
   - component: {fileID: 171613340}
-  - component: {fileID: 171613339}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -366,23 +365,6 @@ RectTransform:
   m_AnchoredPosition: {x: 149, y: -79}
   m_SizeDelta: {x: 130, y: 130}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &171613339
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 171613337}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e07eba18b455c1449934cd371e6035fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  WeaponList:
-  - {fileID: 11400000, guid: c928b7fac43e64643b034370db3e26ef, type: 2}
-  - {fileID: 11400000, guid: 9889f6772606db848bdca417b5cdf39f, type: 2}
-  - {fileID: 11400000, guid: 526a6b1fd8fe6e1468e72b9848c32816, type: 2}
-  - {fileID: 11400000, guid: 95f55366b8f6aa64f881897c2c39c1c1, type: 2}
 --- !u!114 &171613340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -961,7 +943,6 @@ GameObject:
   - component: {fileID: 382637073}
   - component: {fileID: 382637072}
   - component: {fileID: 382637071}
-  - component: {fileID: 382637070}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -990,23 +971,6 @@ RectTransform:
   m_AnchoredPosition: {x: 149, y: -79}
   m_SizeDelta: {x: 130, y: 130}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &382637070
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 382637068}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e07eba18b455c1449934cd371e6035fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  WeaponList:
-  - {fileID: 11400000, guid: c928b7fac43e64643b034370db3e26ef, type: 2}
-  - {fileID: 11400000, guid: 9889f6772606db848bdca417b5cdf39f, type: 2}
-  - {fileID: 11400000, guid: 526a6b1fd8fe6e1468e72b9848c32816, type: 2}
-  - {fileID: 11400000, guid: 95f55366b8f6aa64f881897c2c39c1c1, type: 2}
 --- !u!114 &382637071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1957,7 +1921,6 @@ GameObject:
   - component: {fileID: 696184661}
   - component: {fileID: 696184660}
   - component: {fileID: 696184659}
-  - component: {fileID: 696184658}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -1986,23 +1949,6 @@ RectTransform:
   m_AnchoredPosition: {x: 149, y: -79}
   m_SizeDelta: {x: 130, y: 130}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &696184658
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 696184656}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e07eba18b455c1449934cd371e6035fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  WeaponList:
-  - {fileID: 11400000, guid: c928b7fac43e64643b034370db3e26ef, type: 2}
-  - {fileID: 11400000, guid: 9889f6772606db848bdca417b5cdf39f, type: 2}
-  - {fileID: 11400000, guid: 526a6b1fd8fe6e1468e72b9848c32816, type: 2}
-  - {fileID: 11400000, guid: 95f55366b8f6aa64f881897c2c39c1c1, type: 2}
 --- !u!114 &696184659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2371,6 +2317,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1064075820880886291}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &890547254 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 890547254, guid: 644b0bf6538aee340932cf8e894ed934,
+    type: 3}
+  m_PrefabInstance: {fileID: 1064075820880886291}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 890547244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae97db9a306f5a6489d2e0e4390f7605, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &922264189
 GameObject:
   m_ObjectHideFlags: 0
@@ -4313,7 +4271,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1457356233}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c9942a8c88ca71d4cbe8605d2cff4fdc, type: 3}
   m_Name: 
@@ -6508,6 +6466,7 @@ GameObject:
   - component: {fileID: 2063002398}
   - component: {fileID: 2063002397}
   - component: {fileID: 2063002399}
+  - component: {fileID: 2063002400}
   m_Layer: 5
   m_Name: NewLevelUp
   m_TagString: Untagged
@@ -6599,6 +6558,30 @@ MonoBehaviour:
   m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
+--- !u!114 &2063002400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2063002395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce901ee5560230e4eb2dfe2fee4dbb97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttons:
+  - {fileID: 382637071}
+  - {fileID: 696184659}
+  - {fileID: 171613340}
+  UpgradeOptions:
+  - {fileID: 11400000, guid: c928b7fac43e64643b034370db3e26ef, type: 2}
+  - {fileID: 11400000, guid: 19e7f690865f16449876af46298450c4, type: 2}
+  - {fileID: 11400000, guid: 526a6b1fd8fe6e1468e72b9848c32816, type: 2}
+  - {fileID: 11400000, guid: 95f55366b8f6aa64f881897c2c39c1c1, type: 2}
+  availableOptions: []
+  player: {fileID: 890547244}
+  inventory: {fileID: 890547254}
 --- !u!1 &2063326475
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: BulletWeaponLevel3
   m_EditorClassIdentifier: 
   _prefab: {fileID: 5757239122816901133, guid: e2870fd308fd41a4d8ec7b960a798245, type: 3}
+  _controller: {fileID: 8371001319109914369, guid: 90c7920a16aede046951c0f2aed879cd,
+    type: 3}
+  _nextData: {fileID: 0}
   _damage: 1
   _speed: 8
   _cooldownDuration: 0.6

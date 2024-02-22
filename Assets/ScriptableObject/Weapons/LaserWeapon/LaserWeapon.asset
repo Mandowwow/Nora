@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: LaserWeapon
   m_EditorClassIdentifier: 
   _prefab: {fileID: 6893175042571393887, guid: 93141be3bc35f954fbf7f433d8a2b1a7, type: 3}
+  _controller: {fileID: 6137662730725956734, guid: 6ad1d2c9e90408b47aa7a99bffc32594,
+    type: 3}
+  _nextData: {fileID: 0}
   _damage: 1
   _speed: 0
   _cooldownDuration: 1
