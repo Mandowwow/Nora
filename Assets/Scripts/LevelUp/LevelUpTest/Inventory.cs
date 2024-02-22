@@ -20,7 +20,6 @@ public class Inventory : MonoBehaviour {
         foreach (GameObject weapon in weaponInventory) {
             if (weapon == null) {
                 //if there is an empty slot
-                Debug.Log("Your Inventory is not full!");
                 return false;
             }
         }
@@ -32,7 +31,6 @@ public class Inventory : MonoBehaviour {
     public void AddWeaponToInventory(GameObject weapon) {
         for (int i = 0; i < weaponInventory.Length; i++) {
             if (weaponInventory[i] == null) {
-                Debug.Log("Hello empty slot i will fill you up with my love");
                 weaponInventory[i] = weapon;
                 break;
             }

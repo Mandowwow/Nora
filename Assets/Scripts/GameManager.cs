@@ -24,6 +24,8 @@ public class GameManager : MonoBehaviour
 
     //Refrence to the player
     public GameObject playerObject;
+    //Refrence Button Manager
+    public Button_Manager bm;
 
     //Singleton objects in the scene
     public GameObject singleton1 = null;
@@ -46,6 +48,10 @@ public class GameManager : MonoBehaviour
     public GameObject pauseMenuUI;
     public GameObject resultsScreenUI;
     public GameObject levelUpUI;
+
+    private void Start() {
+        //bm = GameObject.FindObjectOfType<Button_Manager>();
+    }
 
     private void Update() {
         switch (currentState) {
@@ -155,12 +161,14 @@ public class GameManager : MonoBehaviour
     }
 
     public void StartLevelUp() {
+        //bm.InitializeButtonNames();
         ChangeState(GameState.LevelUp);
         ShowMouse();
         //playerObject.SendMessage("RemoveAndApplyUpgrades");
     }
 
     public void EndLevelUp() {
+        //bm.InitializeButtonNames();
         choosingUpgrade = false;
         Time.timeScale = 1f;
         levelUpUI.SetActive(false);

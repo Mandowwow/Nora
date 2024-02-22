@@ -2993,6 +2993,7 @@ MonoBehaviour:
   isGameOver: 0
   choosingUpgrade: 0
   playerObject: {fileID: 890547244}
+  bm: {fileID: 2063002400}
   singleton1: {fileID: 890547244}
   singleton2: {fileID: 1457356233}
   singleton3: {fileID: 1140351022}

@@ -19,20 +19,19 @@ public class Button_Manager : MonoBehaviour {
     void Start() {
         // Initialize the available options list
         availableOptions = new List<WeaponScritpableObject>(UpgradeOptions);
-        //inventory = GetComponent<Inventory>();
         InitializeButtonNames();
     }
 
     void Update() {
-        if (Input.GetKeyDown(KeyCode.Space)) {
-            InitializeButtonNames();
-        }
+        //if (Input.GetKeyDown(KeyCode.Space)) {
+        //    InitializeButtonNames();
+        //}
     }
 
     // Method to initialize button names
-    void InitializeButtonNames() {
-
-        if (inventory.AllSlotsFilled() == false) {
+    public void InitializeButtonNames() {
+        Debug.Log("Initialise");
+        if (inventory.AllSlotsFilled() == false || inventory.AllSlotsFilled() == true) {
             ShuffleArray(numbers);
 
             // Iterate over each button
@@ -57,7 +56,6 @@ public class Button_Manager : MonoBehaviour {
 
                 if (selectedOption.Level == 1) {
                     buttons[i].onClick.AddListener(() => SpawnWeapon(selectedOption.Controller));
-                    Debug.Log(selectedOption);
                 }
                 // Add the assignment of NextData as a listener to the button's onClick event
                 buttons[i].onClick.AddListener(() => AssignNextData(selectedOption, index));
@@ -70,7 +68,6 @@ public class Button_Manager : MonoBehaviour {
                 ReplenishAvailableOptions();
             }
         }
-
     }
 
     void ReplenishAvailableOptions() {
@@ -80,8 +77,10 @@ public class Button_Manager : MonoBehaviour {
     void AssignNextData(WeaponScritpableObject selectedOption, int index) {
         if (selectedOption.NextData != null) {
             UpgradeOptions[index] = selectedOption.NextData;
-            GameManager.instance.EndLevelUp();
         }
+        GameManager.instance.EndLevelUp();
+        //ReplenishAvailableOptions();
+        InitializeButtonNames();
     }
 
     public void SpawnWeapon(GameObject weapon) {
