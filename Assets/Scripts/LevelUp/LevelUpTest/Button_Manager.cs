@@ -56,6 +56,8 @@ public class Button_Manager : MonoBehaviour {
 
                 if (selectedOption.Level == 1) {
                     buttons[i].onClick.AddListener(() => SpawnWeapon(selectedOption.Controller));
+                } else if (selectedOption.Level > 1) {
+                    buttons[i].onClick.AddListener(() => ReplaceController(selectedOption.PreviousLevelController, selectedOption.Controller));
                 }
                 // Add the assignment of NextData as a listener to the button's onClick event
                 buttons[i].onClick.AddListener(() => AssignNextData(selectedOption, index));
@@ -79,7 +81,6 @@ public class Button_Manager : MonoBehaviour {
             UpgradeOptions[index] = selectedOption.NextData;
         }
         GameManager.instance.EndLevelUp();
-        //ReplenishAvailableOptions();
         InitializeButtonNames();
     }
 
@@ -89,6 +90,10 @@ public class Button_Manager : MonoBehaviour {
             spawnedWeapon.transform.SetParent(player.transform);
             inventory.AddWeaponToInventory(spawnedWeapon);
         }
+    }
+
+    void ReplaceController(GameObject data, GameObject weapon) {
+        inventory.ReplaceWeapon(data, weapon);
     }
 
     void ShuffleArray(int[] array) {

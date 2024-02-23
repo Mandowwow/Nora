@@ -4,16 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour {
+
     public GameObject[] weaponInventory;
-    // Start is called before the first frame update
-    void Start() {
-        //AllSlotsFilled();
-    }
-
-    // Update is called once per frame
-    void Update() {
-
-    }
 
     public bool AllSlotsFilled() {
         // Check if any slot is empty (null)
@@ -34,7 +26,20 @@ public class Inventory : MonoBehaviour {
                 weaponInventory[i] = weapon;
                 break;
             }
-
         }
+    }
+
+    public void ReplaceWeapon(GameObject data, GameObject weapon) {
+        for (int i = 0; i < weaponInventory.Length; i++) {
+            Debug.Log(data + " " + weaponInventory[i]);
+            if(weaponInventory[i] != null && IsSameType(data, weaponInventory[i])) {
+                weaponInventory[i] = weapon;
+                Debug.Log("Succesful");
+            }
+        }
+    }
+
+    bool IsSameType(GameObject obj1, GameObject obj2) {
+        return obj1.tag == obj2.tag;
     }
 }

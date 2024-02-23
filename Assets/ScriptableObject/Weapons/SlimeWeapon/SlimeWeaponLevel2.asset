@@ -23,6 +23,8 @@ MonoBehaviour:
   _level: 2
   _nextLevelPrefab: {fileID: 1013406773728155853, guid: a8a4fad7bd5bcd54b8e3dec9531d9a03,
     type: 3}
+  _previousLevelController: {fileID: 1013406773728155853, guid: ee522453143989344bc92eb957a649af,
+    type: 3}
   _icon: {fileID: 21300000, guid: 96ae0daa45401e0448929c030095e147, type: 3}
   _name: Slime Level 2
   _description: Slime stays for a longer time.

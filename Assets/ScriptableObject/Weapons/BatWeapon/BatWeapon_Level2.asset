@@ -23,6 +23,8 @@ MonoBehaviour:
   _level: 2
   _nextLevelPrefab: {fileID: 4956137477647419634, guid: 9995d7ff468cc794bb697784f8dee9d5,
     type: 3}
+  _previousLevelController: {fileID: 4956137477647419634, guid: a11f7d3bee67e5741b83ad2ef7b7b95b,
+    type: 3}
   _icon: {fileID: 21300000, guid: b802b00f260268249a31a440847d64ac, type: 3}
   _name: Eye of Uru Level 2
   _description: Appear more frequently.
