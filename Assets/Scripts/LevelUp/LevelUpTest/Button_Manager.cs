@@ -30,45 +30,42 @@ public class Button_Manager : MonoBehaviour {
 
     // Method to initialize button names
     public void InitializeButtonNames() {
-        Debug.Log("Initialise");
-        if (inventory.AllSlotsFilled() == false || inventory.AllSlotsFilled() == true) {
-            ShuffleArray(numbers);
+        ShuffleArray(numbers);
 
-            // Iterate over each button
-            for (int i = 0; i < buttons.Count; i++) {
+        // Iterate over each button
+        for (int i = 0; i < buttons.Count; i++) {
+            Debug.Log(buttons[i]);
+            int index = numbers[i];
 
-                int index = numbers[i];
+            // Get the randomly selected WeaponScriptableObject
+            WeaponScritpableObject selectedOption = availableOptions[index];
 
-                // Get the randomly selected WeaponScriptableObject
-                WeaponScritpableObject selectedOption = availableOptions[index];
+            var textComponents = buttons[i].GetComponentsInChildren<TextMeshProUGUI>();
 
-                var textComponents = buttons[i].GetComponentsInChildren<TextMeshProUGUI>();
+            // Assign the name of the selected WeaponScriptableObject to the text of the button
+            textComponents[0].text = selectedOption.Name;
+            textComponents[1].text = selectedOption.Description;
 
-                // Assign the name of the selected WeaponScriptableObject to the text of the button
-                textComponents[0].text = selectedOption.Name;
-                textComponents[1].text = selectedOption.Description;
+            //Assign the image of the selected Button
+            buttons[i].image.sprite = selectedOption.Icon;
 
-                //Assign the image of the selected Button
-                buttons[i].image.sprite = selectedOption.Icon;
+            // Assign a method to the button's onClick event
+            buttons[i].onClick.RemoveAllListeners();
 
-                // Assign a method to the button's onClick event
-                buttons[i].onClick.RemoveAllListeners();
-
-                if (selectedOption.Level == 1) {
-                    buttons[i].onClick.AddListener(() => SpawnWeapon(selectedOption.Controller));
-                } else if (selectedOption.Level > 1) {
-                    buttons[i].onClick.AddListener(() => ReplaceController(selectedOption.PreviousLevelController, selectedOption.Controller));
-                }
-                // Add the assignment of NextData as a listener to the button's onClick event
-                buttons[i].onClick.AddListener(() => AssignNextData(selectedOption, index));
-
-                // Remove the selected option from available options to avoid selecting it again
-                availableOptions.RemoveAt(index);
-
-
-                //Debug.Log(randomIndex);
-                ReplenishAvailableOptions();
+            if (selectedOption.Level == 1) {
+                buttons[i].onClick.AddListener(() => SpawnWeapon(selectedOption.Controller));
+            } else if (selectedOption.Level > 1) {
+                buttons[i].onClick.AddListener(() => ReplaceController(selectedOption.PreviousLevelController, selectedOption.Controller));
             }
+            // Add the assignment of NextData as a listener to the button's onClick event
+            buttons[i].onClick.AddListener(() => AssignNextData(selectedOption, index));
+
+            // Remove the selected option from available options to avoid selecting it again
+            availableOptions.RemoveAt(index);
+
+
+            //Debug.Log(randomIndex);
+            ReplenishAvailableOptions();
         }
     }
 
@@ -81,6 +78,7 @@ public class Button_Manager : MonoBehaviour {
             UpgradeOptions[index] = selectedOption.NextData;
         }
         GameManager.instance.EndLevelUp();
+        InitializeButtonNames();
         InitializeButtonNames();
     }
 
