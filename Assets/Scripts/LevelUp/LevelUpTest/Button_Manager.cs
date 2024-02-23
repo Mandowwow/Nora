@@ -12,6 +12,7 @@ public class Button_Manager : MonoBehaviour {
     int[] numbers = new int[] { 0, 1, 2, 3};
 
     public GameObject player;
+    public GameObject playerPos;
 
     //Reference Inventory
     public Inventory inventory;
@@ -78,7 +79,7 @@ public class Button_Manager : MonoBehaviour {
 
     public void SpawnWeapon(GameObject weapon) {
         if (inventory.AllSlotsFilled() == false) {
-            GameObject spawnedWeapon = Instantiate(weapon, player.transform.position, Quaternion.identity);
+            GameObject spawnedWeapon = Instantiate(weapon, playerPos.transform.position, Quaternion.identity);
             spawnedWeapon.transform.SetParent(player.transform);
             inventory.AddWeaponToInventory(spawnedWeapon);
         }
