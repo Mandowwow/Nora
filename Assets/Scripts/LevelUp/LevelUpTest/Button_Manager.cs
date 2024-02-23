@@ -22,12 +22,6 @@ public class Button_Manager : MonoBehaviour {
         InitializeButtonNames();
     }
 
-    void Update() {
-        //if (Input.GetKeyDown(KeyCode.Space)) {
-        //    InitializeButtonNames();
-        //}
-    }
-
     // Method to initialize button names
     public void InitializeButtonNames() {
         ShuffleArray(numbers);
