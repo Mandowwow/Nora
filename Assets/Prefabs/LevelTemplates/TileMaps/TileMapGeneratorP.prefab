@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6338862612673797757}
   - component: {fileID: 8946686645835485078}
   m_Layer: 0
-  m_Name: TileMapGenerator
+  m_Name: TileMapGeneratorP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,9 +45,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objects:
   - {fileID: 8353621503862670794, guid: e1b219853f2907b49bdd0cc8daa5f43d, type: 3}
-  - {fileID: 1039259776275258484, guid: b57e5b20fd5ded9488318420673113a7, type: 3}
-  - {fileID: 7487445811170405819, guid: ff3c43a2f15f22f45b46e342b0284371, type: 3}
-  - {fileID: 555331158649579670, guid: b349d88c36f881040832ead297a22416, type: 3}
-  - {fileID: 8549875132098480322, guid: 53b7553d2bcaf55439304366e1c0582f, type: 3}
-  - {fileID: 1585752585020047585, guid: 30a58516cac3c134289c20522b027ade, type: 3}
-  - {fileID: 3674433727605790113, guid: 2347cf17e360b9847bc0551d068592c1, type: 3}
