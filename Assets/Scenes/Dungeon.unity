@@ -630,6 +630,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bat
       objectReference: {fileID: 0}
+    - target: {fileID: 2518210558495255735, guid: a000f447e9d81264e9944313332e4dd6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a000f447e9d81264e9944313332e4dd6, type: 3}
 --- !u!1 &236742431
@@ -5507,7 +5512,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1727870068
 Transform:
   m_ObjectHideFlags: 0
@@ -6900,10 +6905,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 526a6b1fd8fe6e1468e72b9848c32816, type: 2}
   - {fileID: 11400000, guid: 95f55366b8f6aa64f881897c2c39c1c1, type: 2}
   availableOptions: []
-  ItemOption:
+  PassiveItemUpgradeOptions:
   - {fileID: 11400000, guid: 0e6902d7da7372c48b2bc74b19d12219, type: 2}
   - {fileID: 11400000, guid: 82f1d8758630fa4478061536a722d305, type: 2}
-  ItemAvailable: []
+  PassiveItemAvailableOptions: []
   player: {fileID: 890547244}
   playerPos: {fileID: 287478088}
   inventory: {fileID: 890547254}
