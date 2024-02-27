@@ -15,6 +15,11 @@ MonoBehaviour:
   _multiplier: 20
   _level: 2
   _nextLevelPrefab: {fileID: 0}
+  _previusLevelPrefab: {fileID: 6885198795602271565, guid: b443c41d096254445853c2d4f5512dae,
+    type: 3}
+  _controller: {fileID: 6885198795602271565, guid: 59d7b9b2f41f3974daf973561d73bf3f,
+    type: 3}
+  _nextData: {fileID: 0}
   _icon: {fileID: 21300000, guid: 558997ec9158c584a9ba9ee3eddbe8b0, type: 3}
   _name: Motor Level 2
   _description: Increase movement speed.
