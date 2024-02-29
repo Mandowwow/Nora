@@ -36,14 +36,16 @@ public class Button_Manager : MonoBehaviour {
     // Method to initialize button names
     public void InitializeButtonNames() {
         ShuffleArray(numbers);
+        ShuffleArray(numbersItem);
 
         // Iterate over each button
         for (int i = 0; i < buttons.Count; i++) {
             int index = numbers[i];
+            int indexItem = numbersItem[i];
 
             if (GenerateRandomBoolean()) {
                 if (GenerateRandomBoolean()) {
-                    PassiveItemScriptableObject selectedOption = PassiveItemAvailableOptions[0];
+                    PassiveItemScriptableObject selectedOption = PassiveItemAvailableOptions[indexItem];
 
                     var textComponents = buttons[i].GetComponentsInChildren<TextMeshProUGUI>();
 
@@ -62,7 +64,7 @@ public class Button_Manager : MonoBehaviour {
                     //PassiveItemAvailableOptions.RemoveAt(0);
 
                 } else {
-                    PassiveItemScriptableObject selectedOption = PassiveItemAvailableOptions[1];
+                    PassiveItemScriptableObject selectedOption = PassiveItemAvailableOptions[indexItem];
 
                     var textComponents = buttons[i].GetComponentsInChildren<TextMeshProUGUI>();
 
