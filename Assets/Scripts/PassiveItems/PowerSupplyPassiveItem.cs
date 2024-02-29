@@ -5,6 +5,7 @@ using UnityEngine;
 public class PowerSupplyPassiveItem : PassiveItem
 {
     protected override void ApplyModifier() {
-        ps.CurrentNumOfHearts += passiveItemData.Multiplier;
+        ps.CurrentNumOfHearts += 1;
+        PlayerStats.CurrentHealth += 1;
     }
 }
