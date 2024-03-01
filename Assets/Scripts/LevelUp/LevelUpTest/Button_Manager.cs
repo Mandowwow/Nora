@@ -33,8 +33,16 @@ public class Button_Manager : MonoBehaviour {
         InitializeButtonNames();
     }
 
+    private void Update() {
+        if (Input.GetKeyDown(KeyCode.Space)) {
+            // Call your function here
+            InitializeButtonNames();
+        }
+    }
+
     // Method to initialize button names
     public void InitializeButtonNames() {
+        Debug.Log("Initialisebuttons");
         ShuffleArray(numbers);
         ShuffleArray(numbersItem);
 
@@ -135,6 +143,8 @@ public class Button_Manager : MonoBehaviour {
         GameManager.instance.EndLevelUp();
         InitializeButtonNames();
         InitializeButtonNames();
+        InitializeButtonNames();
+        //InitializeButtonNames();
     }
 
     public void SpawnWeapon(GameObject weapon) {
@@ -166,7 +176,6 @@ public class Button_Manager : MonoBehaviour {
     bool GenerateRandomBoolean() {
         // Generate a random integer (0 or 1)
         int randomNumber = Random.Range(0, 2);
-        Debug.Log(randomNumber);
 
         // Return true if randomNumber is 1, false otherwise
         return randomNumber == 1;

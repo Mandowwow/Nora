@@ -40,7 +40,6 @@ public class Inventory : MonoBehaviour {
     public void ReplaceWeaponPlayer(GameObject weapon) {
         foreach (Transform child in transform) {
             if(IsSameType(child.gameObject, weapon)) {
-                Debug.Log("This new Weapon already exists on your player, should i replace it?");
                 Destroy(child.gameObject);
             }
         }
