@@ -29,12 +29,19 @@ public class Inventory : MonoBehaviour {
         }
     }
 
-    public void ReplaceWeapon(GameObject data, GameObject weapon) {
+    public void ReplaceWeaponInventory(GameObject data, GameObject weapon) {
         for (int i = 0; i < weaponInventory.Length; i++) {
-            Debug.Log(data + " " + weaponInventory[i]);
             if(weaponInventory[i] != null && IsSameType(data, weaponInventory[i])) {
                 weaponInventory[i] = weapon;
-                Debug.Log("Succesful");
+            }
+        }
+    }
+
+    public void ReplaceWeaponPlayer(GameObject weapon) {
+        foreach (Transform child in transform) {
+            if(IsSameType(child.gameObject, weapon)) {
+                Debug.Log("This new Weapon already exists on your player, should i replace it?");
+                Destroy(child.gameObject);
             }
         }
     }

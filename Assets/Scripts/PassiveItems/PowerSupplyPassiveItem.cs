@@ -5,7 +5,11 @@ using UnityEngine;
 public class PowerSupplyPassiveItem : PassiveItem
 {
     protected override void ApplyModifier() {
-        ps.CurrentNumOfHearts += 1;
+        if(ps.CurrentNumOfHearts == ps.playerData.MaxHealth) {
+            PlayerStats.CurrentHealth += 1;
+            return;
+        }
         PlayerStats.CurrentHealth += 1;
+        ps.CurrentNumOfHearts += 1;
     }
 }

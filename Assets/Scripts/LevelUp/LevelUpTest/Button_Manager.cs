@@ -104,6 +104,7 @@ public class Button_Manager : MonoBehaviour {
                     buttons[i].onClick.AddListener(() => SpawnWeapon(selectedOption.Controller));
                 } else if (selectedOption.Level > 1) {
                     buttons[i].onClick.AddListener(() => ReplaceController(selectedOption.PreviousLevelController, selectedOption.Controller));
+                    buttons[i].onClick.AddListener(() => SpawnNewWeaponLevel(selectedOption.Controller));
                 }
                 // Add the assignment of NextData as a listener to the button's onClick event
                 buttons[i].onClick.AddListener(() => AssignNextData(selectedOption, index));
@@ -144,6 +145,11 @@ public class Button_Manager : MonoBehaviour {
         }
     }
 
+    public void SpawnNewWeaponLevel(GameObject weapon) {
+        GameObject spawnedWeapon = Instantiate(weapon, playerPos.transform.position, Quaternion.identity);
+        spawnedWeapon.transform.SetParent(player.transform);
+    }
+
     public void SpawnItem(GameObject weapon) {
         GameObject spawnedWeapon = Instantiate(weapon, playerPos.transform.position, Quaternion.identity);
         spawnedWeapon.transform.SetParent(player.transform);
@@ -153,7 +159,8 @@ public class Button_Manager : MonoBehaviour {
     }
 
     void ReplaceController(GameObject data, GameObject weapon) {
-        inventory.ReplaceWeapon(data, weapon);
+        inventory.ReplaceWeaponInventory(data, weapon);
+        inventory.ReplaceWeaponPlayer(weapon);
     }
 
     bool GenerateRandomBoolean() {
