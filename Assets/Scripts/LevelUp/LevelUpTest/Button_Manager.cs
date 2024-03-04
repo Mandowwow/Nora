@@ -142,9 +142,6 @@ public class Button_Manager : MonoBehaviour {
         }
         GameManager.instance.EndLevelUp();
         InitializeButtonNames();
-        InitializeButtonNames();
-        InitializeButtonNames();
-        //InitializeButtonNames();
     }
 
     public void SpawnWeapon(GameObject weapon) {
@@ -164,7 +161,6 @@ public class Button_Manager : MonoBehaviour {
         GameObject spawnedWeapon = Instantiate(weapon, playerPos.transform.position, Quaternion.identity);
         spawnedWeapon.transform.SetParent(player.transform);
         GameManager.instance.EndLevelUp();
-        InitializeButtonNames();
         InitializeButtonNames();
     }
 
