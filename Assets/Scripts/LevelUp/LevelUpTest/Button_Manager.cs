@@ -33,13 +33,6 @@ public class Button_Manager : MonoBehaviour {
         InitializeButtonNames();
     }
 
-    private void Update() {
-        if (Input.GetKeyDown(KeyCode.Space)) {
-            // Call your function here
-            InitializeButtonNames();
-        }
-    }
-
     // Method to initialize button names
     public void InitializeButtonNames() {
         Debug.Log("Initialisebuttons");
