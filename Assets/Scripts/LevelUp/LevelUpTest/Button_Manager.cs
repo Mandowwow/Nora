@@ -12,8 +12,8 @@ public class Button_Manager : MonoBehaviour {
     public List<PassiveItemScriptableObject> PassiveItemUpgradeOptions;
     public List<PassiveItemScriptableObject> PassiveItemAvailableOptions;
 
-    int[] numbers = new int[] { 0, 1, 2, 3};
-    int[] numbersItem = new int[] { 0, 1 };
+    List<int> numbers = new List<int>();
+    List<int> numbersItem = new List<int>();
 
     public GameObject player;
     private PlayerStats ps;
@@ -35,8 +35,12 @@ public class Button_Manager : MonoBehaviour {
 
     // Method to initialize button names
     public void InitializeButtonNames() {
+        numbers = PopulateLists(availableOptions);
+        numbersItem = PopulateLists(PassiveItemAvailableOptions);
         ShuffleArray(numbers);
         ShuffleArray(numbersItem);
+        Debug.Log(numbers.Count);
+        Debug.Log(numbersItem.Count);
 
         // Iterate over each button
         for (int i = 0; i < buttons.Count; i++) {
@@ -96,7 +100,6 @@ public class Button_Manager : MonoBehaviour {
 
 
                 //Debug.Log(randomIndex);
-                ReplenishAvailableOptions();
 
                 if (inventory.AllSlotsFilled()) {
                     UpgradeOptions.Clear();
@@ -108,8 +111,9 @@ public class Button_Manager : MonoBehaviour {
                         }
                     }
                 }
-            }
 
+                ReplenishAvailableOptions();
+            }
         }
     }
 
@@ -163,15 +167,24 @@ public class Button_Manager : MonoBehaviour {
     }
 
 
-    void ShuffleArray(int[] array) {
+    void ShuffleArray(List<int> list) {
         System.Random rng = new System.Random();
-        int n = array.Length;
+        int n = list.Count;
         while (n > 1) {
             n--;
             int k = rng.Next(n + 1);
-            int temp = array[k];
-            array[k] = array[n];
-            array[n] = temp;
+            int temp = list[k];
+            list[k] = list[n];
+            list[n] = temp;
         }
+    }
+
+    List<int> PopulateLists<T>(List<T> sourceList) {
+        List<int> result = new List<int>();
+
+        for(int i = 0; i<sourceList.Count; i++) {
+            result.Add(i);
+        }
+        return result;
     }
 }
