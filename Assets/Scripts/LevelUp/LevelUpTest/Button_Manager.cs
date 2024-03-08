@@ -35,7 +35,6 @@ public class Button_Manager : MonoBehaviour {
 
     // Method to initialize button names
     public void InitializeButtonNames() {
-        Debug.Log("Initialisebuttons");
         ShuffleArray(numbers);
         ShuffleArray(numbersItem);
 
@@ -64,6 +63,7 @@ public class Button_Manager : MonoBehaviour {
 
                 //PassiveItemAvailableOptions.RemoveAt(0);
 
+                ReplenishAvailableOptions();
                 
             } else {
 
@@ -97,6 +97,17 @@ public class Button_Manager : MonoBehaviour {
 
                 //Debug.Log(randomIndex);
                 ReplenishAvailableOptions();
+
+                if (inventory.AllSlotsFilled()) {
+                    UpgradeOptions.Clear();
+                    foreach (var item in inventory.weaponInventory) {
+                        WeaponsController weaponsController = item.GetComponent<WeaponsController>();
+                        WeaponScritpableObject weaponScritpableObject = weaponsController.nextWeaponData;
+                        if (weaponScritpableObject != null) {
+                            UpgradeOptions.Add(weaponScritpableObject);
+                        }
+                    }
+                }
             }
 
         }
@@ -139,7 +150,6 @@ public class Button_Manager : MonoBehaviour {
     }
 
     void ReplaceController(GameObject data, GameObject weapon) {
-        Debug.Log("replacing");
         inventory.ReplaceWeaponInventory(data, weapon);
         inventory.ReplaceWeaponPlayer(weapon);
     }

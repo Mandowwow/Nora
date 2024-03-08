@@ -9,6 +9,7 @@ public class WeaponsController : MonoBehaviour
 {
     [Header("Weapon Stats")]
     public WeaponScritpableObject weaponData;
+    public WeaponScritpableObject nextWeaponData;
     float currentCooldown;
 
         
