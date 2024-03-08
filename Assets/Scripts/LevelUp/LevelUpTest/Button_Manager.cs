@@ -45,45 +45,26 @@ public class Button_Manager : MonoBehaviour {
             int indexItem = numbersItem[i];
 
             if (GenerateRandomBoolean()) {
-                if (GenerateRandomBoolean()) {
-                    PassiveItemScriptableObject selectedOption = PassiveItemAvailableOptions[indexItem];
 
-                    var textComponents = buttons[i].GetComponentsInChildren<TextMeshProUGUI>();
+                PassiveItemScriptableObject selectedOption = PassiveItemAvailableOptions[indexItem];
 
-                    // Assign the name of the selected WeaponScriptableObject to the text of the button
-                    textComponents[0].text = selectedOption.Name;
-                    textComponents[1].text = selectedOption.Description;
+                var textComponents = buttons[i].GetComponentsInChildren<TextMeshProUGUI>();
 
-                    //Assign the image of the selected Button
-                    buttons[i].image.sprite = selectedOption.Icon;
+                // Assign the name of the selected WeaponScriptableObject to the text of the button
+                textComponents[0].text = selectedOption.Name;
+                textComponents[1].text = selectedOption.Description;
 
-                    // Assign a method to the button's onClick event
-                    buttons[i].onClick.RemoveAllListeners();
+                //Assign the image of the selected Button
+                buttons[i].image.sprite = selectedOption.Icon;
 
-                    buttons[i].onClick.AddListener(() => SpawnItem(selectedOption.Controller));
+                // Assign a method to the button's onClick event
+                buttons[i].onClick.RemoveAllListeners();
 
-                    //PassiveItemAvailableOptions.RemoveAt(0);
+                buttons[i].onClick.AddListener(() => SpawnItem(selectedOption.Controller));
 
-                } else {
-                    PassiveItemScriptableObject selectedOption = PassiveItemAvailableOptions[indexItem];
+                //PassiveItemAvailableOptions.RemoveAt(0);
 
-                    var textComponents = buttons[i].GetComponentsInChildren<TextMeshProUGUI>();
-
-                    // Assign the name of the selected WeaponScriptableObject to the text of the button
-                    textComponents[0].text = selectedOption.Name;
-                    textComponents[1].text = selectedOption.Description;
-
-                    //Assign the image of the selected Button
-                    buttons[i].image.sprite = selectedOption.Icon;
-
-                    // Assign a method to the button's onClick event
-                    buttons[i].onClick.RemoveAllListeners();
-
-                    buttons[i].onClick.AddListener(() => SpawnItem(selectedOption.Controller));
-
-                    //PassiveItemAvailableOptions.RemoveAt(1);
-
-                }
+                
             } else {
 
                 // Get the randomly selected WeaponScriptableObject
@@ -158,6 +139,7 @@ public class Button_Manager : MonoBehaviour {
     }
 
     void ReplaceController(GameObject data, GameObject weapon) {
+        Debug.Log("replacing");
         inventory.ReplaceWeaponInventory(data, weapon);
         inventory.ReplaceWeaponPlayer(weapon);
     }

@@ -5,15 +5,15 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "WeaponScriptableObject", menuName = "ScriptableObjects/Weapon")]
 public class WeaponScritpableObject : ScriptableObject {
     [SerializeField] GameObject _prefab;
+    [SerializeField] GameObject _previousLevelController;
     [SerializeField] GameObject _controller;
+    [SerializeField] GameObject _nextLevelPrefab;
     [SerializeField] WeaponScritpableObject _nextData;
     [SerializeField] int _damage;
     [SerializeField] float _speed;
     [SerializeField] float _cooldownDuration;
     [SerializeField] int _pierce;
     [SerializeField] int _level;
-    [SerializeField] GameObject _nextLevelPrefab;
-    [SerializeField] GameObject _previousLevelController;
     [SerializeField] Sprite _icon;
     [SerializeField] string _name;
     [SerializeField] string _description;
