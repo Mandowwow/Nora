@@ -129,6 +129,8 @@ public class Button_Manager : MonoBehaviour {
     void AssignNextData(WeaponScritpableObject selectedOption, int index) {
         if (selectedOption.NextData != null) {
             UpgradeOptions[index] = selectedOption.NextData;
+        } else {
+            UpgradeOptions.RemoveAt(index);
         }
         GameManager.instance.EndLevelUp();
         InitializeButtonNames();
