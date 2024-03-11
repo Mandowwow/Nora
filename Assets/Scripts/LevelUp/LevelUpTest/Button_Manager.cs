@@ -49,28 +49,6 @@ public class Button_Manager : MonoBehaviour {
 
             if (GenerateRandomBoolean()) {
 
-                PassiveItemScriptableObject selectedOption = PassiveItemAvailableOptions[indexItem];
-
-                var textComponents = buttons[i].GetComponentsInChildren<TextMeshProUGUI>();
-
-                // Assign the name of the selected WeaponScriptableObject to the text of the button
-                textComponents[0].text = selectedOption.Name;
-                textComponents[1].text = selectedOption.Description;
-
-                //Assign the image of the selected Button
-                buttons[i].image.sprite = selectedOption.Icon;
-
-                // Assign a method to the button's onClick event
-                buttons[i].onClick.RemoveAllListeners();
-
-                buttons[i].onClick.AddListener(() => SpawnItem(selectedOption.Controller));
-
-                //PassiveItemAvailableOptions.RemoveAt(0);
-
-                ReplenishAvailableOptions();
-                
-            } else {
-
                 // Get the randomly selected WeaponScriptableObject
                 WeaponScritpableObject selectedOption = availableOptions[index];
 
@@ -88,7 +66,8 @@ public class Button_Manager : MonoBehaviour {
 
                 if (selectedOption.Level == 1) {
                     buttons[i].onClick.AddListener(() => SpawnWeapon(selectedOption.Controller));
-                } else if (selectedOption.Level > 1) {
+                }
+                else if (selectedOption.Level > 1) {
                     buttons[i].onClick.AddListener(() => ReplaceController(selectedOption.PreviousLevelController, selectedOption.Controller));
                     buttons[i].onClick.AddListener(() => SpawnNewWeaponLevel(selectedOption.Controller));
                 }
@@ -113,6 +92,29 @@ public class Button_Manager : MonoBehaviour {
                 }
 
                 ReplenishAvailableOptions();
+
+            } else {
+
+                PassiveItemScriptableObject selectedOption = PassiveItemAvailableOptions[indexItem];
+
+                var textComponents = buttons[i].GetComponentsInChildren<TextMeshProUGUI>();
+
+                // Assign the name of the selected WeaponScriptableObject to the text of the button
+                textComponents[0].text = selectedOption.Name;
+                textComponents[1].text = selectedOption.Description;
+
+                //Assign the image of the selected Button
+                buttons[i].image.sprite = selectedOption.Icon;
+
+                // Assign a method to the button's onClick event
+                buttons[i].onClick.RemoveAllListeners();
+
+                buttons[i].onClick.AddListener(() => SpawnItem(selectedOption.Controller));
+
+                //PassiveItemAvailableOptions.RemoveAt(0);
+
+                ReplenishAvailableOptions();
+
             }
         }
     }
