@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4039227977598821064}
   - component: {fileID: 4171329488761396328}
   m_Layer: 0
-  m_Name: BatControllerLevel3
+  m_Name: BatControllerLevel4
   m_TagString: BatW
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43,5 +43,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd9ce2b1d5988644c972932e0ac4f102, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponData: {fileID: 11400000, guid: c4ab8344a654a0a4688647154a49a329, type: 2}
-  nextWeaponData: {fileID: 11400000, guid: 178fbd099f3d5ea4ab96b599293f53dc, type: 2}
+  weaponData: {fileID: 11400000, guid: 178fbd099f3d5ea4ab96b599293f53dc, type: 2}
+  nextWeaponData: {fileID: 0}
