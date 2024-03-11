@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5901334006482947609}
   - component: {fileID: 4663049964860269982}
   m_Layer: 13
-  m_Name: SlimeControllerLevel3
+  m_Name: SlimeControllerLevel4
   m_TagString: SlimeW
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43,5 +43,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b851c8f16b37d8a49bd98a476fc22101, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponData: {fileID: 11400000, guid: be7e726613b5d1e42abc2a6ee6d77a22, type: 2}
-  nextWeaponData: {fileID: 11400000, guid: 3e5fb6943ef71df4dbe68b955a1d9602, type: 2}
+  weaponData: {fileID: 11400000, guid: 3e5fb6943ef71df4dbe68b955a1d9602, type: 2}
+  nextWeaponData: {fileID: 0}
