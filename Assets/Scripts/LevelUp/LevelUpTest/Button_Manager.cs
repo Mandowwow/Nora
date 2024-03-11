@@ -44,11 +44,9 @@ public class Button_Manager : MonoBehaviour {
 
         // Iterate over each button
         for (int i = 0; i < buttons.Count; i++) {
-            int index = numbers[i];
-            int indexItem = numbersItem[i];
 
-            if (GenerateRandomBoolean()) {
-
+            if (GenerateRandomBoolean() && i < numbers.Count) {
+                int index = numbers[i];
                 // Get the randomly selected WeaponScriptableObject
                 WeaponScritpableObject selectedOption = availableOptions[index];
 
@@ -95,6 +93,7 @@ public class Button_Manager : MonoBehaviour {
 
             } else {
 
+                int indexItem = numbersItem[i];
                 PassiveItemScriptableObject selectedOption = PassiveItemAvailableOptions[indexItem];
 
                 var textComponents = buttons[i].GetComponentsInChildren<TextMeshProUGUI>();
