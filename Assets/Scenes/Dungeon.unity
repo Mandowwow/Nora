@@ -6443,6 +6443,7 @@ MonoBehaviour:
   PassiveItemUpgradeOptions:
   - {fileID: 11400000, guid: 0e6902d7da7372c48b2bc74b19d12219, type: 2}
   - {fileID: 11400000, guid: 82f1d8758630fa4478061536a722d305, type: 2}
+  - {fileID: 11400000, guid: 8889a62b6bc69f5448e6596885364836, type: 2}
   PassiveItemAvailableOptions: []
   player: {fileID: 890547244}
   playerPos: {fileID: 287478088}
