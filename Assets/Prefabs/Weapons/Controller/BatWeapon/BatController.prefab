@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4171329488761396328}
   m_Layer: 0
   m_Name: BatController
-  m_TagString: Untagged
+  m_TagString: BatW
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44,3 +44,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponData: {fileID: 11400000, guid: c928b7fac43e64643b034370db3e26ef, type: 2}
+  nextWeaponData: {fileID: 11400000, guid: 099d72f6f0600a24f9d665d703bb9027, type: 2}

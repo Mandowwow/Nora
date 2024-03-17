@@ -5,12 +5,15 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "WeaponScriptableObject", menuName = "ScriptableObjects/Weapon")]
 public class WeaponScritpableObject : ScriptableObject {
     [SerializeField] GameObject _prefab;
+    [SerializeField] GameObject _previousLevelController;
+    [SerializeField] GameObject _controller;
+    [SerializeField] GameObject _nextLevelPrefab;
+    [SerializeField] WeaponScritpableObject _nextData;
     [SerializeField] int _damage;
     [SerializeField] float _speed;
     [SerializeField] float _cooldownDuration;
     [SerializeField] int _pierce;
     [SerializeField] int _level;
-    [SerializeField] GameObject _nextLevelPrefab;
     [SerializeField] Sprite _icon;
     [SerializeField] string _name;
     [SerializeField] string _description;
@@ -19,6 +22,17 @@ public class WeaponScritpableObject : ScriptableObject {
     {
         get => _prefab;
         set => _prefab = value;
+    }
+
+    public GameObject Controller
+    {
+        get => _controller;
+        set => _controller = value;
+    }
+    public WeaponScritpableObject NextData
+    {
+        get => _nextData;
+        set => _nextData = value;
     }
 
     public int Damage
@@ -57,6 +71,12 @@ public class WeaponScritpableObject : ScriptableObject {
         set => _nextLevelPrefab = value;
     }
 
+    public GameObject PreviousLevelController
+    {
+        get => _previousLevelController;
+        set => _previousLevelController = value;
+    }
+
     public Sprite Icon
     {
         get => _icon;
@@ -73,5 +93,9 @@ public class WeaponScritpableObject : ScriptableObject {
     {
         get => _description;
         private set => _description = value;
+    }
+
+    public void OnButtonClick() {
+        Debug.Log(Name);
     }
 }

@@ -16,6 +16,10 @@ MonoBehaviour:
   _level: 1
   _nextLevelPrefab: {fileID: 6216355384359485842, guid: 5caab34e6aa45c541bd30d77368e4ebf,
     type: 3}
+  _previusLevelPrefab: {fileID: 0}
+  _controller: {fileID: 6216355384359485842, guid: d231821d1d9481c4f88a4ba2c2e807d4,
+    type: 3}
+  _nextData: {fileID: 11400000, guid: dca27155580899d4886d73b8f4a0abfa, type: 2}
   _icon: {fileID: 21300000, guid: d75db4c9d3448a14f91c186882bec3a8, type: 3}
   _name: Power Supply
   _description: Increase total health.

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4171770692746771277}
   m_Layer: 0
   m_Name: BulletControllerLevel3
-  m_TagString: Untagged
+  m_TagString: BulletW
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44,3 +44,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponData: {fileID: 11400000, guid: 481412e05e7b9c040a23e8eec0ea67dc, type: 2}
+  nextWeaponData: {fileID: 11400000, guid: 6286414c2fb04674997bfad6bc47e1d8, type: 2}

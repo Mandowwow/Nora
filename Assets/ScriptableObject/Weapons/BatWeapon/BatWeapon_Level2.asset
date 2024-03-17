@@ -13,12 +13,17 @@ MonoBehaviour:
   m_Name: BatWeapon_Level2
   m_EditorClassIdentifier: 
   _prefab: {fileID: 71275680528837305, guid: 7e533f8d84caf934eab15fe2b39799a1, type: 3}
+  _controller: {fileID: 4956137477647419634, guid: 49fa50412d8aa144dbe292726d0218fc,
+    type: 3}
+  _nextData: {fileID: 11400000, guid: c4ab8344a654a0a4688647154a49a329, type: 2}
   _damage: 1
   _speed: 6
   _cooldownDuration: 3
   _pierce: 1
   _level: 2
   _nextLevelPrefab: {fileID: 4956137477647419634, guid: 9995d7ff468cc794bb697784f8dee9d5,
+    type: 3}
+  _previousLevelController: {fileID: 4956137477647419634, guid: a11f7d3bee67e5741b83ad2ef7b7b95b,
     type: 3}
   _icon: {fileID: 21300000, guid: b802b00f260268249a31a440847d64ac, type: 3}
   _name: Eye of Uru Level 2
