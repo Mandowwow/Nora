@@ -10,7 +10,6 @@ public class Enemy : MonoBehaviour
     [SerializeField] protected private Rigidbody2D rb;
     [SerializeField] private GameObject heart;
     [SerializeField] protected private float fireRate = 0.6f;
-    private LevelUpMenu levelUpMenuUi;
     protected Vector2 direction;
     protected private float nextFire = 0f;
     protected private PlayerMovement playerMovement;
@@ -36,7 +35,6 @@ public class Enemy : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         playerMovement = GameObject.FindGameObjectWithTag("Controller").GetComponent<PlayerMovement>();
         findEnemies = GameObject.FindGameObjectWithTag("Manager").GetComponent<FindEnemies>();
-        levelUpMenuUi = GameObject.FindGameObjectWithTag("GameController").GetComponent<LevelUpMenu>();
         sprite = GetComponent<SpriteRenderer>();
         FindEnemies.Enemies.Add(this.gameObject);
         //sprite.color = Color.black;
@@ -81,16 +79,10 @@ public class Enemy : MonoBehaviour
             FindEnemies.Enemies.Remove(this.gameObject);
             if (FindEnemies.Enemies.Count <= 0) {
                 Instantiate(findEnemies.Portal, new Vector3(0,0,0), Quaternion.identity);
-                //LevelUp();
                 GameManager.instance.StartLevelUp();
             }
 
         }
-    }
-
-    protected virtual void LevelUp()
-    {
-        levelUpMenuUi.OpenMenu();
     }
 
     protected void PlayerDirection() {
