@@ -19,6 +19,6 @@ MonoBehaviour:
   _controller: {fileID: 8464903402049717182, guid: ffacafa36eb6ba146a3458c4939dc644,
     type: 3}
   _nextData: {fileID: 0}
-  _icon: {fileID: 21300000, guid: 903078f231208e14ebd6bb5434091c2b, type: 3}
+  _icon: {fileID: 592112613293883888, guid: cceaa0cdace528549a399768a26b0778, type: 3}
   _name: Recharge
   _description: Ragin to full health by recharging all of your batteries.
