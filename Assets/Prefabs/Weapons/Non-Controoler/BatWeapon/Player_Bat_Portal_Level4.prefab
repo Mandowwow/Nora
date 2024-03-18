@@ -116,4 +116,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponData: {fileID: 11400000, guid: 178fbd099f3d5ea4ab96b599293f53dc, type: 2}
   destroyAfterSeconds: 0
-  prefab: {fileID: 8634637759111709183, guid: fa50a283ff3e1544aad8d3a0deb573af, type: 3}
+  prefab: {fileID: 7869123234547390839, guid: 26debc211eda5724392ef2b7e36318b4, type: 3}

@@ -20,10 +20,10 @@ MonoBehaviour:
   _nextLevelPrefab: {fileID: 0}
   _nextData: {fileID: 0}
   _damage: 1
-  _speed: 6
+  _speed: 7
   _cooldownDuration: 2
-  _pierce: 2
+  _pierce: 1
   _level: 4
   _icon: {fileID: 21300000, guid: b802b00f260268249a31a440847d64ac, type: 3}
   _name: Eye of Uru Level 4
-  _description: Eyes appear even more frequently
+  _description: Missiles appear more frequently

@@ -8,7 +8,7 @@ public class BatBehaviour : ProjectileWeaponBehaviour
     protected override void Start() {
         base.Start();
         bc = FindObjectOfType<BatController>();
-        bc.FindClosestEnemy(this.GetComponent<Rigidbody2D>(), transform.position);
+        bc.FindClosestEnemy(this.GetComponent<Rigidbody2D>(), transform);
     }
 
 }

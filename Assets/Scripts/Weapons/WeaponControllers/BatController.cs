@@ -17,7 +17,7 @@ public class BatController : WeaponsController
         spawnedPortal.transform.position = randPos;
     }
 
-    public void FindClosestEnemy(Rigidbody2D rb, Vector3 vector) {
+    public void FindClosestEnemy(Rigidbody2D rb, Transform transform) {
         float distanceToClosestEnemy = Mathf.Infinity;
         Enemy closestEnemy = null;
         Enemy[] allEnemies = GameObject.FindObjectsOfType<Enemy>();
@@ -33,9 +33,10 @@ public class BatController : WeaponsController
         if(closestEnemy!= null) {
             Vector3 targetPos = closestEnemy.transform.position;
             Vector2 direction = new Vector2(
-                targetPos.x - vector.x,
-                targetPos.y - vector.y);
+                targetPos.x - transform.position.x,
+                targetPos.y - transform.position.y);
             rb.velocity = direction.normalized * weaponData.Speed;
+            transform.up = direction.normalized;
         }
     }
 

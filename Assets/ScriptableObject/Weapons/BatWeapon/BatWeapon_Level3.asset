@@ -21,10 +21,10 @@ MonoBehaviour:
     type: 3}
   _nextData: {fileID: 11400000, guid: 178fbd099f3d5ea4ab96b599293f53dc, type: 2}
   _damage: 1
-  _speed: 6
+  _speed: 7
   _cooldownDuration: 3
-  _pierce: 2
+  _pierce: 1
   _level: 3
   _icon: {fileID: 21300000, guid: b802b00f260268249a31a440847d64ac, type: 3}
   _name: Eye of Uru Level 3
-  _description: Uru pierces through enemies.
+  _description: Missile speed increased.

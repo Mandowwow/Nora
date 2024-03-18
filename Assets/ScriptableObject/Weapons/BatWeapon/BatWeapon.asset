@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: BatWeapon
   m_EditorClassIdentifier: 
   _prefab: {fileID: 71275680528837305, guid: 5a1c734261606f34e9c3e0f8bb7be4e8, type: 3}
+  _previousLevelController: {fileID: 0}
   _controller: {fileID: 4956137477647419634, guid: a11f7d3bee67e5741b83ad2ef7b7b95b,
+    type: 3}
+  _nextLevelPrefab: {fileID: 4956137477647419634, guid: 49fa50412d8aa144dbe292726d0218fc,
     type: 3}
   _nextData: {fileID: 11400000, guid: 099d72f6f0600a24f9d665d703bb9027, type: 2}
   _damage: 1
@@ -21,8 +24,6 @@ MonoBehaviour:
   _cooldownDuration: 4
   _pierce: 1
   _level: 1
-  _nextLevelPrefab: {fileID: 4956137477647419634, guid: 49fa50412d8aa144dbe292726d0218fc,
-    type: 3}
   _icon: {fileID: 21300000, guid: b802b00f260268249a31a440847d64ac, type: 3}
   _name: Eye of Uru
   _description: Eyes of Uru appear randomly on screen and attack the closest enemy
