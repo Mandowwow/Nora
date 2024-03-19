@@ -38,7 +38,7 @@ public class PlayerMovement : MonoBehaviour
             //rb.velocity = movement.normalized * runSpeed * Time.fixedDeltaTime;
         } 
         else if (KBCounter <= 0 && isSlowed) {
-            rb.AddForce(movement.normalized * 0.025f * Time.fixedDeltaTime);
+            rb.AddForce(movement.normalized * 0.020f * Time.fixedDeltaTime);
         }
         else {
             if (knockFromRight == true) {
