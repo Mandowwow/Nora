@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     //Movement Variables
     private Vector2 movement;
+    public bool isSlowed = false;
 
     //Knockback Variables
     public float KBCounter;
@@ -31,10 +32,13 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private void FixedUpdate() {
-        if (KBCounter <= 0) {
+        if (KBCounter <= 0 && !isSlowed) {
             //rb.MovePosition(rb.position + movement.normalized * runSpeed * Time.fixedDeltaTime);
             rb.AddForce(movement.normalized * ps.CurrentMoveSpeed * Time.fixedDeltaTime);
             //rb.velocity = movement.normalized * runSpeed * Time.fixedDeltaTime;
+        } 
+        else if (KBCounter <= 0 && isSlowed) {
+            rb.AddForce(movement.normalized * 0.025f * Time.fixedDeltaTime);
         }
         else {
             if (knockFromRight == true) {

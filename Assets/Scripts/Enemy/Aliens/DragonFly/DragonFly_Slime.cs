@@ -4,29 +4,27 @@ using UnityEngine;
 
 public class DragonFly_Slime : MonoBehaviour
 {
-    PlayerStats ps;
+    PlayerMovement pm;
+    float slowMovement = 0.025f;
     private void Start() {
-        ps = FindObjectOfType<PlayerStats>();
+        pm = FindObjectOfType<PlayerMovement>();
         StartCoroutine(DestroyThis());
     }
     private void OnTriggerStay2D(Collider2D collision) {
         if (collision.GetComponentInParent<PlayerMovement>()) {
-            //CharacterStats.PlayerSpeed = 0.025f;
-            ps.CurrentMoveSpeed = 0.025f;
+            pm.isSlowed = true;
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision) {
         if (collision.GetComponentInParent<PlayerMovement>()) {
-            //CharacterStats.PlayerSpeed = 0.1f;
-            ps.CurrentMoveSpeed = 0.09f;
+            pm.isSlowed = false;
         }
     }
 
     IEnumerator DestroyThis() {
         yield return new WaitForSeconds(10f);
-        //CharacterStats.PlayerSpeed = 0.1f;
-        ps.CurrentMoveSpeed = 0.09f;
+        pm.isSlowed = false;
         Destroy(this.gameObject);
     }
 }
