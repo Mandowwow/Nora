@@ -19,6 +19,7 @@ TagManager:
   - SlimeW
   - BulletW
   - SawBladeW
+  - ShockW
   layers:
   - Default
   - TransparentFX

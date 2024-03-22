@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07e333a50debad24ebda6368b3806825, type: 3}
+  m_Name: ShockWaveWeaponLevel4
+  m_EditorClassIdentifier: 
+  _prefab: {fileID: 3538460461630150606, guid: 239740b19660f4d4aa2fe5a3384a8804, type: 3}
+  _previousLevelController: {fileID: 5536569864568198554, guid: 4d1de5a815d5fcf45be3031bdfc7a5b1,
+    type: 3}
+  _controller: {fileID: 5536569864568198554, guid: dc77e11d754d8db4fae549141e59c98c,
+    type: 3}
+  _nextLevelPrefab: {fileID: 0}
+  _nextData: {fileID: 0}
+  _damage: 1
+  _speed: 0
+  _cooldownDuration: 4.5
+  _pierce: 0
+  _level: 4
+  _icon: {fileID: 21300000, guid: 64b66c3c4c3209c46b696d757442cdaa, type: 3}
+  _name: Electric Shockwave Level 4
+  _description: Electric shock emmits more frequently.
