@@ -116,6 +116,7 @@ public class GameManager : MonoBehaviour
             ChangeState(previousState); //this is to make sure to go back to wherever we were in the game while we paused. because you can pause from many different states of the game.
             Time.timeScale = 1f;
             pauseMenuUI.SetActive(false);
+            HideMouse();
         }
     }
 
