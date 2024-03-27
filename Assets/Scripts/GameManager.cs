@@ -2,11 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class GameManager : MonoBehaviour
 {
     //singleton pattern
     public static GameManager instance;
+
+    public GameObject pauseFirstButton, levelUpFirstButton;
+    private GameObject previouslySelectedObject;
     public enum GameState {
         Gameplay,
         Paused,
@@ -54,6 +58,8 @@ public class GameManager : MonoBehaviour
     }
 
     private void Update() {
+        HandleSelectionChange();
+
         switch (currentState) {
 
             case GameState.Gameplay:
@@ -78,7 +84,6 @@ public class GameManager : MonoBehaviour
                     Time.timeScale = 0f;
                     Debug.Log("Choosing Upgrades!");
                     levelUpUI.SetActive(true);
-
                 }
                 break;
 
@@ -98,6 +103,11 @@ public class GameManager : MonoBehaviour
             ChangeState(GameState.Paused);
             Time.timeScale = 0f;
             pauseMenuUI.SetActive(true);
+
+            //clear selected eventsystem object
+            EventSystem.current.SetSelectedGameObject(null);
+            //set new eventsystem object
+            EventSystem.current.SetSelectedGameObject(pauseFirstButton);
         }
     }
 
@@ -110,7 +120,7 @@ public class GameManager : MonoBehaviour
     }
 
     void CheckForPauseAndResume() {
-        if (Input.GetKeyDown(KeyCode.Escape)) {
+        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown("joystick button 7")) {
             if(currentState == GameState.Paused) {
                 ResumeGame();
                 HideMouse();
@@ -161,10 +171,14 @@ public class GameManager : MonoBehaviour
     }
 
     public void StartLevelUp() {
-        //bm.InitializeButtonNames();
         ChangeState(GameState.LevelUp);
         ShowMouse();
-        //playerObject.SendMessage("RemoveAndApplyUpgrades");
+        //clear selected eventsystem object
+        EventSystem.current.SetSelectedGameObject(null);
+        //set new eventsystem object
+        EventSystem.current.SetSelectedGameObject(levelUpFirstButton);
+        // Access the highlight object from the selected GameObject
+        GameObject selectedObject = EventSystem.current.currentSelectedGameObject;
     }
 
     public void EndLevelUp() {
@@ -174,5 +188,29 @@ public class GameManager : MonoBehaviour
         levelUpUI.SetActive(false);
         HideMouse();
         ChangeState(GameState.Gameplay);
+    }
+
+    public void HandleSelectionChange() {
+        // Get the currently selected object from EventSystem
+        GameObject newSelectedObject = EventSystem.current.currentSelectedGameObject;
+
+        if (previouslySelectedObject != null) {
+            // Deactivate the highlight of the previously selected object, if any
+            Transform previousHighlight = previouslySelectedObject.transform.Find("Highlight");
+            if (previousHighlight != null) {
+                previousHighlight.gameObject.SetActive(false);
+            }
+        }
+
+        // Store the new selected object as the previously selected object
+        previouslySelectedObject = newSelectedObject;
+
+        if (newSelectedObject != null) {
+            // Activate the highlight of the newly selected object, if any
+            Transform highlight = newSelectedObject.transform.Find("Highlight");
+            if (highlight != null) {
+                highlight.gameObject.SetActive(true);
+            }
+        }
     }
 }

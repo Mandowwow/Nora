@@ -916,6 +916,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 739afc53cd931cc4e8a02ac082b750ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  firstMenuButton: {fileID: 424193471}
 --- !u!4 &805093332
 Transform:
   m_ObjectHideFlags: 0

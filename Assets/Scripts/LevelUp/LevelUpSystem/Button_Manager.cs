@@ -39,8 +39,6 @@ public class Button_Manager : MonoBehaviour {
         numbersItem = PopulateLists(PassiveItemAvailableOptions);
         ShuffleArray(numbers);
         ShuffleArray(numbersItem);
-        Debug.Log(numbers.Count);
-        Debug.Log(numbersItem.Count);
 
         // Iterate over each button
         for (int i = 0; i < buttons.Count; i++) {

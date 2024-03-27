@@ -2,14 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
+
 
 public class ButtonUI : MonoBehaviour
 {
+    public GameObject firstMenuButton;
     public void NewGameButton() {
         FindObjectOfType<AudioManager>().StopMusic("MainMenu");
         Invoke("StartGame", 1f);
     }
-    
+
+    private void Start() {
+        //clear selected eventsystem object
+        EventSystem.current.SetSelectedGameObject(null);
+        //set new eventsystem object
+        EventSystem.current.SetSelectedGameObject(firstMenuButton);    
+    }
+
     private void StartGame() {
         SceneManager.LoadScene("Dungeon");
         CharacterStats.NumOfHearts = 3;
