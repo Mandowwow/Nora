@@ -23,7 +23,7 @@ public class SawBladeController : WeaponsController
                 Shoot(Quaternion.Euler(0, 0, 45) * Vector3.up);
                 break;
             case 3:
-                Shoot(Quaternion.Euler(0, 0, -45) * Vector3.up);
+                Shoot(Quaternion.Euler(0, 0, -45) * Vector3.down);
                 break;
         }
 
