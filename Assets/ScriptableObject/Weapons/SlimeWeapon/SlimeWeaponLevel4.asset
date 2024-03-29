@@ -24,6 +24,6 @@ MonoBehaviour:
   _cooldownDuration: 2
   _pierce: 0
   _level: 4
-  _icon: {fileID: 21300000, guid: 96ae0daa45401e0448929c030095e147, type: 3}
+  _icon: {fileID: 21300000, guid: 6b24a566afe2e4b46becb9b0736a1b3e, type: 3}
   _name: Slime Level 4
   _description: Slime ejects more frequently.
