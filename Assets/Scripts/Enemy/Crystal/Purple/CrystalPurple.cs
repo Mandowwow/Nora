@@ -6,6 +6,10 @@ public class CrystalPurple : Enemy
 {
     [SerializeField]
     GameObject prefab = null;
+    protected override void Start() {
+        base.Start();
+        speed = Random.Range(1.25f, 1.75f);
+    }
     protected override void ChasePlayer() {
         base.ChasePlayer();
         TurnDirection();
