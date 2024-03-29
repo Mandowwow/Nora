@@ -26,5 +26,5 @@ MonoBehaviour:
   _pierce: 0
   _level: 2
   _icon: {fileID: 21300000, guid: 6b24a566afe2e4b46becb9b0736a1b3e, type: 3}
-  _name: Slime Level 2
+  _name: Tar Level 2
   _description: Tar stays for a longer time.
