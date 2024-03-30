@@ -116,7 +116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 062c7c87294a0e645961146224585bfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.5
+  speed: 0
   health: 60
   sprite: {fileID: 0}
   rb: {fileID: 0}

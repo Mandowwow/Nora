@@ -9,8 +9,8 @@ public class Translate : MonoBehaviour
     [SerializeField] bool moveRight = true;
 
     private void Start() {
-        InvokeRepeating("ChangeDirection", 5.5f, 5.5f);
-        Invoke("Destroy", 16.5f);
+        InvokeRepeating("ChangeDirection", 14f, 14f);
+        Invoke("Destroy", 28f);
     }
     void Update()
     {
