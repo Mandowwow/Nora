@@ -9,15 +9,15 @@ public class Translate : MonoBehaviour
     [SerializeField] bool moveRight = true;
 
     private void Start() {
-        InvokeRepeating("ChangeDirection", 14f, 14f);
+        InvokeRepeating("ChangeDirection", 9.5f, 9.5f);
         Invoke("Destroy", 28f);
     }
     void Update()
     {
         if(moveRight == true) {
-            transform.Translate(Time.deltaTime, 0, 0);
+            transform.Translate(Time.deltaTime * 1.5f, 0, 0);
         } else {
-            transform.Translate(-Time.deltaTime, 0, 0);
+            transform.Translate(-Time.deltaTime * 1.5f, 0, 0);
         }
     }
 
@@ -32,5 +32,11 @@ public class Translate : MonoBehaviour
 
     private void Destroy() {
         Destroy(this.gameObject);
+    }
+
+    private void OnTriggerStay2D(Collider2D collision) {
+        if (collision.CompareTag("Player")) {
+            collision.gameObject.GetComponentInParent<Health>().TakeDamage(1);
+        }
     }
 }

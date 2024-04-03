@@ -266,6 +266,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32e46d1be1a956e40a6a4b4a5d7d9cfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isSlowed: 0
   KBCounter: 0
   KBTotalTime: 0.2
   KBForce: 5
@@ -292,8 +293,10 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  fullHeart: {fileID: 21300000, guid: d75db4c9d3448a14f91c186882bec3a8, type: 3}
-  emptyHeart: {fileID: 21300000, guid: 0afee2d4bb3da2c44b30a1807447480c, type: 3}
+  fullHeart: {fileID: -3017979480325208809, guid: cceaa0cdace528549a399768a26b0778,
+    type: 3}
+  emptyHeart: {fileID: -1720865232835478159, guid: cceaa0cdace528549a399768a26b0778,
+    type: 3}
 --- !u!114 &1029436792
 MonoBehaviour:
   m_ObjectHideFlags: 0
