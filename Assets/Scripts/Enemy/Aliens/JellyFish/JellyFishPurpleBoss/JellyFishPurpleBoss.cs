@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class JellyFishPurpleBoss : Enemy
 {
+    [SerializeField]
+    GameObject prefabExplosion;
+
+    float timer = 0f;
+    float interval = 2f;
     protected override void ChasePlayer() {
         base.ChasePlayer();
         TurnDirection();
@@ -18,6 +23,21 @@ public class JellyFishPurpleBoss : Enemy
                 sprite.flipX = false;
             }
         }
+    }
+
+    protected override void Attack() {
+        if(Health >= 30) {
+            timer += Time.deltaTime;
+            if(timer >= interval) {
+                Explosion();
+                timer = 0f;
+            }
+        }
+    }
+
+    void Explosion() {
+        GameObject spawnedPrefab = Instantiate(prefabExplosion);
+        spawnedPrefab.transform.position = player.position;
     }
 
     private void OnCollisionStay2D(Collision2D collision) {
