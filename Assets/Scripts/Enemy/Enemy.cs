@@ -59,7 +59,7 @@ public class Enemy : MonoBehaviour
         if (player != null) {
             if (Vector2.Distance(transform.position, player.position) < 20 && Vector2.Distance(transform.position, player.position) > 0.35f) {
                 Vector2 direction = (player.position - transform.position).normalized;
-                rb.MovePosition(rb.position + direction * Time.deltaTime * speed);
+                rb.MovePosition(rb.position + direction * Time.fixedDeltaTime * speed);
             }
         }
     }

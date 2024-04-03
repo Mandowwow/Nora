@@ -6,12 +6,24 @@ public class JellyFishPurpleBoss : Enemy
 {
     [SerializeField]
     GameObject prefabExplosion;
+    Vector3 targetPosition = new Vector2(-6f,0f);
 
     float timer = 0f;
     float interval = 2f;
     protected override void ChasePlayer() {
-        base.ChasePlayer();
-        TurnDirection();
+        if(Health >= 30) {
+            TurnDirection();
+        } else {
+            // Calculate the direction towards the target position
+            Vector2 direction = (targetPosition - transform.position);
+
+            // Calculate the velocity change needed to reach the target position
+            Vector2 velocityChange = Vector2.MoveTowards(rb.velocity, direction.normalized * speed, speed * Time.fixedDeltaTime) - rb.velocity;
+
+            // Apply the velocity change using Rigidbody2D's MovePosition method
+            rb.MovePosition(rb.position + velocityChange * Time.fixedDeltaTime);
+        }
+        //base.ChasePlayer();
     }
 
     private void TurnDirection() {

@@ -44,7 +44,7 @@ public class Butterfly : Enemy
     protected override void ChasePlayer() {
 
         if (Health <= 29 && move == true) {
-            transform.position = Vector3.MoveTowards(transform.position, randPos[rand].transform.position, speed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, randPos[rand].transform.position, speed * Time.fixedDeltaTime);
         }
     }
 
