@@ -158,7 +158,7 @@ public class GameManager : MonoBehaviour
         Destroy(singleton2.gameObject);
         Destroy(singleton3.gameObject);
         SceneManager.LoadScene("MainMenu");
-        FindObjectOfType<AudioManager>().StopMusic("Theme");
+        FindObjectOfType<AudioManager>().StopMusic(AudioManager.lastSongPlayed);
         FindObjectOfType<AudioManager>().Play("MainMenu");
     }
 

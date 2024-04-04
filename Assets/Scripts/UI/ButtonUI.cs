@@ -8,6 +8,7 @@ using UnityEngine.EventSystems;
 public class ButtonUI : MonoBehaviour
 {
     public GameObject firstMenuButton;
+    public string[] musicNames;
     public void NewGameButton() {
         FindObjectOfType<AudioManager>().StopMusic("MainMenu");
         Invoke("StartGame", 1f);
@@ -33,7 +34,7 @@ public class ButtonUI : MonoBehaviour
         LevelGeneration.PlayerPoints = 0;
         LevelGeneration.FirstLevel = true;
 
-        
-        FindObjectOfType<AudioManager>().Play("Theme");
+        int rand = Random.Range(0, 3);
+        FindObjectOfType<AudioManager>().Play(musicNames[rand]);
     }
 }

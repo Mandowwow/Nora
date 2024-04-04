@@ -8,6 +8,7 @@ public class AudioManager : MonoBehaviour
 {
     public Sound[] sounds;
     public static AudioManager instance;
+    public static string lastSongPlayed;
     // Start is called before the first frame update
     void Awake()
     {
@@ -36,6 +37,7 @@ public class AudioManager : MonoBehaviour
         Sound s = Array.Find(sounds, sound => sound.name == name);
         if (s == null)
             return;
+        lastSongPlayed = name;
         s.source.Play();
     }
 
