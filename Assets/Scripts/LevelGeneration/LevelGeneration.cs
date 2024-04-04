@@ -77,8 +77,12 @@ public class LevelGeneration : MonoBehaviour
                 newLevels[rand] = null;
                 break;
             case 12:
-                Instantiate(newLevels[17], transform.position, Quaternion.identity);
-                newLevels[17] = null;
+                rand = Random.Range(17, 19);
+                while (newLevels[rand] == null) {
+                    rand = Random.Range(17, 19);
+                }
+                Instantiate(newLevels[rand], transform.position, Quaternion.identity);
+                newLevels[rand] = null;
                 break;
             case 13:
             case 14:
@@ -86,9 +90,9 @@ public class LevelGeneration : MonoBehaviour
             case 16:
             case 17:
             case 18:
-                rand = Random.Range(18, 24);
+                rand = Random.Range(19, 25);
                 while (newLevels[rand] == null) {
-                    rand = Random.Range(18, 24);
+                    rand = Random.Range(19, 25);
                 }
                 Instantiate(newLevels[rand], transform.position, Quaternion.identity);
                 newLevels[rand] = null;

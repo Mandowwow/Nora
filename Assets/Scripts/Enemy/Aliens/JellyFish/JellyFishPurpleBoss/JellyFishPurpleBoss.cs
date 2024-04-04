@@ -6,24 +6,25 @@ public class JellyFishPurpleBoss : Enemy
 {
     [SerializeField]
     GameObject prefabExplosion;
+    [SerializeField]
+    GameObject prefabBeam;
+    [SerializeField]
+    Transform beamPos;
     Vector3 targetPosition = new Vector2(-6f,0f);
 
     float timer = 0f;
+    float timer2 = 0f;
     float interval = 2f;
     protected override void ChasePlayer() {
         if(Health >= 30) {
-            TurnDirection();
         } else {
-            // Calculate the direction towards the target position
-            Vector2 direction = (targetPosition - transform.position);
-
-            // Calculate the velocity change needed to reach the target position
-            Vector2 velocityChange = Vector2.MoveTowards(rb.velocity, direction.normalized * speed, speed * Time.fixedDeltaTime) - rb.velocity;
-
-            // Apply the velocity change using Rigidbody2D's MovePosition method
-            rb.MovePosition(rb.position + velocityChange * Time.fixedDeltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, new Vector3(-6f,0f,0f), speed * Time.fixedDeltaTime);
         }
-        //base.ChasePlayer();
+        TurnDirection();
+    }
+
+    protected override void Start() {
+        base.Start();
     }
 
     private void TurnDirection() {
@@ -38,11 +39,19 @@ public class JellyFishPurpleBoss : Enemy
     }
 
     protected override void Attack() {
-        if(Health >= 30) {
+        if(Health >= 0) {
             timer += Time.deltaTime;
             if(timer >= interval) {
                 Explosion();
                 timer = 0f;
+            }
+        }
+
+        if(Health <= 30) {
+            timer2 += Time.deltaTime;
+            if(timer2 >= interval) {
+                Beam();
+                timer2 = -18f;
             }
         }
     }
@@ -50,6 +59,11 @@ public class JellyFishPurpleBoss : Enemy
     void Explosion() {
         GameObject spawnedPrefab = Instantiate(prefabExplosion);
         spawnedPrefab.transform.position = player.position;
+    }
+
+    void Beam() {       
+        GameObject spawnedPrefab = Instantiate(prefabBeam);
+        spawnedPrefab.transform.position = beamPos.position;       
     }
 
     private void OnCollisionStay2D(Collision2D collision) {
