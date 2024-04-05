@@ -66,6 +66,16 @@ public class JellyFishPurpleBoss : Enemy
         spawnedPrefab.transform.position = beamPos.position;       
     }
 
+    protected override void Dying() {
+        base.Dying();
+        if (Health <= 0) {
+            GameObject[] ball = GameObject.FindGameObjectsWithTag("Slime");
+            foreach (GameObject obj in ball) {
+                GameObject.Destroy(obj);
+            }
+        }
+    }
+
     private void OnCollisionStay2D(Collision2D collision) {
         if (collision.gameObject.CompareTag("Controller") && Time.time > nextFire) {
             collision.gameObject.GetComponent<Health>().TakeDamage(1);
