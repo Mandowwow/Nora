@@ -26,5 +26,5 @@ MonoBehaviour:
   _level: 1
   _icon: {fileID: 21300000, guid: 6b24a566afe2e4b46becb9b0736a1b3e, type: 3}
   _name: Tar
-  _description: Release corrosive tar at player location damaging to all enemies
+  _description: Release corrosive tar at the players location damaging all enemies
     that walk through.

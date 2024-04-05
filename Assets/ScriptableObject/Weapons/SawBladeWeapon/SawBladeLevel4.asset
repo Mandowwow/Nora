@@ -26,4 +26,4 @@ MonoBehaviour:
   _level: 4
   _icon: {fileID: 21300000, guid: 504c524377f200c4a8e4493ecd4ae8c1, type: 3}
   _name: Saw Blade Level 4
-  _description: Saw Blade travells for longer time and pierces through more enemies.
+  _description: Saw Blade travells for a longer time and pierces through more enemies.
