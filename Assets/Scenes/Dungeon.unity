@@ -5381,6 +5381,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4517113692232884630, guid: b49155df0d6c55240a9cf39d0832f907,
+        type: 3}
+      propertyPath: interval2
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5594886973667162101, guid: b49155df0d6c55240a9cf39d0832f907,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5440,16 +5445,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Level26
-      objectReference: {fileID: 0}
-    - target: {fileID: 5971173088061645486, guid: b49155df0d6c55240a9cf39d0832f907,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 3.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5971173088061645486, guid: b49155df0d6c55240a9cf39d0832f907,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b49155df0d6c55240a9cf39d0832f907, type: 3}
