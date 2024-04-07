@@ -7,8 +7,15 @@ public class BlueBacteriaBoss : Enemy
     [SerializeField] private bool movingRight = true;
     [SerializeField] private GameObject prefab = null;
     [SerializeField] private float interval = 1f;
+    [SerializeField] private float interval2 = 10f;
     [SerializeField] private int numOfInstances = 16;
     private float timer = 0f;
+    public Phase currentPhase = Phase.Phase1;
+
+    public enum Phase {
+        Phase1,
+        Phase2
+    }
 
     protected override void Start() {
         base.Start();
@@ -16,6 +23,13 @@ public class BlueBacteriaBoss : Enemy
     }
     protected override void ChasePlayer() {
         transform.Translate(Vector2.up * speed * Time.fixedDeltaTime);
+    }
+    protected override void Attack() {
+        timer += Time.deltaTime;
+        if(timer > interval2) {
+            StartCoroutine(TriggerOrbsSpawn());
+            timer = 0f;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {
@@ -38,13 +52,26 @@ public class BlueBacteriaBoss : Enemy
     }
 
     IEnumerator TriggerOrbsSpawn() {
-        Vector3 spawnPosition = new Vector3(-8f, 3.3f, 0f);
+        if(currentPhase == Phase.Phase1) {
+            Vector3 spawnPosition = new Vector3(-7.5f, 3.3f, 0f);
 
-        for (float i = 0; i < numOfInstances; i += 0.5f) {
-            float xCoordinate = spawnPosition.x + i;
-            Vector3 instancePosition = new Vector3(xCoordinate, spawnPosition.y, spawnPosition.z);
-            GameObject newPrefabInstance = Instantiate(prefab, instancePosition, Quaternion.identity);
-            yield return new WaitForSeconds(interval);
+            for (float i = 0; i < numOfInstances; i += 1f) {
+                float xCoordinate = spawnPosition.x + i;
+                Vector3 instancePosition = new Vector3(xCoordinate, spawnPosition.y, spawnPosition.z);
+                GameObject newPrefabInstance = Instantiate(prefab, instancePosition, Quaternion.identity);
+                yield return new WaitForSeconds(interval);
+            }
+            currentPhase = Phase.Phase2;
+        } else {
+            Vector3 spawnPosition = new Vector3(-7.5f, -3.3f, 0f);
+
+            for (float i = 0; i < numOfInstances; i += 1f) {
+                float xCoordinate = spawnPosition.x + i;
+                Vector3 instancePosition = new Vector3(xCoordinate, spawnPosition.y, spawnPosition.z);
+                GameObject newPrefabInstance = Instantiate(prefab, instancePosition, Quaternion.identity);
+                yield return new WaitForSeconds(interval);
+            }
+            currentPhase = Phase.Phase1;
         }
     }
 }

@@ -154,7 +154,7 @@ MonoBehaviour:
   heart: {fileID: 7268758921841377277, guid: d51346bfc6da7784ba9e835950155f64, type: 3}
   fireRate: 0.6
   movingRight: 1
-  prefab: {fileID: 1621227034626150026, guid: c5ca1b94424a124478f85594b0d08d66, type: 3}
+  prefab: {fileID: 4033019106397087215, guid: c047990447cf18a4b935ee5cfc2ce9fb, type: 3}
   interval: 0.25
   numOfInstances: 16
 --- !u!70 &6308322348219540778
