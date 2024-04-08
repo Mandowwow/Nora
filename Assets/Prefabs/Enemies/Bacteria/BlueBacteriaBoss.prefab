@@ -155,8 +155,13 @@ MonoBehaviour:
   fireRate: 0.6
   movingRight: 1
   prefab: {fileID: 4033019106397087215, guid: c047990447cf18a4b935ee5cfc2ce9fb, type: 3}
+  prefabBlowUp: {fileID: 4293062819661626061, guid: 7041bd54f1a697147941834cb5a9ce33,
+    type: 3}
   interval: 0.25
+  interval2: 5
   numOfInstances: 16
+  currentPhase: 0
+  waypoints: []
 --- !u!70 &6308322348219540778
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
