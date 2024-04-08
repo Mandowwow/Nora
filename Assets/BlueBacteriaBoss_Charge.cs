@@ -19,10 +19,6 @@ public class BlueBacteriaBoss_Charge : MonoBehaviour
         }
     }
 
-    private void Update() {
-        Debug.Log(bb.currentPhase);
-    }
-
     IEnumerator Spawn(Vector3 dir) {
         yield return new WaitForSeconds(1f);
         GameObject spawnedPrefab = Instantiate(prefab);
