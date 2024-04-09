@@ -6,11 +6,12 @@ public class SpiderNormal : Enemy
 {
     private Vector2 randPos;
     private float randTime;
+    [SerializeField] private GameObject prefab;
     [SerializeField] private bool canMove = true;
 
     protected override void Start() {
         base.Start();
-        randTime = Random.Range(1f, 3f);
+        randTime = Random.Range(2f, 4f);
         randPos = new Vector2(Random.Range(-7.4f, 7.4f), Random.Range(-3.5f, 3.5f));
     }
 
@@ -20,6 +21,7 @@ public class SpiderNormal : Enemy
             LookAtWayPoint();
         }
         else if (Vector2.Distance(transform.position, randPos) <= 0.1 && canMove == true) {
+            SpawnSlime();
             StartCoroutine(Wait());
         }
     }
@@ -28,7 +30,7 @@ public class SpiderNormal : Enemy
         canMove = false;
         yield return new WaitForSeconds(randTime);
         randPos = new Vector2(Random.Range(-7.4f, 7.4f), Random.Range(-3.5f, 3f));
-        randTime = Random.Range(1f, 3f);
+        randTime = Random.Range(2f, 4f);
         canMove = true;
     }
 
@@ -39,6 +41,12 @@ public class SpiderNormal : Enemy
             transform.position.x - wayPointPos.x,
             transform.position.y - wayPointPos.y);
         transform.up = direction.normalized;
+    }
+
+    void SpawnSlime() {
+        GameObject spawnedSlime = Instantiate(prefab);
+        spawnedSlime.transform.position = transform.position;
+        Debug.Log("Spawn");
     }
 
     private void OnCollisionStay2D(Collision2D collision) {
