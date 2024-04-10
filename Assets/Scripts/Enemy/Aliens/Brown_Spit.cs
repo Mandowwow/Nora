@@ -21,10 +21,16 @@ public class Brown_Spit : Enemy
     }
 
     public void Spit() {
+        CreatePrefab(Quaternion.Euler(0, 0, 45) * Vector3.down);
+        CreatePrefab(Quaternion.Euler(0, 0, 0) * Vector3.down);
+        CreatePrefab(Quaternion.Euler(0, 0, -45) * Vector3.down);
+    }
+
+    public void CreatePrefab(Vector3 dir) {
         if (Vector2.Distance(transform.position, player.position) < 13f) {
-            Instantiate(spit, barrel.transform.position, Quaternion.identity);
             GameObject spawnedPrefab = Instantiate(spit);
             spawnedPrefab.transform.position = barrel.transform.position;
+            spawnedPrefab.GetComponent<Brown_SpitBall>().DirectionCalc(dir);
 
         }
     }
