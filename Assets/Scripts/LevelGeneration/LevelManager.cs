@@ -35,16 +35,16 @@ public class LevelManager : MonoBehaviour
 
     private void SetCurrentLevels() {
         if(blueLevels != null) {
-            currentBlueLevels = blueLevels.Levels;
+            currentBlueLevels = new List<LevelData>(blueLevels.Levels);
         }
         if(brownLevels != null) {
-            currentBrownLevels = brownLevels.Levels;
+            currentBrownLevels = new List<LevelData>(brownLevels.Levels);
         }
         if(purpleLevels != null) {
-            currentPurpleLevels = purpleLevels.Levels;
+            currentPurpleLevels = new List<LevelData>(purpleLevels.Levels);
         }
         if(pinkLevels != null) {
-            currentPinkLevels = pinkLevels.Levels;
+            currentPinkLevels = new List<LevelData>(pinkLevels.Levels);
         }
     }
 
