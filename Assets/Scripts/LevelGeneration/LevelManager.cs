@@ -49,7 +49,7 @@ public class LevelManager : MonoBehaviour
                 currentPhase = LevelPhase.Fourth;
                 break;
             case LevelPhase.Fourth:
-                currentPhase = LevelPhase.Boss;
+                currentPhase = LevelPhase.Boss_One;
                 break;
 
         }
