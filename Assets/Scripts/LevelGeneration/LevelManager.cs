@@ -17,6 +17,9 @@ public class LevelManager : MonoBehaviour
     private void Awake() {
         SetCurrentLevels();
         ShuffleArray(currentBlueLevels);
+        ShuffleArray(currentPurpleLevels);
+        ShuffleArray(currentBrownLevels);
+        ShuffleArray(currentPinkLevels);
     }
 
     private void Start() {
