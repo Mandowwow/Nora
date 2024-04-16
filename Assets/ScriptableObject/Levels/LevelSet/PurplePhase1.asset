@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b30c84a0def13a945855f6163913e6a2, type: 3}
+  m_Name: PurplePhase1
+  m_EditorClassIdentifier: 
+  _levels:
+  - {fileID: 11400000, guid: b4f49472858505843a3e3817a07f43f1, type: 2}
+  - {fileID: 11400000, guid: b0f8b22ed7b53334e935eb3a60351da9, type: 2}
+  - {fileID: 11400000, guid: bca2b1239aa5a884fb28dd074e7017fe, type: 2}
+  - {fileID: 11400000, guid: 82a3614ea32ad7f4e86e5d0edb4bbca4, type: 2}
+  - {fileID: 11400000, guid: 9afca1f7de190904f9d6fdfb1a211fac, type: 2}
+  - {fileID: 11400000, guid: ae659a7d4a149364487dce67d786fb10, type: 2}
+  - {fileID: 11400000, guid: a1e62c4db1ab0b64aa6db1a9dfd5b265, type: 2}
+  - {fileID: 11400000, guid: c3ade917a0dfdc9499a1e22dc07f7cbb, type: 2}
+  - {fileID: 11400000, guid: ffc36dd070e998643897699d0082f948, type: 2}
+  - {fileID: 11400000, guid: f3e37464fe4ac7643ae9f1195f2665d5, type: 2}

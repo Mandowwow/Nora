@@ -12,7 +12,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] List<LevelData> currentBrownLevels;
     [SerializeField] LevelSet pinkLevels;
     [SerializeField] List<LevelData> currentPinkLevels;
-    LevelPhase currentPhase = LevelPhase.First;
+    static LevelPhase currentPhase = LevelPhase.First;
 
     private void Awake() {
         SetCurrentLevels();
@@ -27,12 +27,31 @@ public class LevelManager : MonoBehaviour
     }
 
     private void GenerateNextLevel() {
-        LevelData nextLevelData = currentBlueLevels.Find(l => l.Phase == currentPhase);
+        LevelData nextLevelData = currentPurpleLevels.Find(l => l.Phase == currentPhase);
 
         if(nextLevelData != null) {
             GameObject spawnedLevelPrefab = Instantiate(nextLevelData.Prefab);
             spawnedLevelPrefab.transform.position = Vector3.zero;
-            Debug.Log("Spawned level");
+
+            UpdateCurrentPhase();
+        }
+    }
+
+    void UpdateCurrentPhase() {
+        switch (currentPhase) {
+            case LevelPhase.First:
+                currentPhase = LevelPhase.Second;
+                break;
+            case LevelPhase.Second:
+                currentPhase = LevelPhase.Third;
+                break;
+            case LevelPhase.Third:
+                currentPhase = LevelPhase.Fourth;
+                break;
+            case LevelPhase.Fourth:
+                currentPhase = LevelPhase.First;
+                break;
+
         }
     }
 

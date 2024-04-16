@@ -3738,7 +3738,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blueLevels: {fileID: 11400000, guid: 6e6a49f9d50ea164c86b8a4a17b2f75a, type: 2}
   currentBlueLevels: []
-  purpleLevels: {fileID: 0}
+  purpleLevels: {fileID: 11400000, guid: 991a1d19a680f3146b7e49ca050d1e9a, type: 2}
   currentPurpleLevels: []
   brownLevels: {fileID: 0}
   currentBrownLevels: []
