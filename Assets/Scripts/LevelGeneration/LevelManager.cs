@@ -51,6 +51,25 @@ public class LevelManager : MonoBehaviour
             case LevelPhase.Fourth:
                 currentPhase = LevelPhase.Boss_One;
                 break;
+            case LevelPhase.Boss_One:
+                currentPhase = LevelPhase.Fith;
+                break;
+            case LevelPhase.Fith:
+                currentPhase = LevelPhase.Sixth;
+                break;
+            case LevelPhase.Sixth:
+                currentPhase = LevelPhase.Seventh;
+                break;
+            case LevelPhase.Seventh:
+                currentPhase = LevelPhase.Eighth;
+                break;
+            case LevelPhase.Eighth:
+                currentPhase = LevelPhase.Boss_Two;
+                break;
+            case LevelPhase.Boss_Two:
+                //Done
+                break;
+
 
         }
     }

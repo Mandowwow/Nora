@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: acb568fd628408149a342b7022507a07, type: 3}
-  m_Name: PurpleLevel08_03
+  m_Name: PurpleLevelBoss02_01
   m_EditorClassIdentifier: 
-  _levelPrefab: {fileID: 7034563147828862552, guid: b9695be94269cee45ac7b4d34da30fb9,
+  _levelPrefab: {fileID: 9000959411216695363, guid: b7e7b006a96af0f4f987c6f83f3fbe98,
     type: 3}
-  _phase: 8
+  _phase: 9
