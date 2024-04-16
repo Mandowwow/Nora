@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b30c84a0def13a945855f6163913e6a2, type: 3}
+  m_Name: BluePhase1
+  m_EditorClassIdentifier: 
+  _levels:
+  - {fileID: 11400000, guid: 7453bf6f8a7603f479ea87805b61572a, type: 2}
+  - {fileID: 11400000, guid: e973e3897c7dcbb4dab4b826ff1037bc, type: 2}
+  - {fileID: 11400000, guid: ff4bec604189aed49a8e0c5ffa2ac3e8, type: 2}
+  - {fileID: 11400000, guid: 574e311198b8b5f40a4dea9c84f34169, type: 2}
