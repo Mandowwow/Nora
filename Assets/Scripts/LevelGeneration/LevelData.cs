@@ -8,7 +8,12 @@ public enum LevelPhase {
     Second,
     Third,
     Fourth,
-    Boss
+    Boss_One,
+    Fith,
+    Sixth,
+    Seventh,
+    Eighth,
+    Boss_Two
 }
 
 [CreateAssetMenu(fileName = "LevelData", menuName = "Level/LevelData")]
