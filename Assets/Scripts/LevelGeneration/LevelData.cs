@@ -2,19 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+public enum LevelPhase {
+    First,
+    Second,
+    Third,
+    Fourth,
+    Boss
+}
+
 [CreateAssetMenu(fileName = "LevelData", menuName = "Level/LevelData")]
 public class LevelData : ScriptableObject
 {
     [SerializeField] GameObject _levelPrefab;
     [SerializeField] LevelPhase _phase;
-
-    public enum LevelPhase {
-        First,
-        Second,
-        Third,
-        Fourth,
-        Boss
-    }
 
     public GameObject Prefab
     {
