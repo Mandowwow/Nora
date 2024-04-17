@@ -14,6 +14,8 @@ public class LevelManager : MonoBehaviour
     [SerializeField] LevelSet pinkLevels;
     [SerializeField] List<LevelData> currentPinkLevels;
 
+    [SerializeField] List<List<LevelData>> allLevelLists;
+    static int currentSetindex = 0;
 
     static LevelPhase currentPhase = LevelPhase.First;
 
@@ -37,6 +39,7 @@ public class LevelManager : MonoBehaviour
         ShuffleArray(currentPurpleLevels);
         ShuffleArray(currentBrownLevels);
         ShuffleArray(currentPinkLevels);
+        SetAllLevelLists();
     }
 
     private void Start() {
@@ -44,7 +47,8 @@ public class LevelManager : MonoBehaviour
     }
 
     private void GenerateNextLevel() {
-        LevelData nextLevelData = currentPurpleLevels.Find(l => l.Phase == currentPhase);
+        //LevelData nextLevelData = currentPurpleLevels.Find(l => l.Phase == currentPhase);
+        LevelData nextLevelData = allLevelLists[currentSetindex].Find(l => l.Phase == currentPhase);
 
         if(nextLevelData != null) {
             GameObject spawnedLevelPrefab = Instantiate(nextLevelData.Prefab);
@@ -66,8 +70,11 @@ public class LevelManager : MonoBehaviour
             PlayerPrefs.Save(); // Save PlayerPrefs data immediately
         }
         else {
-            // Handle the case where the current phase is not found or it's the last phase
-            Debug.LogWarning("No next phase defined for current phase: " + currentPhase);
+            // If currentIndex is at the last index of phaseSequence, reset to the first phase
+            currentPhase = phaseSequence[0];
+            currentSetindex++;
+            PlayerPrefs.SetInt("CurrentIndex", 0);
+            PlayerPrefs.Save(); // Save PlayerPrefs data immediately
         }
     }
 
@@ -84,6 +91,15 @@ public class LevelManager : MonoBehaviour
         if(pinkLevels != null) {
             currentPinkLevels = new List<LevelData>(pinkLevels.Levels);
         }
+    }
+
+    private void SetAllLevelLists() {
+        allLevelLists = new List<List<LevelData>>();
+
+        allLevelLists.Add(currentPurpleLevels);
+        allLevelLists.Add(currentBlueLevels);
+        allLevelLists.Add(currentBrownLevels);
+        allLevelLists.Add(currentPinkLevels);
     }
 
     void ShuffleArray(List<LevelData> list) {
