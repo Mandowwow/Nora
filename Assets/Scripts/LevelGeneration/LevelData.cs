@@ -9,7 +9,7 @@ public enum LevelPhase {
     Third,
     Fourth,
     Boss_One,
-    Fith,
+    Fifth,
     Sixth,
     Seventh,
     Eighth,
