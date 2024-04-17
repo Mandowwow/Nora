@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class LevelManager : MonoBehaviour
 {
@@ -12,7 +13,23 @@ public class LevelManager : MonoBehaviour
     [SerializeField] List<LevelData> currentBrownLevels;
     [SerializeField] LevelSet pinkLevels;
     [SerializeField] List<LevelData> currentPinkLevels;
+
+
     static LevelPhase currentPhase = LevelPhase.First;
+
+    private LevelPhase[] phaseSequence = new LevelPhase[]
+    {
+        LevelPhase.First,
+        LevelPhase.Second,
+        LevelPhase.Third,
+        LevelPhase.Fourth,
+        LevelPhase.Boss_One,
+        LevelPhase.Fifth,
+        LevelPhase.Sixth,
+        LevelPhase.Seventh,
+        LevelPhase.Eighth,
+        LevelPhase.Boss_Two
+    };
 
     private void Awake() {
         SetCurrentLevels();
@@ -38,39 +55,19 @@ public class LevelManager : MonoBehaviour
     }
 
     void UpdateCurrentPhase() {
-        switch (currentPhase) {
-            case LevelPhase.First:
-                currentPhase = LevelPhase.Second;
-                break;
-            case LevelPhase.Second:
-                currentPhase = LevelPhase.Third;
-                break;
-            case LevelPhase.Third:
-                currentPhase = LevelPhase.Fourth;
-                break;
-            case LevelPhase.Fourth:
-                currentPhase = LevelPhase.Boss_One;
-                break;
-            case LevelPhase.Boss_One:
-                currentPhase = LevelPhase.Fifth;
-                break;
-            case LevelPhase.Fifth:
-                currentPhase = LevelPhase.Sixth;
-                break;
-            case LevelPhase.Sixth:
-                currentPhase = LevelPhase.Seventh;
-                break;
-            case LevelPhase.Seventh:
-                currentPhase = LevelPhase.Eighth;
-                break;
-            case LevelPhase.Eighth:
-                currentPhase = LevelPhase.Boss_Two;
-                break;
-            case LevelPhase.Boss_Two:
-                //Done
-                break;
+        int currentIndex = Array.IndexOf(phaseSequence, currentPhase);
 
+        // Check if the current phase is found in the sequence
+        if (currentIndex != -1 && currentIndex < phaseSequence.Length - 1) {
+            // Update the current phase to the next phase in the sequence
+            currentPhase = phaseSequence[currentIndex + 1];
 
+            PlayerPrefs.SetInt("CurrentIndex", currentIndex + 1);
+            PlayerPrefs.Save(); // Save PlayerPrefs data immediately
+        }
+        else {
+            // Handle the case where the current phase is not found or it's the last phase
+            Debug.LogWarning("No next phase defined for current phase: " + currentPhase);
         }
     }
 
