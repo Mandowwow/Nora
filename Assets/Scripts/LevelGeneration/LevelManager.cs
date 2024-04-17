@@ -52,9 +52,9 @@ public class LevelManager : MonoBehaviour
                 currentPhase = LevelPhase.Boss_One;
                 break;
             case LevelPhase.Boss_One:
-                currentPhase = LevelPhase.Fith;
+                currentPhase = LevelPhase.Fifth;
                 break;
-            case LevelPhase.Fith:
+            case LevelPhase.Fifth:
                 currentPhase = LevelPhase.Sixth;
                 break;
             case LevelPhase.Sixth:
