@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: acb568fd628408149a342b7022507a07, type: 3}
-  m_Name: BlueLevelBoss01_03
+  m_Name: BrownLevel01_01
   m_EditorClassIdentifier: 
-  _levelPrefab: {fileID: 5594886973667162102, guid: b49155df0d6c55240a9cf39d0832f907,
+  _levelPrefab: {fileID: 6925365392677751703, guid: 4a0eed1d890c16e45b3efc9962907a27,
     type: 3}
-  _phase: 9
+  _phase: 0

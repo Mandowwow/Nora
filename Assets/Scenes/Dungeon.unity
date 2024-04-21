@@ -3740,7 +3740,7 @@ MonoBehaviour:
   currentBlueLevels: []
   purpleLevels: {fileID: 11400000, guid: 991a1d19a680f3146b7e49ca050d1e9a, type: 2}
   currentPurpleLevels: []
-  brownLevels: {fileID: 0}
+  brownLevels: {fileID: 11400000, guid: 460bab932ec2ede409027282005d2e97, type: 2}
   currentBrownLevels: []
   pinkLevels: {fileID: 0}
   currentPinkLevels: []
