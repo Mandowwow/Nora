@@ -3744,9 +3744,6 @@ MonoBehaviour:
   currentBrownLevels: []
   pinkLevels: {fileID: 0}
   currentPinkLevels: []
-  allLevelSets:
-  - {fileID: 11400000, guid: 991a1d19a680f3146b7e49ca050d1e9a, type: 2}
-  - {fileID: 11400000, guid: 6e6a49f9d50ea164c86b8a4a17b2f75a, type: 2}
 --- !u!4 &1727870068
 Transform:
   m_ObjectHideFlags: 0
