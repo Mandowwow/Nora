@@ -15,9 +15,9 @@ public class LevelManager : MonoBehaviour
     [SerializeField] List<LevelData> currentPinkLevels;
 
     [SerializeField] List<List<LevelData>> allLevelLists;
-    static int currentSetindex = 0;
+    public static int currentSetindex = 0;
 
-    static LevelPhase currentPhase = LevelPhase.First;
+    public static LevelPhase currentPhase = LevelPhase.First;
 
     private LevelPhase[] phaseSequence = new LevelPhase[]
     {
