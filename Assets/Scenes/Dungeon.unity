@@ -3716,13 +3716,34 @@ GameObject:
   m_Component:
   - component: {fileID: 1727870068}
   - component: {fileID: 1727870069}
+  - component: {fileID: 1727870067}
   m_Layer: 0
   m_Name: LevelGenerator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
+--- !u!114 &1727870067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1727870066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d702a0123aae39d43acb7ce47751d91a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blueLevels: {fileID: 11400000, guid: 6e6a49f9d50ea164c86b8a4a17b2f75a, type: 2}
+  currentBlueLevels: []
+  purpleLevels: {fileID: 11400000, guid: 991a1d19a680f3146b7e49ca050d1e9a, type: 2}
+  currentPurpleLevels: []
+  brownLevels: {fileID: 11400000, guid: 460bab932ec2ede409027282005d2e97, type: 2}
+  currentBrownLevels: []
+  pinkLevels: {fileID: 0}
+  currentPinkLevels: []
 --- !u!4 &1727870068
 Transform:
   m_ObjectHideFlags: 0
@@ -3744,7 +3765,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1727870066}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73b2936469b9a5641b280b80d95a9164, type: 3}
   m_Name: 

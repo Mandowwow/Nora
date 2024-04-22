@@ -157,6 +157,8 @@ public class GameManager : MonoBehaviour
         Destroy(singleton1.gameObject);
         Destroy(singleton2.gameObject);
         Destroy(singleton3.gameObject);
+        PlayerPrefs.SetInt("CurrentIndex", 0);
+        PlayerPrefs.Save(); // Save PlayerPrefs data immediately
         SceneManager.LoadScene("MainMenu");
         FindObjectOfType<AudioManager>().StopMusic(AudioManager.lastSongPlayed);
         FindObjectOfType<AudioManager>().Play("MainMenu");

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9000959411216695360}
   m_Layer: 17
-  m_Name: Level18
+  m_Name: LevelPurpleBoss02_01
   m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b30c84a0def13a945855f6163913e6a2, type: 3}
+  m_Name: BrownPhase
+  m_EditorClassIdentifier: 
+  _levels:
+  - {fileID: 11400000, guid: 8908ab6b9ae924c44a3f196875f7c402, type: 2}
+  - {fileID: 11400000, guid: ffbd150060b98e74fa277330d1be3c49, type: 2}
+  - {fileID: 11400000, guid: 5707e844c123fd84f92a81708a8dd2d1, type: 2}
