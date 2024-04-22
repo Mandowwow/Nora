@@ -36,7 +36,7 @@ public class ButtonUI : MonoBehaviour
         LevelManager.currentSetindex = 0;
         LevelManager.currentPhase = LevelPhase.First;
 
-        int rand = Random.Range(0, 3);
+        int rand = Random.Range(0, musicNames.Length);
         FindObjectOfType<AudioManager>().Play(musicNames[rand]);
         PlayerPrefs.SetInt("CurrentIndex", 0);
         PlayerPrefs.Save(); // Save PlayerPrefs data immediately

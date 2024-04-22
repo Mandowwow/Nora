@@ -44,14 +44,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - name: Theme
-    clip: {fileID: 8300000, guid: 5925468c092e25141aa4c141279b1f8a, type: 3}
+  - name: FourthSong
+    clip: {fileID: 8300000, guid: 3f773e4e48b27a74f80eb4c578b638e0, type: 3}
     volume: 0.5
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: MainMenu
     clip: {fileID: 8300000, guid: 439468990b09b1145ad821a233cbbfd6, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: FirstSong
+    clip: {fileID: 8300000, guid: 5925468c092e25141aa4c141279b1f8a, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: SecondSong
+    clip: {fileID: 8300000, guid: 152c544094f10b04f814d14bcea4624c, type: 3}
+    volume: 0.6
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: ThirdSong
+    clip: {fileID: 8300000, guid: 42fbe3be30636a04d8141dd2bd8abe45, type: 3}
     volume: 0.5
     pitch: 1
     loop: 1
