@@ -74,3 +74,33 @@ MonoBehaviour:
     pitch: 1
     loop: 1
     source: {fileID: 0}
+  - name: GunShot
+    clip: {fileID: 8300000, guid: b677abde201fbbb4291f936ab6c80a2a, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: EnemyDeath
+    clip: {fileID: 8300000, guid: 1f906fc48b678fc44aa52ec0c963609a, type: 3}
+    volume: 0
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: ElectricWave
+    clip: {fileID: 8300000, guid: 1902da514caad584bb0472d8b5300037, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: UI_Click
+    clip: {fileID: 8300000, guid: cd40cccc9f42d03418c13e464dd0c569, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Rocket
+    clip: {fileID: 8300000, guid: d4f94d53af9b8724dbfbaf701113f296, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
