@@ -7,6 +7,7 @@ public class BulletBehaviour : ProjectileWeaponBehaviour
     protected override void Start() {
         base.Start();
         rb.velocity = direction * currentSpeed;
+        FindObjectOfType<AudioManager>().Play("GunShot");
     }
 
     protected override void OnTriggerEnter2D(Collider2D collision) {

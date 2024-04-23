@@ -10,6 +10,7 @@ public class ButtonUI : MonoBehaviour
     public GameObject firstMenuButton;
     public string[] musicNames;
     public void NewGameButton() {
+        FindObjectOfType<AudioManager>().Play("UI_Click");
         FindObjectOfType<AudioManager>().StopMusic("MainMenu");
         Invoke("StartGame", 1f);
     }

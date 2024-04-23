@@ -7,6 +7,7 @@ using System;
 public class AudioManager : MonoBehaviour
 {
     public Sound[] sounds;
+    private List<AudioSource> audioSources = new List<AudioSource>();
     public static AudioManager instance;
     public static string lastSongPlayed;
     // Start is called before the first frame update
@@ -26,6 +27,9 @@ public class AudioManager : MonoBehaviour
             s.source.volume = s.volume;
             s.source.pitch = s.pitch;
             s.source.loop = s.loop;
+
+            // Add the AudioSource to the audioSources list
+            audioSources.Add(s.source);
         }
     }
 
@@ -46,5 +50,13 @@ public class AudioManager : MonoBehaviour
         if (s == null)
             return;
         s.source.Stop();
+    }
+
+    public void StopAllAudio() {
+        foreach (var audioSource in audioSources) {
+            if (audioSource != null && audioSource.isPlaying) {
+                audioSource.Stop();
+            }
+        }
     }
 }

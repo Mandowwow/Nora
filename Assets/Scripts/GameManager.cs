@@ -160,7 +160,7 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetInt("CurrentIndex", 0);
         PlayerPrefs.Save(); // Save PlayerPrefs data immediately
         SceneManager.LoadScene("MainMenu");
-        FindObjectOfType<AudioManager>().StopMusic(AudioManager.lastSongPlayed);
+        FindObjectOfType<AudioManager>().StopAllAudio();
         FindObjectOfType<AudioManager>().Play("MainMenu");
     }
 
