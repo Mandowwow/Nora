@@ -104,3 +104,9 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: Sawblade
+    clip: {fileID: 8300000, guid: ef9cd76649f9c6444bed94bac3d18294, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
