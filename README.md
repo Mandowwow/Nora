@@ -1,3 +1,4 @@
-Nora is a 2D roguelite 
-with randomly selected levels.
+Nora is a top-down dungeon crawler like game
+with roguelite elements. It hosts randomly seleceted 
+levels and randomly selected weapon level up system.
 (currently still in development)
