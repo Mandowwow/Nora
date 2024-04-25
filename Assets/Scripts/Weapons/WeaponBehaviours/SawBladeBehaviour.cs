@@ -7,6 +7,7 @@ public class SawBladeBehaviour : ProjectileWeaponBehaviour
     Vector3 lastVelocity;
     protected override void Start() {
         base.Start();
+        FindObjectOfType<AudioManager>().Play("Sawblade");
         rb.velocity = direction * currentSpeed;
     }
 
