@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 7528867557631174619}
   - component: {fileID: 8509345710291379427}
   - component: {fileID: 8929686468585279825}
-  m_Layer: 0
+  - component: {fileID: 7703533633040929687}
+  m_Layer: 18
   m_Name: Blob_Blue
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -150,3 +151,23 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &7703533633040929687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6586083458241564494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69f08cb325a4e6a42985630e61191247, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  health: 2
+  sprite: {fileID: 0}
+  rb: {fileID: 0}
+  heart: {fileID: 7268758921841377277, guid: d51346bfc6da7784ba9e835950155f64, type: 3}
+  fireRate: 0.6
+  canMove: 1
+  bullet: {fileID: 8981117868647856168, guid: a87540166e651ce4cbda5b9fad3d1b9f, type: 3}
