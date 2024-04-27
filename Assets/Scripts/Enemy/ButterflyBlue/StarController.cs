@@ -14,13 +14,14 @@ public class StarController : MonoBehaviour {
 
     private void StarTransform() {
         stars[index].GetComponent<Star>().anim.Play("Transform");
-        StartCoroutine(Wait()); 
+        StartCoroutine(Wait());
+        ChangeStarPhase();
     }
 
     IEnumerator Wait() {
         yield return new WaitForSeconds(1f);
         stars[index].GetComponent<Star>().speed = Random.Range(1.5f, 2.25f);
-        if (index <= stars.Length) {
+        if (index < stars.Length - 1) {
             index++;
         }
     }
@@ -34,6 +35,14 @@ public class StarController : MonoBehaviour {
             GameObject temp = array[k];
             array[k] = array[n];
             array[n] = temp;
+        }
+    }
+
+    void ChangeStarPhase() {
+        if (index == stars.Length - 1) {
+            for (int i = 0; i < stars.Length; i++) {
+                stars[i].GetComponent<Star>().chase = false;
+            }
         }
     }
 }
