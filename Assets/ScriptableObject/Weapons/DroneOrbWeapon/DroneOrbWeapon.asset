@@ -21,9 +21,9 @@ MonoBehaviour:
   _nextData: {fileID: 11400000, guid: 27079cbec4d2f894a93d1f8c388a039b, type: 2}
   _damage: 1
   _speed: 6
-  _cooldownDuration: 1
+  _cooldownDuration: 10
   _pierce: 0
   _level: 1
   _icon: {fileID: 21300000, guid: 4eed1228d8687764198f78d1312f5e5e, type: 3}
   _name: Drone Orb
-  _description: 'Drone orb rotates around the player while shooting projectiles. '
+  _description: Place an orb at players location that rotates and shoots projectiles.

@@ -19,10 +19,10 @@ MonoBehaviour:
     type: 3}
   _nextLevelPrefab: {fileID: 8187001225302806873, guid: d05403ac62715094b8b9f5433868180d,
     type: 3}
-  _nextData: {fileID: 0}
+  _nextData: {fileID: 11400000, guid: 835fa125d015a434886ec652b88c7920, type: 2}
   _damage: 1
   _speed: 6
-  _cooldownDuration: 0.7
+  _cooldownDuration: 10
   _pierce: 0
   _level: 2
   _icon: {fileID: 21300000, guid: 4eed1228d8687764198f78d1312f5e5e, type: 3}

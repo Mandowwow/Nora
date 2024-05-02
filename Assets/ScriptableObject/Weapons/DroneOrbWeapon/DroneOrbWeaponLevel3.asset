@@ -17,13 +17,14 @@ MonoBehaviour:
     type: 3}
   _controller: {fileID: 8187001225302806873, guid: d05403ac62715094b8b9f5433868180d,
     type: 3}
-  _nextLevelPrefab: {fileID: 0}
-  _nextData: {fileID: 0}
+  _nextLevelPrefab: {fileID: 8187001225302806873, guid: 69921d9fb5f58dc41b33d060867f13cc,
+    type: 3}
+  _nextData: {fileID: 11400000, guid: e65553cd36569c34695460c6730d6fd0, type: 2}
   _damage: 1
   _speed: 7
-  _cooldownDuration: 0.7
+  _cooldownDuration: 10
   _pierce: 0
   _level: 3
   _icon: {fileID: 21300000, guid: 4eed1228d8687764198f78d1312f5e5e, type: 3}
-  _name: Drone Orb Level 2
+  _name: Drone Orb Level 3
   _description: Increase Drone Orb projectile speed.
