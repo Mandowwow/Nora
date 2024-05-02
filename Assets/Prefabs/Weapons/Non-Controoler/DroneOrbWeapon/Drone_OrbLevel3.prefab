@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 1531113922522354909}
   - component: {fileID: -6757206909268037923}
   m_Layer: 0
-  m_Name: Drone_Orb
+  m_Name: Drone_OrbLevel3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -125,10 +125,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8df039ad09f17234dba639c1349ea44e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponData: {fileID: 11400000, guid: 8e2466448f5290642b0d09f1ed5d2727, type: 2}
-  destroyAfterSeconds: 6
+  weaponData: {fileID: 11400000, guid: 835fa125d015a434886ec652b88c7920, type: 2}
+  destroyAfterSeconds: 8
   radius: 0.75
-  bulletCooldown: 1
+  bulletCooldown: 0.8
 --- !u!1 &3095895951901127680
 GameObject:
   m_ObjectHideFlags: 0

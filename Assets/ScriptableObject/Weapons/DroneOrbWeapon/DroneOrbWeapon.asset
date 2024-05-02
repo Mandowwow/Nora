@@ -12,16 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07e333a50debad24ebda6368b3806825, type: 3}
   m_Name: DroneOrbWeapon
   m_EditorClassIdentifier: 
-  _prefab: {fileID: 0}
+  _prefab: {fileID: 7799305132374209461, guid: 6cb550d08e35d2947a5988ec0f64656c, type: 3}
   _previousLevelController: {fileID: 0}
-  _controller: {fileID: 0}
-  _nextLevelPrefab: {fileID: 0}
-  _nextData: {fileID: 0}
-  _damage: 0
-  _speed: 0
-  _cooldownDuration: 0
+  _controller: {fileID: 8187001225302806873, guid: dd7d140fb29c645439a4210b11182535,
+    type: 3}
+  _nextLevelPrefab: {fileID: 8187001225302806873, guid: 0a51711470127d343906778ebff14a20,
+    type: 3}
+  _nextData: {fileID: 11400000, guid: 27079cbec4d2f894a93d1f8c388a039b, type: 2}
+  _damage: 1
+  _speed: 6
+  _cooldownDuration: 1
   _pierce: 0
-  _level: 0
-  _icon: {fileID: 0}
-  _name: 
-  _description: 
+  _level: 1
+  _icon: {fileID: 21300000, guid: 4eed1228d8687764198f78d1312f5e5e, type: 3}
+  _name: Drone Orb
+  _description: 'Drone orb rotates around the player while shooting projectiles. '

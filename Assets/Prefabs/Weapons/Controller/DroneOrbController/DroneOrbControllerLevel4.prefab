@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 621275936749683011}
   - component: {fileID: 4357368030694175660}
   m_Layer: 0
-  m_Name: DroneOrbController
+  m_Name: DroneOrbControllerLevel4
   m_TagString: OrbW
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 691b238c4eb9cc94eba70c1b90df55de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponData: {fileID: 11400000, guid: 8e2466448f5290642b0d09f1ed5d2727, type: 2}
-  nextWeaponData: {fileID: 11400000, guid: 27079cbec4d2f894a93d1f8c388a039b, type: 2}
-  orbPrefab: {fileID: 1531113922522354908, guid: 7f3a6f98a12b0ef4dad8971ec6ed8abe,
+  weaponData: {fileID: 11400000, guid: 835fa125d015a434886ec652b88c7920, type: 2}
+  nextWeaponData: {fileID: 0}
+  orbPrefab: {fileID: 1531113922522354908, guid: 77904a5c3a7288e41a3421c4256c470d,
     type: 3}

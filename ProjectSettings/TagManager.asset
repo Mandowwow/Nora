@@ -20,6 +20,7 @@ TagManager:
   - BulletW
   - SawBladeW
   - ShockW
+  - OrbW
   layers:
   - Default
   - TransparentFX

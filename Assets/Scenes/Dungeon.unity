@@ -4851,6 +4851,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 95f55366b8f6aa64f881897c2c39c1c1, type: 2}
   - {fileID: 11400000, guid: d2fb673e5c18b6440ac47ad1254fcf82, type: 2}
   - {fileID: 11400000, guid: 6f793319f9c9dd646960cf61928670ab, type: 2}
+  - {fileID: 11400000, guid: 8e2466448f5290642b0d09f1ed5d2727, type: 2}
   availableOptions: []
   PassiveItemUpgradeOptions:
   - {fileID: 11400000, guid: 0e6902d7da7372c48b2bc74b19d12219, type: 2}

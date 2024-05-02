@@ -11,21 +11,16 @@ public class OrbController : WeaponsController {
     }
 
     protected override void Attack() {
-        
-        if (Input.GetKey("right") || Input.GetKey("joystick button 1") || Input.GetKey("left") || Input.GetKey("joystick button 2")
-            || Input.GetKey("up") || Input.GetKey("joystick button 3") || Input.GetKey("down") || Input.GetKey("joystick button 0")) {
-            Shoot();
-        }
+        Shoot();
     }
 
     void Shoot() {
         base.Attack();
-        spanwedOrb.GetComponent<OrbBehaviour>().Shoot();
+        SpawnOrb();
     }
 
     private void SpawnOrb() {
         spanwedOrb = Instantiate(orbPrefab);
         spanwedOrb.transform.position = transform.position;
-        spanwedOrb.transform.parent = transform.parent;
     }
 }
