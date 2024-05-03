@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class JellyFishPurple : Enemy
+public class JellyFishBlue : Enemy
 {
     private bool canChase = false;
     protected override void Start() {
