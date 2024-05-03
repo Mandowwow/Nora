@@ -9,7 +9,7 @@ public class StarController : MonoBehaviour {
     // Start is called before the first frame update
     void Start() {
         ShuffleArray(stars);
-        InvokeRepeating("StarTransform", 3f, 5f);
+        InvokeRepeating("StarTransform", 3f, 4f);
     }
 
     private void StarTransform() {
