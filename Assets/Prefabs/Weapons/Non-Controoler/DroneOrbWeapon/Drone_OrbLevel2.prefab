@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8986957969045933700}
   m_Layer: 0
   m_Name: circumference
-  m_TagString: BeamTarget
+  m_TagString: DroneTarget
   m_Icon: {fileID: 4162164826716764455, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -21,6 +21,8 @@ TagManager:
   - SawBladeW
   - ShockW
   - OrbW
+  - DroneTarget
+  - RobotDroneTarget
   layers:
   - Default
   - TransparentFX
