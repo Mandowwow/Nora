@@ -13,12 +13,22 @@ public class Robot_One : Enemy
 
     protected override void Start() {
         base.Start();
-        InvokeRepeating("Shoot", 1f, 0.5f);
+        InvokeRepeating("Shoot", 3f, 0.5f);
     }
     protected override void ChasePlayer() {
         if (Vector2.Distance(transform.position, player.position) < 20 && Vector2.Distance(transform.position, player.position) > 6f) {
             Vector2 direction = (player.position - transform.position).normalized;
             rb.MovePosition(rb.position + direction * Time.fixedDeltaTime * speed);
+        }
+    }
+
+    protected override void Dying() {
+        base.Dying();
+        if (Health <= 0) {
+            GameObject[] ball = GameObject.FindGameObjectsWithTag("Enemy");
+            foreach (GameObject obj in ball) {
+                GameObject.Destroy(obj);
+            }
         }
     }
 

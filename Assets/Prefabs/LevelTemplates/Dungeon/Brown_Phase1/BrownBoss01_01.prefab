@@ -526,6 +526,11 @@ PrefabInstance:
       propertyPath: orbPos.Array.data[3]
       value: 
       objectReference: {fileID: 2680898510924623436}
+    - target: {fileID: 2049185811674925555, guid: 2abf0e44d0c98954bb527ec7476c6297,
+        type: 3}
+      propertyPath: health
+      value: 70
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2abf0e44d0c98954bb527ec7476c6297, type: 3}
 --- !u!4 &4367521452173696475 stripped
