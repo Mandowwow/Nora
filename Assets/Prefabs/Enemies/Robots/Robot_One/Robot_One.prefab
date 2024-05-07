@@ -155,7 +155,7 @@ MonoBehaviour:
   fireRate: 0.6
   bulletPrefab: {fileID: 8596333168420980531, guid: 45e6c325f471abd4cba94f3c45d56594,
     type: 3}
-  dronePrefab: {fileID: 8251041281677316033, guid: 2dd540787ea84ce478b158f8c8e1bccb,
+  dronePrefab: {fileID: 7227372867203709967, guid: d0aa76cfef884a64295347820e8c53a1,
     type: 3}
   barrel: {fileID: 2049185811426537833}
   orbPos: []

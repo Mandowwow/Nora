@@ -21,7 +21,7 @@ MonoBehaviour:
   _nextData: {fileID: 0}
   _damage: 1
   _speed: 8
-  _cooldownDuration: 0.4
+  _cooldownDuration: 0.5
   _pierce: 1
   _level: 5
   _icon: {fileID: 21300000, guid: 9e911266b68a9cd4ab44bf133f5304ac, type: 3}
