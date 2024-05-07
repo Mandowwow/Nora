@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6925365392677751700}
   m_Layer: 17
-  m_Name: Level1_Brown
+  m_Name: Brown01_01
   m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -516,7 +516,7 @@ PrefabInstance:
     - target: {fileID: 2734106149133038473, guid: bac0d322ffd9a4c42a5b5a6735399862,
         type: 3}
       propertyPath: objects.Array.size
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2734106149133038473, guid: bac0d322ffd9a4c42a5b5a6735399862,
         type: 3}
