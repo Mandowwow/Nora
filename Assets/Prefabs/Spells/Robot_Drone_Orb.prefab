@@ -157,5 +157,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletCooldown: 0.6
-  bulletPrefab: {fileID: 8149651262155336533, guid: edbe5a98ce3fb0249b00c11281328ee5,
+  bulletPrefab: {fileID: 7663167898298079556, guid: c2f07b2839c47654a960e66ad82ecf24,
     type: 3}
