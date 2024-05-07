@@ -44,4 +44,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponData: {fileID: 11400000, guid: 3e5fb6943ef71df4dbe68b955a1d9602, type: 2}
-  nextWeaponData: {fileID: 0}
+  nextWeaponData: {fileID: 11400000, guid: 5357394dc24527c46bc47f3835c8bd06, type: 2}

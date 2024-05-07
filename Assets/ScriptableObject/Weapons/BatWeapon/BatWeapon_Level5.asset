@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07e333a50debad24ebda6368b3806825, type: 3}
+  m_Name: BatWeapon_Level5
+  m_EditorClassIdentifier: 
+  _prefab: {fileID: 71275680528837305, guid: 5c914c79ae8fe7e4facc00226fa1c8c6, type: 3}
+  _previousLevelController: {fileID: 4956137477647419634, guid: bd26133c999134042828f4dbee0938de,
+    type: 3}
+  _controller: {fileID: 4956137477647419634, guid: 8c6d9408c6c3e5c4b986b57bc0f1e6ac,
+    type: 3}
+  _nextLevelPrefab: {fileID: 0}
+  _nextData: {fileID: 0}
+  _damage: 1
+  _speed: 8
+  _cooldownDuration: 2
+  _pierce: 1
+  _level: 5
+  _icon: {fileID: 21300000, guid: fb079791ed8878b4082370b6fb9bae4a, type: 3}
+  _name: Missile Level 5
+  _description: Missile speed increased.

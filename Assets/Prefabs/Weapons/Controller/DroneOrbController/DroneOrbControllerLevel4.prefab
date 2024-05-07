@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 691b238c4eb9cc94eba70c1b90df55de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponData: {fileID: 11400000, guid: 835fa125d015a434886ec652b88c7920, type: 2}
-  nextWeaponData: {fileID: 0}
+  weaponData: {fileID: 11400000, guid: e65553cd36569c34695460c6730d6fd0, type: 2}
+  nextWeaponData: {fileID: 11400000, guid: da358e4ba6550314cb3c36def0ee4ef6, type: 2}
   orbPrefab: {fileID: 1531113922522354908, guid: 77904a5c3a7288e41a3421c4256c470d,
     type: 3}

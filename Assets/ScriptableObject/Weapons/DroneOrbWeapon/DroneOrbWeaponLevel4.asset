@@ -17,8 +17,9 @@ MonoBehaviour:
     type: 3}
   _controller: {fileID: 8187001225302806873, guid: 69921d9fb5f58dc41b33d060867f13cc,
     type: 3}
-  _nextLevelPrefab: {fileID: 0}
-  _nextData: {fileID: 0}
+  _nextLevelPrefab: {fileID: 8187001225302806873, guid: 6f0e93aa987276542b90fc77823bda2f,
+    type: 3}
+  _nextData: {fileID: 11400000, guid: da358e4ba6550314cb3c36def0ee4ef6, type: 2}
   _damage: 1
   _speed: 7
   _cooldownDuration: 10
