@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1.5
-  health: 70
+  health: 80
   sprite: {fileID: 0}
   rb: {fileID: 0}
   heart: {fileID: 7268758921841377277, guid: d51346bfc6da7784ba9e835950155f64, type: 3}
@@ -159,6 +159,7 @@ MonoBehaviour:
     type: 3}
   barrel: {fileID: 2049185811426537833}
   orbPos: []
+  canMove: 1
 --- !u!50 &2049185811674925554
 Rigidbody2D:
   serializedVersion: 4

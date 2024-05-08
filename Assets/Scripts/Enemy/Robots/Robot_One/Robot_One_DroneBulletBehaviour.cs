@@ -28,7 +28,7 @@ public class Robot_One_DroneBulletBehaviour : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.CompareTag("Player")) {
-            collision.gameObject.GetComponentInParent<Health>().TakeDamage(1);
+            collision.gameObject.GetComponentInParent<Health>().TakeDamage(2);
             Destroy(this.gameObject);
         }
         else if (collision.CompareTag("Wall")) {
