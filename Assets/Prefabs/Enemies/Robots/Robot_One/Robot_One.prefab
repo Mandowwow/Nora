@@ -102,9 +102,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -560229745
+  m_SortingLayer: 5
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 2dcb168bb9860794ba7bf8a6c6382713, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -159,7 +159,6 @@ MonoBehaviour:
     type: 3}
   barrel: {fileID: 2049185811426537833}
   orbPos: []
-  canMove: 1
 --- !u!50 &2049185811674925554
 Rigidbody2D:
   serializedVersion: 4
