@@ -30,7 +30,6 @@ public class Robot_Two_SawBladeBehaviour : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.CompareTag("Player")) {
             collision.gameObject.GetComponentInParent<Health>().TakeDamage(1);
-            Destroy(this.gameObject);
         }
         else if (collision.CompareTag("Wall")) {
             Vector2 collisionNormal = collision.ClosestPoint(transform.position) - (Vector2)transform.position;

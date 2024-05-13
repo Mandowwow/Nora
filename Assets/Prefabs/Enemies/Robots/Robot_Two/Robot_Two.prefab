@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3817992383035913188}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.08, y: -0.72, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.9, y: 0.9, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -160,4 +160,6 @@ MonoBehaviour:
   heart: {fileID: 7268758921841377277, guid: d51346bfc6da7784ba9e835950155f64, type: 3}
   fireRate: 0.6
   sawBladePrefab: {fileID: 9124336802173565422, guid: aa4734db9b524ba4eb2f2783e691c500,
+    type: 3}
+  shockwavePrefab: {fileID: 4719678773198235692, guid: 89d10faa7eab7224f89ac25d96e2fb88,
     type: 3}
