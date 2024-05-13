@@ -127,7 +127,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponData: {fileID: 11400000, guid: 27079cbec4d2f894a93d1f8c388a039b, type: 2}
   destroyAfterSeconds: 7
-  bulletCooldown: 0.8
+  bulletCooldown: 0.7
 --- !u!1 &3095895951901127680
 GameObject:
   m_ObjectHideFlags: 0
