@@ -4,8 +4,15 @@ using UnityEngine;
 
 public class Robot_Two : Enemy
 {
+    public enum Phase {
+        one,
+        two
+    }
+    public Phase currentPhase = Phase.one;
     [SerializeField] GameObject sawBladePrefab;
     [SerializeField] GameObject shockwavePrefab;
+    float sawBladeTimer = 8f;
+    float shockWavetimer = 10f;
     int[] angles = new int[2] { 45, -45 };
     int[] directions = new int[2] { -1, 1 };
     int randomAngleValue;
@@ -13,17 +20,31 @@ public class Robot_Two : Enemy
 
     protected override void Start() {
         base.Start();
-        InvokeRepeating("SpawnSawBlade", 5f, 8f);
-        InvokeRepeating("Shockwaves", 10f, 10f);
+        InvokeRepeating("SpawnSawBlade", 5f, sawBladeTimer);
+        InvokeRepeating("Shockwaves", 10f, shockWavetimer);
     }
 
     public override void TakeDamage(int damage) {
         base.TakeDamage(damage);
         if(health == 40) {
-            speed = 2f;
-        } 
-        if(health == 20) {
-            speed = 2.5f;
+            CancelInvoke("Shockwaves");
+            CancelInvoke("SpawnSawBlade");
+            currentPhase = Phase.two;
+            shockWavetimer = 1f;
+            sawBladeTimer = 6f;
+            InvokeRepeating("Shockwaves", 5f, shockWavetimer);
+            InvokeRepeating("SpawnSawBlade", 5f, sawBladeTimer);
+        }
+    }
+
+    protected override void ChasePlayer() {
+        switch (currentPhase) {
+            case Phase.one:
+                base.ChasePlayer();
+                break;
+            case Phase.two:
+                transform.position = Vector2.MoveTowards(transform.position, new Vector2(0, 0), speed * Time.fixedDeltaTime);
+                break;
         }
     }
 
