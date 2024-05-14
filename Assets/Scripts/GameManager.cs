@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     //singleton pattern
     public static GameManager instance;
 
-    public GameObject pauseFirstButton, levelUpFirstButton;
+    public GameObject pauseFirstButton, levelUpFirstButton, gameOverFirstButton;
     private GameObject previouslySelectedObject;
     public enum GameState {
         Gameplay,
@@ -167,6 +167,10 @@ public class GameManager : MonoBehaviour
     public void GameOver() {
         ChangeState(GameState.GameOver);
         ShowMouse();
+        //clear selected eventsystem object
+        EventSystem.current.SetSelectedGameObject(null);
+        //set new eventsystem object
+        EventSystem.current.SetSelectedGameObject(gameOverFirstButton);
     }
 
     void DisplayResults() {
